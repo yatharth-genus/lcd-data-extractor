@@ -1,0 +1,23 @@
+﻿@"
+annotation_env/
+annotation_legacy_env/
+paddle_legacy_env/
+venv/
+__pycache__/
+*.pyc
+*.pyo
+**/Cache.cach
+**/fileState.txt
+*.log
+~`$*.xlsx
+~`$*.docx
+~`$*.pptx
+.vscode/
+.idea/
+runs/
+outputs/
+checkpoints/
+tracked_files.txt
+tracked_files_updated.txt
+"@ | Set-Content -Encoding UTF8 .gitignoretools/
+tools/
