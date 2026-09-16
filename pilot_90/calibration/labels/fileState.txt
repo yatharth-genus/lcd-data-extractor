@@ -1,0 +1,10 @@
+D:\Actual Project\lcd-data-extractor\pilot_90\calibration\images\94.png	1
+D:\Actual Project\lcd-data-extractor\pilot_90\calibration\images\121.png	1
+D:\Actual Project\lcd-data-extractor\pilot_90\calibration\images\226.png	1
+D:\Actual Project\lcd-data-extractor\pilot_90\calibration\images\301.png	1
+D:\Actual Project\lcd-data-extractor\pilot_90\calibration\images\361.png	1
+D:\Actual Project\lcd-data-extractor\pilot_90\calibration\images\425.png	1
+D:\Actual Project\lcd-data-extractor\pilot_90\calibration\images\532.png	1
+D:\Actual Project\lcd-data-extractor\pilot_90\calibration\images\533.png	1
+D:\Actual Project\lcd-data-extractor\pilot_90\calibration\images\551.png	1
+D:\Actual Project\lcd-data-extractor\pilot_90\calibration\images\636.png	1

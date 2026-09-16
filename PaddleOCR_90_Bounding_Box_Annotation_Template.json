@@ -1,0 +1,1356 @@
+{
+  "schema_version": "pilot-1.1",
+  "note": "Polygons require manual visual annotation on source images. CSV text is prefilled as inventory only.",
+  "images": [
+    {
+      "selection_id": 1,
+      "split": "calibration",
+      "image": "94.png",
+      "source_ground_truth": {
+        "value": "0.999",
+        "unit": "",
+        "display_text": "PF IPT B1 A",
+        "confidence": 0.7
+      },
+      "text_regions": [],
+      "excluded_symbols": [],
+      "ambiguity_notes": "",
+      "status": "not_started"
+    },
+    {
+      "selection_id": 2,
+      "split": "calibration",
+      "image": "121.png",
+      "source_ground_truth": {
+        "value": "1.000",
+        "unit": "",
+        "display_text": "PF IPT2 BA",
+        "confidence": 0.75
+      },
+      "text_regions": [],
+      "excluded_symbols": [],
+      "ambiguity_notes": "",
+      "status": "not_started"
+    },
+    {
+      "selection_id": 3,
+      "split": "calibration",
+      "image": "226.png",
+      "source_ground_truth": {
+        "value": "16:06:26",
+        "unit": "kW",
+        "display_text": "d IP 1 MD",
+        "confidence": 0.85
+      },
+      "text_regions": [],
+      "excluded_symbols": [],
+      "ambiguity_notes": "",
+      "status": "not_started"
+    },
+    {
+      "selection_id": 4,
+      "split": "calibration",
+      "image": "301.png",
+      "source_ground_truth": {
+        "value": "09:15:00",
+        "unit": "kVA",
+        "display_text": "t IP B1 MD",
+        "confidence": 0.9
+      },
+      "text_regions": [],
+      "excluded_symbols": [],
+      "ambiguity_notes": "",
+      "status": "not_started"
+    },
+    {
+      "selection_id": 5,
+      "split": "calibration",
+      "image": "361.png",
+      "source_ground_truth": {
+        "value": "28:06:26",
+        "unit": "kW",
+        "display_text": "d IP B1 MD",
+        "confidence": 0.9
+      },
+      "text_regions": [],
+      "excluded_symbols": [],
+      "ambiguity_notes": "",
+      "status": "not_started"
+    },
+    {
+      "selection_id": 6,
+      "split": "calibration",
+      "image": "425.png",
+      "source_ground_truth": {
+        "value": "1.000",
+        "unit": "",
+        "display_text": "PF EP T BA",
+        "confidence": 0.8
+      },
+      "text_regions": [],
+      "excluded_symbols": [],
+      "ambiguity_notes": "",
+      "status": "not_started"
+    },
+    {
+      "selection_id": 7,
+      "split": "calibration",
+      "image": "532.png",
+      "source_ground_truth": {
+        "value": "0000000.6",
+        "unit": "kWh",
+        "display_text": "L1 L2 T1 t1B1",
+        "confidence": 0.65
+      },
+      "text_regions": [],
+      "excluded_symbols": [],
+      "ambiguity_notes": "",
+      "status": "not_started"
+    },
+    {
+      "selection_id": 8,
+      "split": "calibration",
+      "image": "533.png",
+      "source_ground_truth": {
+        "value": "0000000.0",
+        "unit": "kWh",
+        "display_text": "L1 L2 T1 t2B1",
+        "confidence": 0.6
+      },
+      "text_regions": [],
+      "excluded_symbols": [],
+      "ambiguity_notes": "",
+      "status": "not_started"
+    },
+    {
+      "selection_id": 9,
+      "split": "calibration",
+      "image": "551.png",
+      "source_ground_truth": {
+        "value": "0000:00:05",
+        "unit": "",
+        "display_text": "L1 L2 T1 POB",
+        "confidence": 0.75
+      },
+      "text_regions": [],
+      "excluded_symbols": [],
+      "ambiguity_notes": "",
+      "status": "not_started"
+    },
+    {
+      "selection_id": 10,
+      "split": "calibration",
+      "image": "636.png",
+      "source_ground_truth": {
+        "value": "0000000.0",
+        "unit": "kWh",
+        "display_text": "L2 T1 t3B1",
+        "confidence": 0.65
+      },
+      "text_regions": [],
+      "excluded_symbols": [],
+      "ambiguity_notes": "",
+      "status": "not_started"
+    },
+    {
+      "selection_id": 11,
+      "split": "train",
+      "image": "36.png",
+      "source_ground_truth": {
+        "value": "0000.00",
+        "unit": "rupees",
+        "display_text": "Alr",
+        "confidence": 0.75
+      },
+      "text_regions": [],
+      "excluded_symbols": [],
+      "ambiguity_notes": "",
+      "status": "not_started"
+    },
+    {
+      "selection_id": 12,
+      "split": "train",
+      "image": "52.png",
+      "source_ground_truth": {
+        "value": "000.00",
+        "unit": "A",
+        "display_text": "In T4",
+        "confidence": 0.95
+      },
+      "text_regions": [],
+      "excluded_symbols": [],
+      "ambiguity_notes": "",
+      "status": "not_started"
+    },
+    {
+      "selection_id": 13,
+      "split": "train",
+      "image": "71.png",
+      "source_ground_truth": {
+        "value": "360",
+        "unit": "",
+        "display_text": "S T1",
+        "confidence": 0.5
+      },
+      "text_regions": [],
+      "excluded_symbols": [],
+      "ambiguity_notes": "",
+      "status": "not_started"
+    },
+    {
+      "selection_id": 14,
+      "split": "train",
+      "image": "97.png",
+      "source_ground_truth": {
+        "value": "0.999",
+        "unit": "",
+        "display_text": "PF IPT1 BA",
+        "confidence": 0.8
+      },
+      "text_regions": [],
+      "excluded_symbols": [],
+      "ambiguity_notes": "",
+      "status": "not_started"
+    },
+    {
+      "selection_id": 15,
+      "split": "train",
+      "image": "98.png",
+      "source_ground_truth": {
+        "value": "1.000",
+        "unit": "",
+        "display_text": "PF EPT1 BA",
+        "confidence": 0.8
+      },
+      "text_regions": [],
+      "excluded_symbols": [],
+      "ambiguity_notes": "",
+      "status": "not_started"
+    },
+    {
+      "selection_id": 16,
+      "split": "train",
+      "image": "105.png",
+      "source_ground_truth": {
+        "value": "",
+        "unit": "",
+        "display_text": "PuSh",
+        "confidence": 0.85
+      },
+      "text_regions": [],
+      "excluded_symbols": [],
+      "ambiguity_notes": "",
+      "status": "not_started"
+    },
+    {
+      "selection_id": 17,
+      "split": "train",
+      "image": "106.png",
+      "source_ground_truth": {
+        "value": "",
+        "unit": "",
+        "display_text": "PO mode n",
+        "confidence": 0.65
+      },
+      "text_regions": [],
+      "excluded_symbols": [],
+      "ambiguity_notes": "",
+      "status": "not_started"
+    },
+    {
+      "selection_id": 18,
+      "split": "train",
+      "image": "116.png",
+      "source_ground_truth": {
+        "value": "03",
+        "unit": "",
+        "display_text": "S T2",
+        "confidence": 0.8
+      },
+      "text_regions": [],
+      "excluded_symbols": [],
+      "ambiguity_notes": "",
+      "status": "not_started"
+    },
+    {
+      "selection_id": 19,
+      "split": "train",
+      "image": "119.png",
+      "source_ground_truth": {
+        "value": "000169",
+        "unit": "kVAh",
+        "display_text": "IP B1",
+        "confidence": 0.9
+      },
+      "text_regions": [],
+      "excluded_symbols": [],
+      "ambiguity_notes": "",
+      "status": "not_started"
+    },
+    {
+      "selection_id": 20,
+      "split": "train",
+      "image": "133.png",
+      "source_ground_truth": {
+        "value": "4.8",
+        "unit": "",
+        "display_text": "FG",
+        "confidence": 0.8
+      },
+      "text_regions": [],
+      "excluded_symbols": [],
+      "ambiguity_notes": "",
+      "status": "not_started"
+    },
+    {
+      "selection_id": 21,
+      "split": "train",
+      "image": "146.png",
+      "source_ground_truth": {
+        "value": "3",
+        "unit": "",
+        "display_text": "T2 S",
+        "confidence": 0.85
+      },
+      "text_regions": [],
+      "excluded_symbols": [],
+      "ambiguity_notes": "",
+      "status": "not_started"
+    },
+    {
+      "selection_id": 22,
+      "split": "train",
+      "image": "160.png",
+      "source_ground_truth": {
+        "value": "000003",
+        "unit": "kWh",
+        "display_text": "EP B1",
+        "confidence": 0.9
+      },
+      "text_regions": [],
+      "excluded_symbols": [],
+      "ambiguity_notes": "",
+      "status": "not_started"
+    },
+    {
+      "selection_id": 23,
+      "split": "train",
+      "image": "184.png",
+      "source_ground_truth": {
+        "value": "64",
+        "unit": "",
+        "display_text": "T1 S",
+        "confidence": 0.8
+      },
+      "text_regions": [],
+      "excluded_symbols": [],
+      "ambiguity_notes": "",
+      "status": "not_started"
+    },
+    {
+      "selection_id": 24,
+      "split": "train",
+      "image": "186.png",
+      "source_ground_truth": {
+        "value": "0000.00",
+        "unit": "rupees",
+        "display_text": "lr",
+        "confidence": 0.85
+      },
+      "text_regions": [],
+      "excluded_symbols": [],
+      "ambiguity_notes": "",
+      "status": "not_started"
+    },
+    {
+      "selection_id": 25,
+      "split": "train",
+      "image": "189.png",
+      "source_ground_truth": {
+        "value": "0000.00",
+        "unit": "rupees",
+        "display_text": "BAL",
+        "confidence": 0.85
+      },
+      "text_regions": [],
+      "excluded_symbols": [],
+      "ambiguity_notes": "",
+      "status": "not_started"
+    },
+    {
+      "selection_id": 26,
+      "split": "train",
+      "image": "214.png",
+      "source_ground_truth": {
+        "value": "0003",
+        "unit": "",
+        "display_text": "T2 S",
+        "confidence": 0.75
+      },
+      "text_regions": [],
+      "excluded_symbols": [],
+      "ambiguity_notes": "",
+      "status": "not_started"
+    },
+    {
+      "selection_id": 27,
+      "split": "train",
+      "image": "218.png",
+      "source_ground_truth": {
+        "value": "5",
+        "unit": "",
+        "display_text": "S T2",
+        "confidence": 0.8
+      },
+      "text_regions": [],
+      "excluded_symbols": [],
+      "ambiguity_notes": "",
+      "status": "not_started"
+    },
+    {
+      "selection_id": 28,
+      "split": "train",
+      "image": "220.png",
+      "source_ground_truth": {
+        "value": "17:12:00",
+        "unit": "kW",
+        "display_text": "t IP B1 MD",
+        "confidence": 0.85
+      },
+      "text_regions": [],
+      "excluded_symbols": [],
+      "ambiguity_notes": "",
+      "status": "not_started"
+    },
+    {
+      "selection_id": 29,
+      "split": "train",
+      "image": "229.png",
+      "source_ground_truth": {
+        "value": "5.8",
+        "unit": "",
+        "display_text": "FG",
+        "confidence": 0.8
+      },
+      "text_regions": [],
+      "excluded_symbols": [],
+      "ambiguity_notes": "",
+      "status": "not_started"
+    },
+    {
+      "selection_id": 30,
+      "split": "train",
+      "image": "249.png",
+      "source_ground_truth": {
+        "value": "1.000",
+        "unit": "",
+        "display_text": "PF EP T1 BA",
+        "confidence": 0.9
+      },
+      "text_regions": [],
+      "excluded_symbols": [],
+      "ambiguity_notes": "",
+      "status": "not_started"
+    },
+    {
+      "selection_id": 31,
+      "split": "train",
+      "image": "251.png",
+      "source_ground_truth": {
+        "value": "28:06:26",
+        "unit": "kW",
+        "display_text": "d EP B1 MD",
+        "confidence": 0.9
+      },
+      "text_regions": [],
+      "excluded_symbols": [],
+      "ambiguity_notes": "",
+      "status": "not_started"
+    },
+    {
+      "selection_id": 32,
+      "split": "train",
+      "image": "253.png",
+      "source_ground_truth": {
+        "value": "0.999",
+        "unit": "",
+        "display_text": "PF IP T1 BA",
+        "confidence": 0.9
+      },
+      "text_regions": [],
+      "excluded_symbols": [],
+      "ambiguity_notes": "",
+      "status": "not_started"
+    },
+    {
+      "selection_id": 33,
+      "split": "train",
+      "image": "255.png",
+      "source_ground_truth": {
+        "value": "000003",
+        "unit": "kWh",
+        "display_text": "EP T1",
+        "confidence": 0.9
+      },
+      "text_regions": [],
+      "excluded_symbols": [],
+      "ambiguity_notes": "",
+      "status": "not_started"
+    },
+    {
+      "selection_id": 34,
+      "split": "train",
+      "image": "300.png",
+      "source_ground_truth": {
+        "value": "000005",
+        "unit": "kVAh",
+        "display_text": "EP B1",
+        "confidence": 0.9
+      },
+      "text_regions": [],
+      "excluded_symbols": [],
+      "ambiguity_notes": "",
+      "status": "not_started"
+    },
+    {
+      "selection_id": 35,
+      "split": "train",
+      "image": "302.png",
+      "source_ground_truth": {
+        "value": "05.773",
+        "unit": "kVA",
+        "display_text": "IP B1 MD",
+        "confidence": 0.9
+      },
+      "text_regions": [],
+      "excluded_symbols": [],
+      "ambiguity_notes": "",
+      "status": "not_started"
+    },
+    {
+      "selection_id": 36,
+      "split": "train",
+      "image": "307.png",
+      "source_ground_truth": {
+        "value": "04",
+        "unit": "",
+        "display_text": "S T1",
+        "confidence": 0.35
+      },
+      "text_regions": [],
+      "excluded_symbols": [],
+      "ambiguity_notes": "",
+      "status": "not_started"
+    },
+    {
+      "selection_id": 37,
+      "split": "train",
+      "image": "327.png",
+      "source_ground_truth": {
+        "value": "0",
+        "unit": "",
+        "display_text": "S T1",
+        "confidence": 0.3
+      },
+      "text_regions": [],
+      "excluded_symbols": [],
+      "ambiguity_notes": "",
+      "status": "not_started"
+    },
+    {
+      "selection_id": 38,
+      "split": "train",
+      "image": "328.png",
+      "source_ground_truth": {
+        "value": "00:00:00",
+        "unit": "",
+        "display_text": "d lr",
+        "confidence": 0.85
+      },
+      "text_regions": [],
+      "excluded_symbols": [],
+      "ambiguity_notes": "",
+      "status": "not_started"
+    },
+    {
+      "selection_id": 39,
+      "split": "train",
+      "image": "340.png",
+      "source_ground_truth": {
+        "value": "042513",
+        "unit": "",
+        "display_text": "S T1",
+        "confidence": 0.9
+      },
+      "text_regions": [],
+      "excluded_symbols": [],
+      "ambiguity_notes": "",
+      "status": "not_started"
+    },
+    {
+      "selection_id": 40,
+      "split": "train",
+      "image": "341.png",
+      "source_ground_truth": {
+        "value": "00:00:00",
+        "unit": "",
+        "display_text": "t BAL",
+        "confidence": 0.85
+      },
+      "text_regions": [],
+      "excluded_symbols": [],
+      "ambiguity_notes": "",
+      "status": "not_started"
+    },
+    {
+      "selection_id": 41,
+      "split": "train",
+      "image": "356.png",
+      "source_ground_truth": {
+        "value": "000030",
+        "unit": "kWh",
+        "display_text": "IP B1",
+        "confidence": 0.9
+      },
+      "text_regions": [],
+      "excluded_symbols": [],
+      "ambiguity_notes": "",
+      "status": "not_started"
+    },
+    {
+      "selection_id": 42,
+      "split": "train",
+      "image": "365.png",
+      "source_ground_truth": {
+        "value": "05.773",
+        "unit": "kW",
+        "display_text": "IP B1 MD",
+        "confidence": 0.9
+      },
+      "text_regions": [],
+      "excluded_symbols": [],
+      "ambiguity_notes": "",
+      "status": "not_started"
+    },
+    {
+      "selection_id": 43,
+      "split": "train",
+      "image": "370.png",
+      "source_ground_truth": {
+        "value": "000141",
+        "unit": "kWh",
+        "display_text": "IP B1",
+        "confidence": 0.9
+      },
+      "text_regions": [],
+      "excluded_symbols": [],
+      "ambiguity_notes": "",
+      "status": "not_started"
+    },
+    {
+      "selection_id": 44,
+      "split": "train",
+      "image": "406.png",
+      "source_ground_truth": {
+        "value": "09:00:00",
+        "unit": "kW",
+        "display_text": "t EP B1 MD",
+        "confidence": 0.9
+      },
+      "text_regions": [],
+      "excluded_symbols": [],
+      "ambiguity_notes": "",
+      "status": "not_started"
+    },
+    {
+      "selection_id": 45,
+      "split": "train",
+      "image": "413.png",
+      "source_ground_truth": {
+        "value": "5100",
+        "unit": "",
+        "display_text": "S T2",
+        "confidence": 0.35
+      },
+      "text_regions": [],
+      "excluded_symbols": [],
+      "ambiguity_notes": "",
+      "status": "not_started"
+    },
+    {
+      "selection_id": 46,
+      "split": "train",
+      "image": "415.png",
+      "source_ground_truth": {
+        "value": "7.8",
+        "unit": "",
+        "display_text": "FG",
+        "confidence": 0.8
+      },
+      "text_regions": [],
+      "excluded_symbols": [],
+      "ambiguity_notes": "",
+      "status": "not_started"
+    },
+    {
+      "selection_id": 47,
+      "split": "train",
+      "image": "418.png",
+      "source_ground_truth": {
+        "value": "16:06:26",
+        "unit": "kW",
+        "display_text": "d IP B1 MD",
+        "confidence": 0.9
+      },
+      "text_regions": [],
+      "excluded_symbols": [],
+      "ambiguity_notes": "",
+      "status": "not_started"
+    },
+    {
+      "selection_id": 48,
+      "split": "train",
+      "image": "433.png",
+      "source_ground_truth": {
+        "value": "18:49:31",
+        "unit": "",
+        "display_text": "t",
+        "confidence": 0.9
+      },
+      "text_regions": [],
+      "excluded_symbols": [],
+      "ambiguity_notes": "",
+      "status": "not_started"
+    },
+    {
+      "selection_id": 49,
+      "split": "train",
+      "image": "437.png",
+      "source_ground_truth": {
+        "value": "1.000",
+        "unit": "",
+        "display_text": "PF EP T2 BA",
+        "confidence": 0.9
+      },
+      "text_regions": [],
+      "excluded_symbols": [],
+      "ambiguity_notes": "",
+      "status": "not_started"
+    },
+    {
+      "selection_id": 50,
+      "split": "train",
+      "image": "438.png",
+      "source_ground_truth": {
+        "value": "00.000",
+        "unit": "kVA",
+        "display_text": "IP B1 MD",
+        "confidence": 0.9
+      },
+      "text_regions": [],
+      "excluded_symbols": [],
+      "ambiguity_notes": "",
+      "status": "not_started"
+    },
+    {
+      "selection_id": 51,
+      "split": "train",
+      "image": "480.png",
+      "source_ground_truth": {
+        "value": "0000000.0",
+        "unit": "kVAh",
+        "display_text": "L1 L2 T1 t3",
+        "confidence": 0.85
+      },
+      "text_regions": [],
+      "excluded_symbols": [],
+      "ambiguity_notes": "",
+      "status": "not_started"
+    },
+    {
+      "selection_id": 52,
+      "split": "train",
+      "image": "506.png",
+      "source_ground_truth": {
+        "value": "240.06",
+        "unit": "V",
+        "display_text": "L1 L2 T1 y",
+        "confidence": 0.85
+      },
+      "text_regions": [],
+      "excluded_symbols": [],
+      "ambiguity_notes": "",
+      "status": "not_started"
+    },
+    {
+      "selection_id": 53,
+      "split": "train",
+      "image": "507.png",
+      "source_ground_truth": {
+        "value": "0.00",
+        "unit": "V",
+        "display_text": "L1 L2 T1 b",
+        "confidence": 0.85
+      },
+      "text_regions": [],
+      "excluded_symbols": [],
+      "ambiguity_notes": "",
+      "status": "not_started"
+    },
+    {
+      "selection_id": 54,
+      "split": "train",
+      "image": "511.png",
+      "source_ground_truth": {
+        "value": "0.000",
+        "unit": "A",
+        "display_text": "L1 L2 T1 NEU",
+        "confidence": 0.85
+      },
+      "text_regions": [],
+      "excluded_symbols": [],
+      "ambiguity_notes": "",
+      "status": "not_started"
+    },
+    {
+      "selection_id": 55,
+      "split": "train",
+      "image": "526.png",
+      "source_ground_truth": {
+        "value": "1.000",
+        "unit": "",
+        "display_text": "L1 L2 T1 PF R",
+        "confidence": 0.85
+      },
+      "text_regions": [],
+      "excluded_symbols": [],
+      "ambiguity_notes": "",
+      "status": "not_started"
+    },
+    {
+      "selection_id": 56,
+      "split": "train",
+      "image": "530.png",
+      "source_ground_truth": {
+        "value": "49.984",
+        "unit": "Hz",
+        "display_text": "T1 F",
+        "confidence": 0.85
+      },
+      "text_regions": [],
+      "excluded_symbols": [],
+      "ambiguity_notes": "",
+      "status": "not_started"
+    },
+    {
+      "selection_id": 57,
+      "split": "train",
+      "image": "554.png",
+      "source_ground_truth": {
+        "value": "0.280",
+        "unit": "kW",
+        "display_text": "L1 L2 T1 B1 IMD",
+        "confidence": 0.75
+      },
+      "text_regions": [],
+      "excluded_symbols": [],
+      "ambiguity_notes": "",
+      "status": "not_started"
+    },
+    {
+      "selection_id": 58,
+      "split": "train",
+      "image": "564.png",
+      "source_ground_truth": {
+        "value": "8888888.8",
+        "unit": "kWAhHz",
+        "display_text": "TB",
+        "confidence": 0.4
+      },
+      "text_regions": [],
+      "excluded_symbols": [],
+      "ambiguity_notes": "",
+      "status": "not_started"
+    },
+    {
+      "selection_id": 59,
+      "split": "train",
+      "image": "569.png",
+      "source_ground_truth": {
+        "value": "0000000.0",
+        "unit": "kWh",
+        "display_text": "L1 L2 T1 t2",
+        "confidence": 0.8
+      },
+      "text_regions": [],
+      "excluded_symbols": [],
+      "ambiguity_notes": "",
+      "status": "not_started"
+    },
+    {
+      "selection_id": 60,
+      "split": "train",
+      "image": "572.png",
+      "source_ground_truth": {
+        "value": "0000001.0",
+        "unit": "kVAh",
+        "display_text": "L1 L2 T1 t1",
+        "confidence": 0.8
+      },
+      "text_regions": [],
+      "excluded_symbols": [],
+      "ambiguity_notes": "",
+      "status": "not_started"
+    },
+    {
+      "selection_id": 61,
+      "split": "train",
+      "image": "584.png",
+      "source_ground_truth": {
+        "value": "0000000.0",
+        "unit": "kVAh",
+        "display_text": "L1 L2 T1 t2",
+        "confidence": 0.8
+      },
+      "text_regions": [],
+      "excluded_symbols": [],
+      "ambiguity_notes": "",
+      "status": "not_started"
+    },
+    {
+      "selection_id": 62,
+      "split": "train",
+      "image": "604.png",
+      "source_ground_truth": {
+        "value": "195.04",
+        "unit": "V",
+        "display_text": "T1 r",
+        "confidence": 0.85
+      },
+      "text_regions": [],
+      "excluded_symbols": [],
+      "ambiguity_notes": "",
+      "status": "not_started"
+    },
+    {
+      "selection_id": 63,
+      "split": "train",
+      "image": "611.png",
+      "source_ground_truth": {
+        "value": "0.000",
+        "unit": "kW",
+        "display_text": "T1 P",
+        "confidence": 0.85
+      },
+      "text_regions": [],
+      "excluded_symbols": [],
+      "ambiguity_notes": "",
+      "status": "not_started"
+    },
+    {
+      "selection_id": 64,
+      "split": "train",
+      "image": "627.png",
+      "source_ground_truth": {
+        "value": "49.984",
+        "unit": "Hz",
+        "display_text": "L1 L2 T1 F",
+        "confidence": 0.85
+      },
+      "text_regions": [],
+      "excluded_symbols": [],
+      "ambiguity_notes": "",
+      "status": "not_started"
+    },
+    {
+      "selection_id": 65,
+      "split": "train",
+      "image": "643.png",
+      "source_ground_truth": {
+        "value": "0.800",
+        "unit": "",
+        "display_text": "PF L2 T1 B1 AVG",
+        "confidence": 0.75
+      },
+      "text_regions": [],
+      "excluded_symbols": [],
+      "ambiguity_notes": "",
+      "status": "not_started"
+    },
+    {
+      "selection_id": 66,
+      "split": "train",
+      "image": "657.png",
+      "source_ground_truth": {
+        "value": "0000000.7",
+        "unit": "kWh",
+        "display_text": "L1 L2 T1 CUM",
+        "confidence": 0.8
+      },
+      "text_regions": [],
+      "excluded_symbols": [],
+      "ambiguity_notes": "",
+      "status": "not_started"
+    },
+    {
+      "selection_id": 67,
+      "split": "train",
+      "image": "658.png",
+      "source_ground_truth": {
+        "value": "0000000.7",
+        "unit": "kWh",
+        "display_text": "L1 L2 T1 t1",
+        "confidence": 0.8
+      },
+      "text_regions": [],
+      "excluded_symbols": [],
+      "ambiguity_notes": "",
+      "status": "not_started"
+    },
+    {
+      "selection_id": 68,
+      "split": "train",
+      "image": "663.png",
+      "source_ground_truth": {
+        "value": "0000000.0",
+        "unit": "kVAh",
+        "display_text": "L1 T1 t3",
+        "confidence": 0.8
+      },
+      "text_regions": [],
+      "excluded_symbols": [],
+      "ambiguity_notes": "",
+      "status": "not_started"
+    },
+    {
+      "selection_id": 69,
+      "split": "train",
+      "image": "671.png",
+      "source_ground_truth": {
+        "value": "192.51",
+        "unit": "V",
+        "display_text": "L1 L2 T1 r",
+        "confidence": 0.85
+      },
+      "text_regions": [],
+      "excluded_symbols": [],
+      "ambiguity_notes": "",
+      "status": "not_started"
+    },
+    {
+      "selection_id": 70,
+      "split": "train",
+      "image": "676.png",
+      "source_ground_truth": {
+        "value": "0.119",
+        "unit": "A",
+        "display_text": "L1 L2 T1 b",
+        "confidence": 0.85
+      },
+      "text_regions": [],
+      "excluded_symbols": [],
+      "ambiguity_notes": "",
+      "status": "not_started"
+    },
+    {
+      "selection_id": 71,
+      "split": "validation",
+      "image": "62.png",
+      "source_ground_truth": {
+        "value": "000.01",
+        "unit": "A",
+        "display_text": "In T4",
+        "confidence": 0.95
+      },
+      "text_regions": [],
+      "excluded_symbols": [],
+      "ambiguity_notes": "",
+      "status": "not_started"
+    },
+    {
+      "selection_id": 72,
+      "split": "validation",
+      "image": "88.png",
+      "source_ground_truth": {
+        "value": "09:15:00",
+        "unit": "kW",
+        "display_text": "t IP B1 MD",
+        "confidence": 0.75
+      },
+      "text_regions": [],
+      "excluded_symbols": [],
+      "ambiguity_notes": "",
+      "status": "not_started"
+    },
+    {
+      "selection_id": 73,
+      "split": "validation",
+      "image": "100.png",
+      "source_ground_truth": {
+        "value": "28:06:26",
+        "unit": "kVA",
+        "display_text": "d IP B1 MD",
+        "confidence": 0.85
+      },
+      "text_regions": [],
+      "excluded_symbols": [],
+      "ambiguity_notes": "",
+      "status": "not_started"
+    },
+    {
+      "selection_id": 74,
+      "split": "validation",
+      "image": "239.png",
+      "source_ground_truth": {
+        "value": "00:00:00",
+        "unit": "",
+        "display_text": "t lr",
+        "confidence": 0.85
+      },
+      "text_regions": [],
+      "excluded_symbols": [],
+      "ambiguity_notes": "",
+      "status": "not_started"
+    },
+    {
+      "selection_id": 75,
+      "split": "validation",
+      "image": "273.png",
+      "source_ground_truth": {
+        "value": "00:00:00",
+        "unit": "",
+        "display_text": "d BAL",
+        "confidence": 0.85
+      },
+      "text_regions": [],
+      "excluded_symbols": [],
+      "ambiguity_notes": "",
+      "status": "not_started"
+    },
+    {
+      "selection_id": 76,
+      "split": "validation",
+      "image": "325.png",
+      "source_ground_truth": {
+        "value": "04:07:26",
+        "unit": "",
+        "display_text": "d",
+        "confidence": 0.9
+      },
+      "text_regions": [],
+      "excluded_symbols": [],
+      "ambiguity_notes": "",
+      "status": "not_started"
+    },
+    {
+      "selection_id": 77,
+      "split": "validation",
+      "image": "412.png",
+      "source_ground_truth": {
+        "value": "18:50:17",
+        "unit": "",
+        "display_text": "t",
+        "confidence": 0.9
+      },
+      "text_regions": [],
+      "excluded_symbols": [],
+      "ambiguity_notes": "",
+      "status": "not_started"
+    },
+    {
+      "selection_id": 78,
+      "split": "validation",
+      "image": "488.png",
+      "source_ground_truth": {
+        "value": "0.916",
+        "unit": "",
+        "display_text": "PF L1 L2 T1 AVG",
+        "confidence": 0.85
+      },
+      "text_regions": [],
+      "excluded_symbols": [],
+      "ambiguity_notes": "",
+      "status": "not_started"
+    },
+    {
+      "selection_id": 79,
+      "split": "validation",
+      "image": "610.png",
+      "source_ground_truth": {
+        "value": "0.000",
+        "unit": "A",
+        "display_text": "T1 NEU",
+        "confidence": 0.85
+      },
+      "text_regions": [],
+      "excluded_symbols": [],
+      "ambiguity_notes": "",
+      "status": "not_started"
+    },
+    {
+      "selection_id": 80,
+      "split": "validation",
+      "image": "624.png",
+      "source_ground_truth": {
+        "value": "1.000",
+        "unit": "",
+        "display_text": "L1 L2 T1 PF B",
+        "confidence": 0.85
+      },
+      "text_regions": [],
+      "excluded_symbols": [],
+      "ambiguity_notes": "",
+      "status": "not_started"
+    },
+    {
+      "selection_id": 81,
+      "split": "test",
+      "image": "26.png",
+      "source_ground_truth": {
+        "value": "888888.8",
+        "unit": "kWArh",
+        "display_text": "EP T8 BAL8",
+        "confidence": 0.55
+      },
+      "text_regions": [],
+      "excluded_symbols": [],
+      "ambiguity_notes": "",
+      "status": "not_started"
+    },
+    {
+      "selection_id": 82,
+      "split": "test",
+      "image": "65.png",
+      "source_ground_truth": {
+        "value": "",
+        "unit": "",
+        "display_text": "Pr mode F",
+        "confidence": 0.55
+      },
+      "text_regions": [],
+      "excluded_symbols": [],
+      "ambiguity_notes": "",
+      "status": "not_started"
+    },
+    {
+      "selection_id": 83,
+      "split": "test",
+      "image": "107.png",
+      "source_ground_truth": {
+        "value": "",
+        "unit": "",
+        "display_text": "C_OPEN",
+        "confidence": 0.85
+      },
+      "text_regions": [],
+      "excluded_symbols": [],
+      "ambiguity_notes": "",
+      "status": "not_started"
+    },
+    {
+      "selection_id": 84,
+      "split": "test",
+      "image": "196.png",
+      "source_ground_truth": {
+        "value": "000034",
+        "unit": "kVAh",
+        "display_text": "IP B1",
+        "confidence": 0.9
+      },
+      "text_regions": [],
+      "excluded_symbols": [],
+      "ambiguity_notes": "",
+      "status": "not_started"
+    },
+    {
+      "selection_id": 85,
+      "split": "test",
+      "image": "260.png",
+      "source_ground_truth": {
+        "value": "",
+        "unit": "",
+        "display_text": "Pr mode n",
+        "confidence": 0.65
+      },
+      "text_regions": [],
+      "excluded_symbols": [],
+      "ambiguity_notes": "",
+      "status": "not_started"
+    },
+    {
+      "selection_id": 86,
+      "split": "test",
+      "image": "334.png",
+      "source_ground_truth": {
+        "value": "",
+        "unit": "",
+        "display_text": "AutO",
+        "confidence": 0.8
+      },
+      "text_regions": [],
+      "excluded_symbols": [],
+      "ambiguity_notes": "",
+      "status": "not_started"
+    },
+    {
+      "selection_id": 87,
+      "split": "test",
+      "image": "426.png",
+      "source_ground_truth": {
+        "value": "000004",
+        "unit": "kWh",
+        "display_text": "EP T1",
+        "confidence": 0.85
+      },
+      "text_regions": [],
+      "excluded_symbols": [],
+      "ambiguity_notes": "",
+      "status": "not_started"
+    },
+    {
+      "selection_id": 88,
+      "split": "test",
+      "image": "479.png",
+      "source_ground_truth": {
+        "value": "0000000.6",
+        "unit": "kWh",
+        "display_text": "L1 L2 T1 b1 CUM",
+        "confidence": 0.75
+      },
+      "text_regions": [],
+      "excluded_symbols": [],
+      "ambiguity_notes": "",
+      "status": "not_started"
+    },
+    {
+      "selection_id": 89,
+      "split": "test",
+      "image": "553.png",
+      "source_ground_truth": {
+        "value": "",
+        "unit": "",
+        "display_text": "AutO L1 L2 T1 FOR",
+        "confidence": 0.8
+      },
+      "text_regions": [],
+      "excluded_symbols": [],
+      "ambiguity_notes": "",
+      "status": "not_started"
+    },
+    {
+      "selection_id": 90,
+      "split": "test",
+      "image": "654.png",
+      "source_ground_truth": {
+        "value": "",
+        "unit": "",
+        "display_text": "AutO L1 L2  T1 FOR",
+        "confidence": 0.8
+      },
+      "text_regions": [],
+      "excluded_symbols": [],
+      "ambiguity_notes": "",
+      "status": "not_started"
+    }
+  ]
+}
