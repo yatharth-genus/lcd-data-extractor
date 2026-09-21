@@ -1,0 +1,52 @@
+﻿PaddleOCR LCD Model Metrics
+Updated: 21 September 2026
+
+Recognition model
+Run: rec_lcd_v2_finetuned
+Architecture: English PP-OCRv3 recognition
+Training images: 60
+Validation images: 10
+Epochs completed: 50
+Best epoch: 45
+Exact validation accuracy: 0.8749997265625854
+Normalized edit distance: 0.9418402959526853
+Validation FPS: 0.4514875830857429
+Selected checkpoint: best_accuracy
+
+Detector baseline
+Run: det_lcd_v1_60
+Initialization: MobileNetV3 ImageNet backbone
+Training images: 60
+Validation images: 10
+Epochs completed: 50
+Best epoch: 33
+Precision: 0.5555555555555556
+Recall: 0.39473684210526316
+Hmean: 0.46153846153846156
+Validation FPS: 0.24734973737458457
+Selected checkpoint: best_accuracy
+
+Expanded detector
+Run: det_lcd_v2_expanded_240
+Initialization: Fully trained PP-OCRv3 student detector
+Training images: 240
+Validation images: 28
+Epochs completed: 50
+Best epoch: 15
+Precision: 0.6503496503496503
+Recall: 0.7265625
+Hmean: 0.6863468634686346
+Validation FPS: 0.6062845692150092
+Selected checkpoint: best_accuracy
+
+Integration decisions
+1. Convert the PaddleOCR detector and recognizer to ONNX and OpenVINO.
+2. Integrate OCR alongside the existing icon-detection model.
+3. Suppress OCR regions that substantially overlap trusted icon detections.
+4. Preserve raw, accepted, and suppressed results during development.
+5. Use recognition confidence and domain-format validation for ambiguous regions.
+6. Keep the original test split untouched until the complete pipeline is frozen.
+
+Known annotation issue
+Recognizer testing revealed incorrect ground truths, including Pu5h and KVA h.
+The recognition annotations require an audit before expanded retraining.

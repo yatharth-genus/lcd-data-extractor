@@ -21,3 +21,39 @@ tracked_files.txt
 tracked_files_updated.txt
 "@ | Set-Content -Encoding UTF8 .gitignoretools/
 tools/
+
+
+
+* Training outputs and checkpoints
+*utput/
+models*
+pretrain_models/
+*.pdparams
+*.pdo*t
+*.states
+*.pdiparams
+*.pdmodel
+
+* Deployment artifacts deployment/
+*.*nnx
+*.bin
+*.xml
+
+# Generated repor*s and temporary model testing
+mode*_test/
+grayscale_datasets/
+
+# Temporary and backup files
+*.backup**.bak
+*.tmp
+*~
+***Label_before_boundary_fix_*.txt
+*_***ore***py
+
+# Logs
+*.log console.txt
+*_infere=ence***w.txt
+
+# Office temporary files
+***.docx
+~$*.xlsx
