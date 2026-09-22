@@ -1,0 +1,10 @@
+{
+  "random_seed": 20260921,
+  "validation_fraction": 0.15,
+  "test_split": "pilot_90/test remains sealed and was not compiled",
+  "source_image_count": 646,
+  "train_image_count": 549,
+  "validation_image_count": 97,
+  "train_crop_count": 2372,
+  "validation_crop_count": 374
+}

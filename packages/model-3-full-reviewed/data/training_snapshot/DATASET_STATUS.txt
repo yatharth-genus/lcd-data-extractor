@@ -1,0 +1,24 @@
+﻿Model 3 training dataset snapshot
+
+Source dataset:
+D:\Actual Project\lcd-data-extractor\dataset_final
+
+Purpose:
+This is the dataset used by the currently running Model 3 detector and
+recognizer training jobs.
+
+Important ground-truth note:
+Additional annotation errors were discovered and corrected in the
+authoritative source annotation folders on September 22, 2026.
+
+The active dataset_final folder was not modified after training started.
+
+Therefore, the current Model 3 training runs use the pre-correction compiled
+dataset.
+
+The corrected annotations will be compiled separately under:
+
+data/corrected_dataset
+
+The training snapshot and corrected submission dataset must not be described
+as identical.
