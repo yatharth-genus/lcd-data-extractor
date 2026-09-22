@@ -1,0 +1,30 @@
+﻿Model 1 checkpoint provenance
+
+Package:
+model-1-pilot-mobilenet
+
+Detector:
+Run name: det_lcd_v1_60
+Initialization: ImageNet-pretrained MobileNetV3 backbone
+Training images: 60
+Validation images: 10
+Selected checkpoint: best_accuracy
+Best epoch: 33
+Precision: 0.5555555555555556
+Recall: 0.39473684210526316
+Hmean: 0.46153846153846156
+
+Recognizer:
+Run name: rec_lcd_v2_finetuned
+Initialization: official English PP-OCRv3 recognition checkpoint
+Training source: recognition crops from 60 pilot training images
+Validation source: recognition crops from 10 pilot validation images
+Selected checkpoint: best_accuracy
+Best epoch: 45
+Exact validation accuracy: 0.8749997266
+Normalized edit similarity: 0.9418402960
+
+Historical end-to-end evaluation:
+Not performed.
+
+The recognizer was later reused with the Model 2 expanded detector.

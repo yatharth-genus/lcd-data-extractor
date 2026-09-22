@@ -1,0 +1,14 @@
+﻿{
+  "run": "det_lcd_v1_60",
+  "evaluation_type": "standalone_detector_validation",
+  "training_images": 60,
+  "validation_images": 10,
+  "initialization": "ImageNet-pretrained MobileNetV3 backbone",
+  "epochs_completed": 50,
+  "best_epoch": 33,
+  "precision": 0.5555555555555556,
+  "recall": 0.39473684210526316,
+  "hmean": 0.46153846153846156,
+  "validation_fps": 0.24734973737458457,
+  "selected_checkpoint": "best_accuracy"
+}

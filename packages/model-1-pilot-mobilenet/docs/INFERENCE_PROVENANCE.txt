@@ -1,0 +1,27 @@
+﻿Model 1 inference export provenance
+
+Package:
+model-1-pilot-mobilenet
+
+Detector:
+Run: det_lcd_v1_60
+Training checkpoint: models/detector/training/best_accuracy
+Export configuration: config/detector_original.yml
+Inference output: models/detector/inference
+
+Recognizer:
+Run: rec_lcd_v2_finetuned
+Training checkpoint: models/recognizer/training/best_accuracy
+Export configuration: config/recognizer_original.yml
+Inference output: models/recognizer/inference
+Character dictionary: models/recognizer/character_dict.txt
+
+Export framework:
+PaddleOCR release/2.8
+PaddlePaddle 2.6.2
+
+Historical end-to-end evaluation:
+Not performed.
+
+The inference models are provided for standalone testing and future
+retrospective end-to-end testing.
