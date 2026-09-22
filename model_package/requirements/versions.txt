@@ -1,0 +1,6 @@
+Python: 3.10
+PaddlePaddle: 2.6.2
+PaddleOCR package: 2.8.1
+PaddleOCR source: release/2.8
+Operating system used for training: Windows
+Training device: CPU

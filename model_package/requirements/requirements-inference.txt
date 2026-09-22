@@ -1,0 +1,8 @@
+paddlepaddle==2.6.2
+paddleocr==2.8.1
+PyYAML
+Pillow
+opencv-python
+shapely
+pyclipper
+openpyxl

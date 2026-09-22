@@ -1,0 +1,10 @@
+D:\Actual Project\lcd-data-extractor\pilot_90\validation\images\62.png	1
+D:\Actual Project\lcd-data-extractor\pilot_90\validation\images\88.png	1
+D:\Actual Project\lcd-data-extractor\pilot_90\validation\images\100.png	1
+D:\Actual Project\lcd-data-extractor\pilot_90\validation\images\239.png	1
+D:\Actual Project\lcd-data-extractor\pilot_90\validation\images\273.png	1
+D:\Actual Project\lcd-data-extractor\pilot_90\validation\images\325.png	1
+D:\Actual Project\lcd-data-extractor\pilot_90\validation\images\412.png	1
+D:\Actual Project\lcd-data-extractor\pilot_90\validation\images\488.png	1
+D:\Actual Project\lcd-data-extractor\pilot_90\validation\images\610.png	1
+D:\Actual Project\lcd-data-extractor\pilot_90\validation\images\624.png	1

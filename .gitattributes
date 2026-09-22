@@ -1,0 +1,12 @@
+model_package/**/*.png filter=lfs diff=lfs merge=lfs -text
+model_package/**/*.jpg filter=lfs diff=lfs merge=lfs -text
+model_package/**/*.jpeg filter=lfs diff=lfs merge=lfs -text
+model_package/**/*.bmp filter=lfs diff=lfs merge=lfs -text
+model_package/**/*.pdparams filter=lfs diff=lfs merge=lfs -text
+model_package/**/*.pdiparams filter=lfs diff=lfs merge=lfs -text
+model_package/**/*.pdmodel filter=lfs diff=lfs merge=lfs -text
+model_package/**/*.onnx filter=lfs diff=lfs merge=lfs -text
+model_package/**/*.bin filter=lfs diff=lfs merge=lfs -text
+model_package/**/*.xml filter=lfs diff=lfs merge=lfs -text
+model_package/**/*.docx filter=lfs diff=lfs merge=lfs -text
+model_package/**/*.xlsx filter=lfs diff=lfs merge=lfs -text

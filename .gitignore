@@ -1,0 +1,38 @@
+# Virtual environments
+paddle_train_env/
+annotation_legacy_env/
+paddle_legacy_env/
+paddle_conversion_env/
+.venv/
+venv/
+
+# Python cache
+__pycache__/
+.pytest_cache/
+*.pyc
+*.pyo
+
+# Temporary training artifacts
+latest.pdparams
+latest.pdopt
+latest.states
+iter_epoch_*.pdparams
+iter_epoch_*.pdopt
+iter_epoch_*.states
+
+# Runtime logs and temporary files
+*.log
+*_console.txt
+*_inference_raw.txt
+*.tmp
+*.bak
+*.backup
+
+# Annotation backups
+Label_before_boundary_fix_*.txt
+Label_before_final_boundary_fix_*.txt
+Label_before_gt_review_*.txt
+
+# Office temporary files
+~$*.docx
+~$*.xlsx
