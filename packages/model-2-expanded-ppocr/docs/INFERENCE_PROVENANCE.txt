@@ -1,0 +1,26 @@
+﻿Model 2 inference export provenance
+
+Package:
+model-2-expanded-ppocr
+
+Detector:
+Run: det_lcd_v2_expanded_240
+Training checkpoint: models/detector/training/best_accuracy
+Export configuration: config/detector_original.yml
+Inference output: models/detector/inference
+
+Recognizer:
+Run: rec_lcd_v2_finetuned
+Source package: model-1-pilot-mobilenet
+Training checkpoint: models/recognizer/training/best_accuracy
+Inference output: models/recognizer/inference
+Character dictionary: models/recognizer/character_dict.txt
+
+The recognizer checkpoint and inference model are identical to Model 1.
+
+Export framework:
+PaddleOCR release/2.8
+PaddlePaddle 2.6.2
+
+Historical end-to-end evaluation:
+Not performed.

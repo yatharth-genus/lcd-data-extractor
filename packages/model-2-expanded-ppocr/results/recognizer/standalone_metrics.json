@@ -1,0 +1,13 @@
+﻿{
+  "run": "rec_lcd_v2_finetuned",
+  "evaluation_type": "standalone_recognizer_validation",
+  "parent_training_images": 60,
+  "parent_validation_images": 10,
+  "initialization": "Official English PP-OCRv3 recognition checkpoint",
+  "epochs_completed": 50,
+  "best_epoch": 45,
+  "exact_validation_accuracy": 0.8749997265625854,
+  "normalized_edit_similarity": 0.9418402959526853,
+  "validation_fps": 0.4514875830857429,
+  "selected_checkpoint": "best_accuracy"
+}

@@ -1,0 +1,14 @@
+﻿{
+  "run": "det_lcd_v2_expanded_240",
+  "evaluation_type": "standalone_detector_validation",
+  "training_images": 240,
+  "validation_images": 28,
+  "initialization": "Fully trained PP-OCRv3 student detector",
+  "epochs_completed": 50,
+  "best_epoch": 15,
+  "precision": 0.6503496503496503,
+  "recall": 0.7265625,
+  "hmean": 0.6863468634686346,
+  "validation_fps": 0.6062845692150092,
+  "selected_checkpoint": "best_accuracy"
+}

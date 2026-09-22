@@ -1,0 +1,62 @@
+﻿Model 2 package freeze record
+
+Freeze date:
+2026-09-22 17:02:15
+
+Package:
+model-2-expanded-ppocr
+
+Package status:
+Complete and validated
+
+Detector:
+det_lcd_v2_expanded_240
+
+Detector checkpoint:
+best_accuracy
+
+Detector inference export:
+Validated
+
+Detector data:
+240 training images
+28 validation images
+
+Recognizer:
+rec_lcd_v2_finetuned
+
+Recognizer status:
+Reused unchanged from Model 1
+
+Recognizer checkpoint identity:
+Verified by SHA256
+
+Recognizer inference identity:
+Verified by SHA256
+
+Recognizer data:
+281 training crops
+44 validation crops
+
+Standalone detector smoke test:
+Passed
+
+Standalone recognizer smoke test:
+Passed
+
+Retrospective detector evaluation:
+Completed on all 28 validation images
+
+Retrospective recognizer evaluation:
+Completed on all 44 validation crops
+
+Retrospective end-to-end evaluation:
+Completed on all 28 validation images
+
+Historical end-to-end evaluation:
+Not performed
+
+Aggregate end-to-end accuracy:
+Not manually scored
+
+Package modifications after this freeze should be documented explicitly.
