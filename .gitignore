@@ -1,0 +1,45 @@
+﻿# Local staging packages
+packages/
+
+# Git worktrees
+git-worktrees/
+
+# Python environments
+.venv/
+venv/
+env/
+paddle_train_env/
+annotation_legacy_env/
+
+# Python cache
+__pycache__/
+.pytest_cache/
+*.pyc
+*.pyo
+
+# Temporary training files
+latest.pdparams
+latest.pdopt
+latest.states
+iter_epoch_*.pdparams
+iter_epoch_*.pdopt
+iter_epoch_*.states
+
+# Runtime logs
+*.log
+*_console.txt
+*_inference_raw.txt
+
+# Annotation backups
+Label_before_boundary_fix_*.txt
+Label_before_final_boundary_fix_*.txt
+Label_before_gt_review_*.txt
+
+# Microsoft Office temporary files
+~$*.docx
+~$*.xlsx
+
+# Miscellaneous temporary files
+*.tmp
+*.bak
+*.backup

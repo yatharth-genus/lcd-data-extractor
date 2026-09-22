@@ -1,0 +1,15 @@
+packages/**/*.png filter=lfs diff=lfs merge=lfs -text
+packages/**/*.jpg filter=lfs diff=lfs merge=lfs -text
+packages/**/*.jpeg filter=lfs diff=lfs merge=lfs -text
+packages/**/*.bmp filter=lfs diff=lfs merge=lfs -text
+packages/**/*.tif filter=lfs diff=lfs merge=lfs -text
+packages/**/*.tiff filter=lfs diff=lfs merge=lfs -text
+packages/**/*.webp filter=lfs diff=lfs merge=lfs -text
+packages/**/*.pdparams filter=lfs diff=lfs merge=lfs -text
+packages/**/*.pdiparams filter=lfs diff=lfs merge=lfs -text
+packages/**/*.pdmodel filter=lfs diff=lfs merge=lfs -text
+packages/**/*.onnx filter=lfs diff=lfs merge=lfs -text
+packages/**/*.bin filter=lfs diff=lfs merge=lfs -text
+packages/**/*.xml filter=lfs diff=lfs merge=lfs -text
+packages/**/*.docx filter=lfs diff=lfs merge=lfs -text
+packages/**/*.xlsx filter=lfs diff=lfs merge=lfs -text
