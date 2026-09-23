@@ -1,0 +1,18 @@
+﻿{
+  "run": "det_lcd_v3_full_reviewed",
+  "evaluation_type": "training_snapshot_detector_validation",
+  "training_dataset": "pre-correction dataset_final",
+  "ground_truth_corrections_discovered_after_training_started": true,
+  "selected_checkpoint": "best_accuracy",
+  "epochs_scheduled": 25,
+  "best_epoch": 11,
+  "precision": 0.42905405405405406,
+  "recall": 0.6846361185983828,
+  "hmean": 0.5275181723779855,
+  "validation_fps": 0.3939764372369134,
+  "comparison_with_model_2": {
+    "model_2_hmean": 0.6863468634686346,
+    "model_3_hmean": 0.5275181723779855,
+    "model_3_improved_over_model_2": false
+  }
+}

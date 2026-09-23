@@ -1,0 +1,22 @@
+﻿Model 1 environment versions
+
+Python:
+3.10
+
+PaddlePaddle:
+2.6.2
+
+PaddleOCR package:
+2.8.1
+
+PaddleOCR source:
+release/2.8
+
+Operating system used during development:
+Windows
+
+Training device:
+CPU
+
+Windows DataLoader workers:
+0

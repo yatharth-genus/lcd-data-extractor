@@ -1,0 +1,59 @@
+﻿model_id: model-3-full-reviewed
+package_status: trained_pending_evaluation
+
+detector:
+  run: det_lcd_v3_full_reviewed
+  initialization: fully trained PP-OCRv3 student detector
+  epochs_scheduled: 25
+  selected_checkpoint: best_accuracy
+  best_epoch: 11
+  precision: 0.42905405405405406
+  recall: 0.6846361185983828
+  hmean: 0.5275181723779855
+  validation_fps: 0.3939764372369134
+  improved_over_model_2: false
+
+recognizer:
+  run: rec_lcd_v3_full_reviewed
+  initialization: official English PP-OCRv3 recognition checkpoint
+  epochs_completed: 10
+  selected_checkpoint: best_accuracy
+  best_epoch: 10
+  exact_validation_accuracy: 0.940217365754963
+  normalized_edit_similarity: 0.9728260876949433
+  validation_fps: 1.2464433991706503
+  improved_over_previous_recognizer: true
+
+datasets:
+  training_snapshot:
+    source: D:/Actual Project/lcd-data-extractor/dataset_final
+    ground_truth_state: pre_correction
+    used_for_current_training: true
+
+  corrected_submission:
+    path: data/corrected_dataset
+    correction_date: 2026-09-22
+    used_for_current_training: false
+    intended_use: corrected_evaluation_and_future_retraining
+
+recommended_combined_system:
+  detector: model_2_expanded_ppocr_detector
+  recognizer: model_3_full_reviewed_recognizer
+  status: pending_retrospective_evaluation
+
+end_to_end:
+  status: pending
+
+corrected_evaluation:
+  detector:
+    precision: 0.42905405405405406
+    recall: 0.6846361185983828
+    hmean: 0.5275181723779855
+    fps: 0.6936077281342832
+    changed_from_training_snapshot: false
+
+  recognizer:
+    exact_accuracy: 0.940217365754963
+    normalized_edit_similarity: 0.9728260876949433
+    fps: 4.224947567669982
+    changed_from_training_snapshot: false

@@ -1,0 +1,13 @@
+﻿{
+  "run": "det_lcd_v3_full_reviewed",
+  "evaluation_type": "corrected_detector_validation",
+  "checkpoint": "best_accuracy",
+  "trained_on": "pre-correction dataset_final",
+  "evaluated_on": "data/corrected_dataset/detector/validation",
+  "precision": 0.42905405405405406,
+  "recall": 0.6846361185983828,
+  "hmean": 0.5275181723779855,
+  "evaluation_fps": 0.6936077281342832,
+  "quality_metrics_changed_from_training_snapshot": false,
+  "ground_truth_correction_date": "2026-09-22"
+}

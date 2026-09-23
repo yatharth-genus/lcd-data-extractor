@@ -1,0 +1,61 @@
+﻿Model 3 inference export provenance
+
+Package:
+model-3-full-reviewed
+
+Detector:
+Run: det_lcd_v3_full_reviewed
+Selected checkpoint: best_accuracy
+Best epoch: 11
+Training configuration: config/detector_training_snapshot.yml
+Inference output: models/detector/inference
+
+Detector validation metrics:
+Precision: 0.42905405405405406
+Recall: 0.6846361185983828
+Hmean: 0.5275181723779855
+
+Recognizer:
+Run: rec_lcd_v3_full_reviewed
+Selected checkpoint: best_accuracy
+Best epoch: 10
+Training configuration: config/recognizer_training_snapshot.yml
+Inference output: models/recognizer/inference
+Character dictionary: models/recognizer/character_dict.txt
+
+Recognizer corrected validation metrics:
+Exact accuracy: 0.940217365754963
+Normalized edit similarity: 0.9728260876949433
+
+Export environment:
+PaddleOCR release/2.8
+PaddlePaddle 2.6.2
+Python 3.10
+Device: CPU
+Operating system: Windows
+
+Training dataset:
+The packaged checkpoints were trained using the pre-correction dataset_final
+snapshot.
+
+Ground-truth correction status:
+Additional ground-truth corrections were applied to the authoritative source
+annotations on September 22, 2026.
+
+Corrected dataset:
+data/corrected_dataset
+
+Important:
+The corrected dataset was used for corrected evaluation and submission
+packaging. The packaged checkpoints must not be described as having been
+trained on the corrected dataset.
+
+Native Model 3 end-to-end evaluation:
+Completed retrospectively on the corrected validation images.
+
+Recommended hybrid candidate:
+Model 2 detector, det_lcd_v2_expanded_240
+Model 3 recognizer, rec_lcd_v3_full_reviewed
+
+The hybrid system is a separate retrospective pipeline and was not jointly
+trained.

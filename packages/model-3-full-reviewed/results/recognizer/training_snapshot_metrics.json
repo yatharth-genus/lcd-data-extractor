@@ -1,0 +1,17 @@
+﻿{
+  "run": "rec_lcd_v3_full_reviewed",
+  "evaluation_type": "training_snapshot_recognizer_validation",
+  "training_dataset": "pre-correction dataset_final",
+  "ground_truth_corrections_discovered_after_training_started": true,
+  "selected_checkpoint": "best_accuracy",
+  "epochs_completed": 10,
+  "best_epoch": 10,
+  "exact_validation_accuracy": 0.940217365754963,
+  "normalized_edit_similarity": 0.9728260876949433,
+  "validation_fps": 1.2464433991706503,
+  "comparison_with_previous_recognizer": {
+    "previous_accuracy": 0.8749997265625854,
+    "model_3_accuracy": 0.940217365754963,
+    "model_3_improved": true
+  }
+}

@@ -1,0 +1,12 @@
+﻿{
+  "run": "rec_lcd_v3_full_reviewed",
+  "evaluation_type": "corrected_recognizer_validation",
+  "checkpoint": "best_accuracy",
+  "trained_on": "pre-correction dataset_final",
+  "evaluated_on": "data/corrected_dataset/recognizer/validation",
+  "exact_accuracy": 0.940217365754963,
+  "normalized_edit_similarity": 0.9728260876949433,
+  "evaluation_fps": 4.224947567669982,
+  "quality_metrics_changed_from_training_snapshot": false,
+  "ground_truth_correction_date": "2026-09-22"
+}

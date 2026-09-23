@@ -1,0 +1,47 @@
+﻿Model 3 checkpoint provenance
+
+Package:
+model-3-full-reviewed
+
+Training dataset:
+D:\Actual Project\lcd-data-extractor\dataset_final
+
+Training dataset status:
+Compiled before additional ground-truth corrections discovered on
+September 22, 2026.
+
+Corrected submission dataset:
+data/corrected_dataset
+
+Detector:
+Run: det_lcd_v3_full_reviewed
+Initialization: fully trained PP-OCRv3 student detector
+Scheduled epochs: 25
+Selected checkpoint: best_accuracy
+Best epoch: 11
+Precision: 0.42905405405405406
+Recall: 0.6846361185983828
+Hmean: 0.5275181723779855
+Validation FPS: 0.3939764372369134
+
+Detector interpretation:
+The final Model 3 detector underperformed Model 2.
+Model 2 remains the stronger detector according to standalone validation
+Hmean.
+
+Recognizer:
+Run: rec_lcd_v3_full_reviewed
+Initialization: official English PP-OCRv3 recognition checkpoint
+Epochs completed: 10
+Selected checkpoint: best_accuracy
+Best epoch: 10
+Exact validation accuracy: 0.940217365754963
+Normalized edit similarity: 0.9728260876949433
+Validation FPS: 1.2464433991706503
+
+Recognizer interpretation:
+The Model 3 recognizer improved substantially over the previous recognizer.
+
+Ground-truth warning:
+Both selected checkpoints were trained using the pre-correction compiled
+dataset. They must not be described as trained on data/corrected_dataset.
