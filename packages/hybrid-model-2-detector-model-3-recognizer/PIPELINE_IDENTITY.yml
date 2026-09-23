@@ -1,0 +1,28 @@
+﻿pipeline_id: hybrid-model-2-detector-model-3-recognizer
+pipeline_status: retrospectively_evaluated
+evaluation_date: "2026-09-23 10:07:07"
+
+detector:
+  package: model-2-expanded-ppocr
+  run: det_lcd_v2_expanded_240
+  checkpoint: best_accuracy
+  hmean: 0.6863468634686346
+
+recognizer:
+  package: model-3-full-reviewed
+  run: rec_lcd_v3_full_reviewed
+  checkpoint: best_accuracy
+  corrected_validation_accuracy: 0.940217365754963
+  corrected_normalized_edit_similarity: 0.9728260876949433
+
+evaluation:
+  corrected_validation_images: 97
+  rendered_image_files: 0
+  rendered_folder_files: 98
+  detector_generated_crops: 393
+  aggregate_end_to_end_accuracy: not_manually_scored
+
+historical_status:
+  trained_jointly: false
+  original_training_pipeline: false
+  evaluation_type: retrospective

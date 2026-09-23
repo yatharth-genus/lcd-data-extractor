@@ -1,0 +1,52 @@
+﻿Hybrid pipeline package freeze record
+
+Freeze date:
+2026-09-23 10:53:58
+
+Package:
+hybrid-model-2-detector-model-3-recognizer
+
+Detector:
+det_lcd_v2_expanded_240
+
+Detector source:
+model-2-expanded-ppocr
+
+Detector Hmean:
+0.6863468634686346
+
+Recognizer:
+rec_lcd_v3_full_reviewed
+
+Recognizer source:
+model-3-full-reviewed
+
+Recognizer corrected validation accuracy:
+0.940217365754963
+
+Corrected validation images:
+97
+
+Detector-generated crops:
+393
+
+Package validation:
+Passed
+
+Smoke test:
+Passed
+
+Visualization font:
+C:\Windows\Fonts\arial.ttf
+
+Pipeline status:
+Leading retrospective deployment candidate
+
+Historical status:
+The detector and recognizer were trained separately.
+The hybrid was not jointly trained.
+
+Aggregate end-to-end accuracy:
+Not manually scored
+
+Package modifications after this freeze must be documented.
