@@ -1,0 +1,14 @@
+{
+  "mode": "icon_regions_masked_before_ocr",
+  "source_images": 97,
+  "masked_images": 97,
+  "icon_regions_hidden": 320,
+  "mask_padding_pixels": 2,
+  "mask_fill_value": 0,
+  "ocr_exit_code": 0,
+  "ocr_visual_result_images": 97,
+  "masked_images_folder": "D:\\Actual Project\\Indali_Lcd-Data-Extractor\\shared\\hybrid-with-icon-masking\\masked_images",
+  "ocr_visual_results_folder": "D:\\Actual Project\\Indali_Lcd-Data-Extractor\\shared\\hybrid-with-icon-masking\\ocr_visual_results",
+  "ocr_results_file": "D:\\Actual Project\\Indali_Lcd-Data-Extractor\\shared\\hybrid-with-icon-masking\\ocr_visual_results\\system_results.txt",
+  "ocr_console_log": "D:\\Actual Project\\Indali_Lcd-Data-Extractor\\shared\\hybrid-with-icon-masking\\reports\\ocr_console.txt"
+}

@@ -1,0 +1,28 @@
+﻿pipeline_id: hybrid-with-icon-masking
+pipeline_status: visually_verified_functional_baseline
+pipeline_type: pre_ocr_icon_masking
+ocr_detector:
+  package: model-2-expanded-ppocr
+  run: det_lcd_v2_expanded_240
+ocr_recognizer:
+  package: model-3-full-reviewed
+  run: rec_lcd_v3_full_reviewed
+icon_detector:
+  source: existing_company_openvino_model
+  bundled_in_this_branch: false
+masking:
+  fill_value: 0
+  padding_pixels: 2
+  icon_threshold: 0.38
+evaluation:
+  images: 97
+  unmasked_precision: 0.5115384615384615
+  unmasked_recall: 0.7169811320754716
+  unmasked_hmean: 0.5970819304152638
+  masked_precision: 0.4649910233393178
+  masked_recall: 0.6981132075471698
+  masked_hmean: 0.5581896551724138
+  visual_icon_ocr_outputs_removed: true
+decision:
+  retained_as_functional_baseline: true
+  standalone_detector_metrics_improved: false

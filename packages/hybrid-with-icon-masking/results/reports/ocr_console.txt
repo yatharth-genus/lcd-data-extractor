@@ -1,0 +1,701 @@
+[2026/09/23 15:21:43] ppocr INFO: In PP-OCRv3, rec_image_shape parameter defaults to '3, 48, 320', if you are using recognition model with PP-OCRv2 or an older version, please set --rec_image_shape='3,32,320
+[2026/09/23 15:21:43] ppocr DEBUG: dt_boxes num : 2, elapsed : 0.23224186897277832
+[2026/09/23 15:21:43] ppocr DEBUG: rec_res num  : 2, elapsed : 0.19137144088745117
+[2026/09/23 15:21:43] ppocr DEBUG: 0  Predict time of D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\masked_images\additional_100__batch_01__231.png: 0.428s
+[2026/09/23 15:21:43] ppocr DEBUG: 00:00:00, 0.981
+[2026/09/23 15:21:43] ppocr DEBUG: BA, 0.995
+[2026/09/23 15:21:43] ppocr DEBUG: The visualized image saved in D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\ocr_visual_results\additional_100__batch_01__231.png
+[2026/09/23 15:21:43] ppocr DEBUG: dt_boxes num : 3, elapsed : 0.4267411231994629
+[2026/09/23 15:21:44] ppocr DEBUG: rec_res num  : 3, elapsed : 0.18048977851867676
+[2026/09/23 15:21:44] ppocr DEBUG: 1  Predict time of D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\masked_images\additional_100__batch_01__38.png: 0.613s
+[2026/09/23 15:21:44] ppocr DEBUG: 00000, 0.993
+[2026/09/23 15:21:44] ppocr DEBUG: kW, 0.992
+[2026/09/23 15:21:44] ppocr DEBUG: FMD, 1.000
+[2026/09/23 15:21:44] ppocr DEBUG: The visualized image saved in D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\ocr_visual_results\additional_100__batch_01__38.png
+[2026/09/23 15:21:44] ppocr DEBUG: dt_boxes num : 7, elapsed : 0.28928565979003906
+[2026/09/23 15:21:44] ppocr DEBUG: rec_res num  : 7, elapsed : 0.4779963493347168
+[2026/09/23 15:21:44] ppocr DEBUG: 2  Predict time of D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\masked_images\additional_100__batch_01__51.png: 0.774s
+[2026/09/23 15:21:44] ppocr DEBUG: 00299, 0.975
+[2026/09/23 15:21:44] ppocr DEBUG: T4, 0.998
+[2026/09/23 15:21:44] ppocr DEBUG: A, 0.990
+[2026/09/23 15:21:44] ppocr DEBUG: IP, 0.998
+[2026/09/23 15:21:44] ppocr DEBUG: The visualized image saved in D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\ocr_visual_results\additional_100__batch_01__51.png
+[2026/09/23 15:21:45] ppocr DEBUG: dt_boxes num : 5, elapsed : 0.440765380859375
+[2026/09/23 15:21:45] ppocr DEBUG: rec_res num  : 5, elapsed : 0.27631235122680664
+[2026/09/23 15:21:45] ppocr DEBUG: 3  Predict time of D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\masked_images\additional_100__batch_02__124.png: 0.722s
+[2026/09/23 15:21:45] ppocr DEBUG: 00000, 0.915
+[2026/09/23 15:21:45] ppocr DEBUG: IP, 1.000
+[2026/09/23 15:21:45] ppocr DEBUG: kVA, 0.989
+[2026/09/23 15:21:45] ppocr DEBUG: B, 0.983
+[2026/09/23 15:21:45] ppocr DEBUG: MD, 1.000
+[2026/09/23 15:21:45] ppocr DEBUG: The visualized image saved in D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\ocr_visual_results\additional_100__batch_02__124.png
+[2026/09/23 15:21:46] ppocr DEBUG: dt_boxes num : 1, elapsed : 0.47399282455444336
+[2026/09/23 15:21:46] ppocr DEBUG: rec_res num  : 1, elapsed : 0.055663108825683594
+[2026/09/23 15:21:46] ppocr DEBUG: 4  Predict time of D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\masked_images\additional_100__batch_02__127.png: 0.536s
+[2026/09/23 15:21:46] ppocr DEBUG: FG9.8, 0.993
+[2026/09/23 15:21:46] ppocr DEBUG: The visualized image saved in D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\ocr_visual_results\additional_100__batch_02__127.png
+[2026/09/23 15:21:46] ppocr DEBUG: dt_boxes num : 2, elapsed : 0.15272045135498047
+[2026/09/23 15:21:46] ppocr DEBUG: rec_res num  : 2, elapsed : 0.09997963905334473
+[2026/09/23 15:21:46] ppocr DEBUG: 5  Predict time of D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\masked_images\additional_100__batch_02__282.png: 0.255s
+[2026/09/23 15:21:46] ppocr DEBUG: 0000.06, 0.883
+[2026/09/23 15:21:46] ppocr DEBUG: Alr, 0.999
+[2026/09/23 15:21:46] ppocr DEBUG: The visualized image saved in D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\ocr_visual_results\additional_100__batch_02__282.png
+[2026/09/23 15:21:47] ppocr DEBUG: dt_boxes num : 5, elapsed : 0.451678991317749
+[2026/09/23 15:21:47] ppocr DEBUG: rec_res num  : 5, elapsed : 0.2153019905090332
+[2026/09/23 15:21:47] ppocr DEBUG: 6  Predict time of D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\masked_images\additional_100__batch_03__126.png: 0.677s
+[2026/09/23 15:21:47] ppocr DEBUG: PO, 0.667
+[2026/09/23 15:21:47] ppocr DEBUG: uod, 0.598
+[2026/09/23 15:21:47] ppocr DEBUG: t, 0.995
+[2026/09/23 15:21:47] ppocr DEBUG: n, 0.980
+[2026/09/23 15:21:47] ppocr DEBUG: The visualized image saved in D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\ocr_visual_results\additional_100__batch_03__126.png
+[2026/09/23 15:21:47] ppocr DEBUG: dt_boxes num : 3, elapsed : 0.28855466842651367
+[2026/09/23 15:21:47] ppocr DEBUG: rec_res num  : 3, elapsed : 0.13844728469848633
+[2026/09/23 15:21:47] ppocr DEBUG: 7  Predict time of D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\masked_images\additional_100__batch_03__297.png: 0.428s
+[2026/09/23 15:21:47] ppocr DEBUG: 1, 0.930
+[2026/09/23 15:21:47] ppocr DEBUG: 000034, 0.990
+[2026/09/23 15:21:47] ppocr DEBUG: kVAh, 0.992
+[2026/09/23 15:21:47] ppocr DEBUG: The visualized image saved in D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\ocr_visual_results\additional_100__batch_03__297.png
+[2026/09/23 15:21:47] ppocr DEBUG: dt_boxes num : 3, elapsed : 0.19149065017700195
+[2026/09/23 15:21:48] ppocr DEBUG: rec_res num  : 3, elapsed : 0.1398029327392578
+[2026/09/23 15:21:48] ppocr DEBUG: 8  Predict time of D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\masked_images\additional_100__batch_03__400.png: 0.334s
+[2026/09/23 15:21:48] ppocr DEBUG: 10:35:17, 0.993
+[2026/09/23 15:21:48] ppocr DEBUG: 7t1, 0.720
+[2026/09/23 15:21:48] ppocr DEBUG: The visualized image saved in D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\ocr_visual_results\additional_100__batch_03__400.png
+[2026/09/23 15:21:48] ppocr DEBUG: dt_boxes num : 6, elapsed : 0.4485964775085449
+[2026/09/23 15:21:48] ppocr DEBUG: rec_res num  : 6, elapsed : 0.25005483627319336
+[2026/09/23 15:21:48] ppocr DEBUG: 9  Predict time of D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\masked_images\additional_100__batch_04__414.png: 0.707s
+[2026/09/23 15:21:48] ppocr DEBUG: _PuSh, 0.837
+[2026/09/23 15:21:48] ppocr DEBUG: The visualized image saved in D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\ocr_visual_results\additional_100__batch_04__414.png
+[2026/09/23 15:21:49] ppocr DEBUG: dt_boxes num : 2, elapsed : 0.2982051372528076
+[2026/09/23 15:21:49] ppocr DEBUG: rec_res num  : 2, elapsed : 0.15824055671691895
+[2026/09/23 15:21:49] ppocr DEBUG: 10  Predict time of D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\masked_images\additional_100__batch_04__465.png: 0.464s
+[2026/09/23 15:21:49] ppocr DEBUG: 11:13:52, 0.914
+[2026/09/23 15:21:49] ppocr DEBUG: t, 0.998
+[2026/09/23 15:21:49] ppocr DEBUG: The visualized image saved in D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\ocr_visual_results\additional_100__batch_04__465.png
+[2026/09/23 15:21:49] ppocr DEBUG: dt_boxes num : 6, elapsed : 0.4466114044189453
+[2026/09/23 15:21:50] ppocr DEBUG: rec_res num  : 6, elapsed : 0.2563145160675049
+[2026/09/23 15:21:50] ppocr DEBUG: 11  Predict time of D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\masked_images\additional_100__batch_04__653.png: 0.715s
+[2026/09/23 15:21:50] ppocr DEBUG: 0000:00:09, 0.959
+[2026/09/23 15:21:50] ppocr DEBUG: L1, 0.998
+[2026/09/23 15:21:50] ppocr DEBUG: L2, 0.930
+[2026/09/23 15:21:50] ppocr DEBUG: 3, 0.339
+[2026/09/23 15:21:50] ppocr DEBUG: POB, 0.939
+[2026/09/23 15:21:50] ppocr DEBUG: T1, 0.999
+[2026/09/23 15:21:50] ppocr DEBUG: The visualized image saved in D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\ocr_visual_results\additional_100__batch_04__653.png
+[2026/09/23 15:21:50] ppocr DEBUG: dt_boxes num : 5, elapsed : 0.29319095611572266
+[2026/09/23 15:21:50] ppocr DEBUG: rec_res num  : 5, elapsed : 0.22141456604003906
+[2026/09/23 15:21:50] ppocr DEBUG: 12  Predict time of D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\masked_images\additional_100__batch_05__481.png: 0.525s
+[2026/09/23 15:21:50] ppocr DEBUG: 0.000, 0.920
+[2026/09/23 15:21:50] ppocr DEBUG: L1L2, 0.956
+[2026/09/23 15:21:50] ppocr DEBUG: MD, 0.998
+[2026/09/23 15:21:50] ppocr DEBUG: T1, 0.999
+[2026/09/23 15:21:50] ppocr DEBUG: kW, 0.966
+[2026/09/23 15:21:50] ppocr DEBUG: The visualized image saved in D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\ocr_visual_results\additional_100__batch_05__481.png
+[2026/09/23 15:21:51] ppocr DEBUG: dt_boxes num : 4, elapsed : 0.46530890464782715
+[2026/09/23 15:21:51] ppocr DEBUG: rec_res num  : 4, elapsed : 0.27027273178100586
+[2026/09/23 15:21:51] ppocr DEBUG: 13  Predict time of D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\masked_images\additional_100__batch_05__519.png: 0.747s
+[2026/09/23 15:21:51] ppocr DEBUG: 000060, 0.984
+[2026/09/23 15:21:51] ppocr DEBUG: T2, 1.000
+[2026/09/23 15:21:51] ppocr DEBUG: kWh, 0.976
+[2026/09/23 15:21:51] ppocr DEBUG: F, 0.999
+[2026/09/23 15:21:51] ppocr DEBUG: The visualized image saved in D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\ocr_visual_results\additional_100__batch_05__519.png
+[2026/09/23 15:21:51] ppocr DEBUG: dt_boxes num : 5, elapsed : 0.0818030834197998
+[2026/09/23 15:21:52] ppocr DEBUG: rec_res num  : 5, elapsed : 0.2554636001586914
+[2026/09/23 15:21:52] ppocr DEBUG: 14  Predict time of D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\masked_images\additional_100__batch_05__662.png: 0.345s
+[2026/09/23 15:21:52] ppocr DEBUG: 0000001.0, 0.899
+[2026/09/23 15:21:52] ppocr DEBUG: L1, 1.000
+[2026/09/23 15:21:52] ppocr DEBUG: T1, 1.000
+[2026/09/23 15:21:52] ppocr DEBUG: CUM, 0.990
+[2026/09/23 15:21:52] ppocr DEBUG: kVAh, 0.993
+[2026/09/23 15:21:52] ppocr DEBUG: The visualized image saved in D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\ocr_visual_results\additional_100__batch_05__662.png
+[2026/09/23 15:21:52] ppocr DEBUG: dt_boxes num : 2, elapsed : 0.1467299461364746
+[2026/09/23 15:21:52] ppocr DEBUG: rec_res num  : 2, elapsed : 0.09111499786376953
+[2026/09/23 15:21:52] ppocr DEBUG: 15  Predict time of D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\masked_images\next_100__batch_01__312.png: 0.238s
+[2026/09/23 15:21:52] ppocr DEBUG: 1_1:01:28t, 0.949
+[2026/09/23 15:21:52] ppocr DEBUG: The visualized image saved in D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\ocr_visual_results\next_100__batch_01__312.png
+[2026/09/23 15:21:52] ppocr DEBUG: dt_boxes num : 4, elapsed : 0.4379744529724121
+[2026/09/23 15:21:53] ppocr DEBUG: rec_res num  : 4, elapsed : 0.18753552436828613
+[2026/09/23 15:21:53] ppocr DEBUG: 16  Predict time of D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\masked_images\next_100__batch_01__43.png: 0.631s
+[2026/09/23 15:21:53] ppocr DEBUG: 00000, 0.995
+[2026/09/23 15:21:53] ppocr DEBUG: T4, 0.993
+[2026/09/23 15:21:53] ppocr DEBUG: A, 1.000
+[2026/09/23 15:21:53] ppocr DEBUG: IP, 1.000
+[2026/09/23 15:21:53] ppocr DEBUG: The visualized image saved in D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\ocr_visual_results\next_100__batch_01__43.png
+[2026/09/23 15:21:53] ppocr DEBUG: dt_boxes num : 4, elapsed : 0.4553368091583252
+[2026/09/23 15:21:53] ppocr DEBUG: rec_res num  : 4, elapsed : 0.17024779319763184
+[2026/09/23 15:21:53] ppocr DEBUG: 17  Predict time of D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\masked_images\next_100__batch_01__54.png: 0.632s
+[2026/09/23 15:21:53] ppocr DEBUG: 00071, 0.978
+[2026/09/23 15:21:53] ppocr DEBUG: T4, 0.989
+[2026/09/23 15:21:53] ppocr DEBUG: kW, 0.989
+[2026/09/23 15:21:53] ppocr DEBUG: The visualized image saved in D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\ocr_visual_results\next_100__batch_01__54.png
+[2026/09/23 15:21:54] ppocr DEBUG: dt_boxes num : 3, elapsed : 0.4364054203033447
+[2026/09/23 15:21:54] ppocr DEBUG: rec_res num  : 3, elapsed : 0.18530964851379395
+[2026/09/23 15:21:54] ppocr DEBUG: 18  Predict time of D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\masked_images\next_100__batch_02__173.png: 0.628s
+[2026/09/23 15:21:54] ppocr DEBUG: PF0.999, 0.976
+[2026/09/23 15:21:54] ppocr DEBUG: IPT, 1.000
+[2026/09/23 15:21:54] ppocr DEBUG: BA, 0.837
+[2026/09/23 15:21:54] ppocr DEBUG: The visualized image saved in D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\ocr_visual_results\next_100__batch_02__173.png
+[2026/09/23 15:21:54] ppocr DEBUG: dt_boxes num : 4, elapsed : 0.3381936550140381
+[2026/09/23 15:21:55] ppocr DEBUG: rec_res num  : 4, elapsed : 0.1871204376220703
+[2026/09/23 15:21:55] ppocr DEBUG: 19  Predict time of D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\masked_images\next_100__batch_02__304.png: 0.528s
+[2026/09/23 15:21:55] ppocr DEBUG: 05.773, 0.997
+[2026/09/23 15:21:55] ppocr DEBUG: kVA, 0.990
+[2026/09/23 15:21:55] ppocr DEBUG: B, 0.985
+[2026/09/23 15:21:55] ppocr DEBUG: MC, 0.715
+[2026/09/23 15:21:55] ppocr DEBUG: The visualized image saved in D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\ocr_visual_results\next_100__batch_02__304.png
+[2026/09/23 15:21:55] ppocr DEBUG: dt_boxes num : 2, elapsed : 0.38991641998291016
+[2026/09/23 15:21:55] ppocr DEBUG: rec_res num  : 2, elapsed : 0.16217613220214844
+[2026/09/23 15:21:55] ppocr DEBUG: 20  Predict time of D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\masked_images\next_100__batch_02__383.png: 0.558s
+[2026/09/23 15:21:55] ppocr DEBUG: 11:13:45, 0.894
+[2026/09/23 15:21:55] ppocr DEBUG: t, 0.998
+[2026/09/23 15:21:55] ppocr DEBUG: The visualized image saved in D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\ocr_visual_results\next_100__batch_02__383.png
+[2026/09/23 15:21:55] ppocr DEBUG: dt_boxes num : 3, elapsed : 0.1584620475769043
+[2026/09/23 15:21:55] ppocr DEBUG: rec_res num  : 3, elapsed : 0.1451880931854248
+[2026/09/23 15:21:55] ppocr DEBUG: 21  Predict time of D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\masked_images\next_100__batch_03__252.png: 0.306s
+[2026/09/23 15:21:55] ppocr DEBUG: 000030, 0.986
+[2026/09/23 15:21:55] ppocr DEBUG: kLh, 0.833
+[2026/09/23 15:21:56] ppocr DEBUG: The visualized image saved in D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\ocr_visual_results\next_100__batch_03__252.png
+[2026/09/23 15:21:56] ppocr DEBUG: dt_boxes num : 2, elapsed : 0.025141239166259766
+[2026/09/23 15:21:56] ppocr DEBUG: rec_res num  : 2, elapsed : 0.10568904876708984
+[2026/09/23 15:21:56] ppocr DEBUG: 22  Predict time of D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\masked_images\next_100__batch_03__266.png: 0.133s
+[2026/09/23 15:21:56] ppocr DEBUG: 000003, 0.994
+[2026/09/23 15:21:56] ppocr DEBUG: S, 0.982
+[2026/09/23 15:21:56] ppocr DEBUG: The visualized image saved in D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\ocr_visual_results\next_100__batch_03__266.png
+[2026/09/23 15:21:56] ppocr DEBUG: dt_boxes num : 2, elapsed : 0.20053648948669434
+[2026/09/23 15:21:56] ppocr DEBUG: rec_res num  : 2, elapsed : 0.09840917587280273
+[2026/09/23 15:21:56] ppocr DEBUG: 23  Predict time of D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\masked_images\next_100__batch_03__72.png: 0.303s
+[2026/09/23 15:21:56] ppocr DEBUG: 100036, 0.989
+[2026/09/23 15:21:56] ppocr DEBUG: S, 0.994
+[2026/09/23 15:21:56] ppocr DEBUG: The visualized image saved in D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\ocr_visual_results\next_100__batch_03__72.png
+[2026/09/23 15:21:56] ppocr DEBUG: dt_boxes num : 2, elapsed : 0.21828269958496094
+[2026/09/23 15:21:56] ppocr DEBUG: rec_res num  : 2, elapsed : 0.09795451164245605
+[2026/09/23 15:21:56] ppocr DEBUG: 24  Predict time of D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\masked_images\next_100__batch_04__458.png: 0.321s
+[2026/09/23 15:21:56] ppocr DEBUG: 1:03:01, 0.967
+[2026/09/23 15:21:56] ppocr DEBUG: The visualized image saved in D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\ocr_visual_results\next_100__batch_04__458.png
+[2026/09/23 15:21:57] ppocr DEBUG: dt_boxes num : 1, elapsed : 0.35851502418518066
+[2026/09/23 15:21:57] ppocr DEBUG: rec_res num  : 1, elapsed : 0.14264750480651855
+[2026/09/23 15:21:57] ppocr DEBUG: 25  Predict time of D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\masked_images\next_100__batch_04__460.png: 0.502s
+[2026/09/23 15:21:57] ppocr DEBUG: 11:04:12, 0.988
+[2026/09/23 15:21:57] ppocr DEBUG: The visualized image saved in D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\ocr_visual_results\next_100__batch_04__460.png
+[2026/09/23 15:21:57] ppocr DEBUG: dt_boxes num : 3, elapsed : 0.20045828819274902
+[2026/09/23 15:21:57] ppocr DEBUG: rec_res num  : 3, elapsed : 0.19416069984436035
+[2026/09/23 15:21:57] ppocr DEBUG: 26  Predict time of D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\masked_images\next_100__batch_04__470.png: 0.397s
+[2026/09/23 15:21:57] ppocr DEBUG: 00003, 0.997
+[2026/09/23 15:21:57] ppocr DEBUG: T2, 0.999
+[2026/09/23 15:21:57] ppocr DEBUG: The visualized image saved in D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\ocr_visual_results\next_100__batch_04__470.png
+[2026/09/23 15:21:58] ppocr DEBUG: dt_boxes num : 6, elapsed : 0.5898044109344482
+[2026/09/23 15:21:58] ppocr DEBUG: rec_res num  : 6, elapsed : 0.39921116828918457
+[2026/09/23 15:21:58] ppocr DEBUG: 27  Predict time of D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\masked_images\next_100__batch_05__585.png: 1.003s
+[2026/09/23 15:21:58] ppocr DEBUG: 0000000.0, 0.859
+[2026/09/23 15:21:58] ppocr DEBUG: L1, 1.000
+[2026/09/23 15:21:58] ppocr DEBUG: L2, 0.995
+[2026/09/23 15:21:58] ppocr DEBUG: t3, 0.982
+[2026/09/23 15:21:58] ppocr DEBUG: T1, 0.999
+[2026/09/23 15:21:58] ppocr DEBUG: kVAh, 0.868
+[2026/09/23 15:21:58] ppocr DEBUG: The visualized image saved in D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\ocr_visual_results\next_100__batch_05__585.png
+[2026/09/23 15:21:59] ppocr DEBUG: dt_boxes num : 4, elapsed : 0.08648133277893066
+[2026/09/23 15:21:59] ppocr DEBUG: rec_res num  : 4, elapsed : 0.3415863513946533
+[2026/09/23 15:21:59] ppocr DEBUG: 28  Predict time of D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\masked_images\next_100__batch_05__606.png: 0.439s
+[2026/09/23 15:21:59] ppocr DEBUG: b, 0.997
+[2026/09/23 15:21:59] ppocr DEBUG: 0.00, 1.000
+[2026/09/23 15:21:59] ppocr DEBUG: T1, 0.999
+[2026/09/23 15:21:59] ppocr DEBUG: V, 0.861
+[2026/09/23 15:21:59] ppocr DEBUG: The visualized image saved in D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\ocr_visual_results\next_100__batch_05__606.png
+[2026/09/23 15:22:00] ppocr DEBUG: dt_boxes num : 7, elapsed : 0.5102412700653076
+[2026/09/23 15:22:00] ppocr DEBUG: rec_res num  : 7, elapsed : 0.38716864585876465
+[2026/09/23 15:22:00] ppocr DEBUG: 29  Predict time of D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\masked_images\next_100__batch_05__608.png: 0.909s
+[2026/09/23 15:22:00] ppocr DEBUG: y, 0.995
+[2026/09/23 15:22:00] ppocr DEBUG: 0.000, 1.000
+[2026/09/23 15:22:00] ppocr DEBUG: L1, 1.000
+[2026/09/23 15:22:00] ppocr DEBUG: L2, 0.991
+[2026/09/23 15:22:00] ppocr DEBUG: A, 0.589
+[2026/09/23 15:22:00] ppocr DEBUG: T1, 0.999
+[2026/09/23 15:22:00] ppocr DEBUG: A, 1.000
+[2026/09/23 15:22:00] ppocr DEBUG: The visualized image saved in D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\ocr_visual_results\next_100__batch_05__608.png
+[2026/09/23 15:22:00] ppocr DEBUG: dt_boxes num : 3, elapsed : 0.19453692436218262
+[2026/09/23 15:22:01] ppocr DEBUG: rec_res num  : 3, elapsed : 0.2507302761077881
+[2026/09/23 15:22:01] ppocr DEBUG: 30  Predict time of D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\masked_images\pilot_90__calibration__301.png: 0.447s
+[2026/09/23 15:22:01] ppocr DEBUG: 09:15:00, 0.981
+[2026/09/23 15:22:01] ppocr DEBUG: kVA, 0.991
+[2026/09/23 15:22:01] ppocr DEBUG: MD, 1.000
+[2026/09/23 15:22:01] ppocr DEBUG: The visualized image saved in D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\ocr_visual_results\pilot_90__calibration__301.png
+[2026/09/23 15:22:01] ppocr DEBUG: dt_boxes num : 3, elapsed : 0.29202818870544434
+[2026/09/23 15:22:01] ppocr DEBUG: rec_res num  : 3, elapsed : 0.20673847198486328
+[2026/09/23 15:22:01] ppocr DEBUG: 31  Predict time of D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\masked_images\pilot_90__train__184.png: 0.504s
+[2026/09/23 15:22:01] ppocr DEBUG: 64, 0.875
+[2026/09/23 15:22:01] ppocr DEBUG: T1, 0.995
+[2026/09/23 15:22:01] ppocr DEBUG: S, 0.975
+[2026/09/23 15:22:01] ppocr DEBUG: The visualized image saved in D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\ocr_visual_results\pilot_90__train__184.png
+[2026/09/23 15:22:02] ppocr DEBUG: dt_boxes num : 3, elapsed : 0.5927596092224121
+[2026/09/23 15:22:02] ppocr DEBUG: rec_res num  : 3, elapsed : 0.18478059768676758
+[2026/09/23 15:22:02] ppocr DEBUG: 32  Predict time of D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\masked_images\pilot_90__train__189.png: 0.783s
+[2026/09/23 15:22:02] ppocr DEBUG: 0000.0, 1.000
+[2026/09/23 15:22:02] ppocr DEBUG: BALL, 0.848
+[2026/09/23 15:22:02] ppocr DEBUG: The visualized image saved in D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\ocr_visual_results\pilot_90__train__189.png
+[2026/09/23 15:22:02] ppocr DEBUG: dt_boxes num : 3, elapsed : 0.26474428176879883
+[2026/09/23 15:22:02] ppocr DEBUG: rec_res num  : 3, elapsed : 0.16854166984558105
+[2026/09/23 15:22:02] ppocr DEBUG: 33  Predict time of D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\masked_images\pilot_90__train__341.png: 0.437s
+[2026/09/23 15:22:02] ppocr DEBUG: 00:00:00, 0.985
+[2026/09/23 15:22:02] ppocr DEBUG: t, 0.918
+[2026/09/23 15:22:02] ppocr DEBUG: BAL, 0.998
+[2026/09/23 15:22:02] ppocr DEBUG: The visualized image saved in D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\ocr_visual_results\pilot_90__train__341.png
+[2026/09/23 15:22:03] ppocr DEBUG: dt_boxes num : 3, elapsed : 0.5397653579711914
+[2026/09/23 15:22:03] ppocr DEBUG: rec_res num  : 3, elapsed : 0.16871118545532227
+[2026/09/23 15:22:03] ppocr DEBUG: 34  Predict time of D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\masked_images\pilot_90__train__36.png: 0.713s
+[2026/09/23 15:22:03] ppocr DEBUG: up0, 0.783
+[2026/09/23 15:22:03] ppocr DEBUG: 00000, 0.993
+[2026/09/23 15:22:03] ppocr DEBUG: Alr, 1.000
+[2026/09/23 15:22:03] ppocr DEBUG: The visualized image saved in D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\ocr_visual_results\pilot_90__train__36.png
+[2026/09/23 15:22:03] ppocr DEBUG: dt_boxes num : 3, elapsed : 0.030522823333740234
+[2026/09/23 15:22:03] ppocr DEBUG: rec_res num  : 3, elapsed : 0.19091272354125977
+[2026/09/23 15:22:03] ppocr DEBUG: 35  Predict time of D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\masked_images\pilot_90__train__370.png: 0.223s
+[2026/09/23 15:22:03] ppocr DEBUG: 000141, 0.995
+[2026/09/23 15:22:03] ppocr DEBUG: IP, 1.000
+[2026/09/23 15:22:03] ppocr DEBUG: kW, 0.991
+[2026/09/23 15:22:03] ppocr DEBUG: The visualized image saved in D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\ocr_visual_results\pilot_90__train__370.png
+[2026/09/23 15:22:04] ppocr DEBUG: dt_boxes num : 2, elapsed : 0.5616908073425293
+[2026/09/23 15:22:04] ppocr DEBUG: rec_res num  : 2, elapsed : 0.20574259757995605
+[2026/09/23 15:22:04] ppocr DEBUG: 36  Predict time of D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\masked_images\pilot_90__train__415.png: 0.777s
+[2026/09/23 15:22:04] ppocr DEBUG: 67.8, 0.959
+[2026/09/23 15:22:04] ppocr DEBUG: FG, 0.987
+[2026/09/23 15:22:04] ppocr DEBUG: The visualized image saved in D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\ocr_visual_results\pilot_90__train__415.png
+[2026/09/23 15:22:05] ppocr DEBUG: dt_boxes num : 5, elapsed : 0.5755078792572021
+[2026/09/23 15:22:05] ppocr DEBUG: rec_res num  : 5, elapsed : 0.3483872413635254
+[2026/09/23 15:22:05] ppocr DEBUG: 37  Predict time of D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\masked_images\pilot_90__train__507.png: 0.938s
+[2026/09/23 15:22:05] ppocr DEBUG: b, 0.998
+[2026/09/23 15:22:05] ppocr DEBUG: 0.00, 1.000
+[2026/09/23 15:22:05] ppocr DEBUG: L1L2, 0.998
+[2026/09/23 15:22:05] ppocr DEBUG: T1, 0.999
+[2026/09/23 15:22:05] ppocr DEBUG: V, 0.934
+[2026/09/23 15:22:05] ppocr DEBUG: The visualized image saved in D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\ocr_visual_results\pilot_90__train__507.png
+[2026/09/23 15:22:06] ppocr DEBUG: dt_boxes num : 8, elapsed : 0.4942913055419922
+[2026/09/23 15:22:06] ppocr DEBUG: rec_res num  : 8, elapsed : 0.4996349811553955
+[2026/09/23 15:22:06] ppocr DEBUG: 38  Predict time of D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\masked_images\pilot_90__train__584.png: 1.001s
+[2026/09/23 15:22:06] ppocr DEBUG: 0000000.0, 0.914
+[2026/09/23 15:22:06] ppocr DEBUG: L1, 1.000
+[2026/09/23 15:22:06] ppocr DEBUG: L2, 0.988
+[2026/09/23 15:22:06] ppocr DEBUG: 1, 0.799
+[2026/09/23 15:22:06] ppocr DEBUG: t2, 0.989
+[2026/09/23 15:22:06] ppocr DEBUG: T1, 1.000
+[2026/09/23 15:22:06] ppocr DEBUG: kVAh, 0.992
+[2026/09/23 15:22:06] ppocr DEBUG: 1, 0.561
+[2026/09/23 15:22:06] ppocr DEBUG: The visualized image saved in D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\ocr_visual_results\pilot_90__train__584.png
+[2026/09/23 15:22:07] ppocr DEBUG: dt_boxes num : 2, elapsed : 0.24796152114868164
+[2026/09/23 15:22:07] ppocr DEBUG: rec_res num  : 2, elapsed : 0.14617705345153809
+[2026/09/23 15:22:07] ppocr DEBUG: 39  Predict time of D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\masked_images\pilot_90__train__71.png: 0.398s
+[2026/09/23 15:22:07] ppocr DEBUG: 0036.0, 0.854
+[2026/09/23 15:22:07] ppocr DEBUG: S, 0.984
+[2026/09/23 15:22:07] ppocr DEBUG: The visualized image saved in D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\ocr_visual_results\pilot_90__train__71.png
+[2026/09/23 15:22:07] ppocr DEBUG: dt_boxes num : 8, elapsed : 0.07875943183898926
+[2026/09/23 15:22:07] ppocr DEBUG: rec_res num  : 8, elapsed : 0.46147918701171875
+[2026/09/23 15:22:07] ppocr DEBUG: 40  Predict time of D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\masked_images\pilot_90__validation__624.png: 0.555s
+[2026/09/23 15:22:07] ppocr DEBUG: 1.000, 0.999
+[2026/09/23 15:22:07] ppocr DEBUG: L1, 1.000
+[2026/09/23 15:22:07] ppocr DEBUG: L2, 0.899
+[2026/09/23 15:22:07] ppocr DEBUG: 3, 0.493
+[2026/09/23 15:22:07] ppocr DEBUG: B, 0.983
+[2026/09/23 15:22:07] ppocr DEBUG: T1, 1.000
+[2026/09/23 15:22:07] ppocr DEBUG: PF, 1.000
+[2026/09/23 15:22:07] ppocr DEBUG: z, 0.876
+[2026/09/23 15:22:08] ppocr DEBUG: The visualized image saved in D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\ocr_visual_results\pilot_90__validation__624.png
+[2026/09/23 15:22:08] ppocr DEBUG: dt_boxes num : 3, elapsed : 0.6462640762329102
+[2026/09/23 15:22:09] ppocr DEBUG: rec_res num  : 3, elapsed : 0.23132944107055664
+[2026/09/23 15:22:09] ppocr DEBUG: 41  Predict time of D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\masked_images\remaining_376__batch_01__29.png: 0.886s
+[2026/09/23 15:22:09] ppocr DEBUG: up0, 0.786
+[2026/09/23 15:22:09] ppocr DEBUG: 00000, 0.994
+[2026/09/23 15:22:09] ppocr DEBUG: lr, 0.998
+[2026/09/23 15:22:09] ppocr DEBUG: The visualized image saved in D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\ocr_visual_results\remaining_376__batch_01__29.png
+[2026/09/23 15:22:09] ppocr DEBUG: dt_boxes num : 4, elapsed : 0.47142696380615234
+[2026/09/23 15:22:09] ppocr DEBUG: rec_res num  : 4, elapsed : 0.33658313751220703
+[2026/09/23 15:22:09] ppocr DEBUG: 42  Predict time of D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\masked_images\remaining_376__batch_01__49.png: 0.815s
+[2026/09/23 15:22:09] ppocr DEBUG: 12:56:41, 0.959
+[2026/09/23 15:22:09] ppocr DEBUG: t, 0.730
+[2026/09/23 15:22:09] ppocr DEBUG: The visualized image saved in D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\ocr_visual_results\remaining_376__batch_01__49.png
+[2026/09/23 15:22:10] ppocr DEBUG: dt_boxes num : 2, elapsed : 0.0810251235961914
+[2026/09/23 15:22:10] ppocr DEBUG: rec_res num  : 2, elapsed : 0.11797714233398438
+[2026/09/23 15:22:10] ppocr DEBUG: 43  Predict time of D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\masked_images\remaining_376__batch_01__58.png: 0.207s
+[2026/09/23 15:22:10] ppocr DEBUG: 12:58:04, 0.921
+[2026/09/23 15:22:10] ppocr DEBUG: The visualized image saved in D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\ocr_visual_results\remaining_376__batch_01__58.png
+[2026/09/23 15:22:10] ppocr DEBUG: dt_boxes num : 1, elapsed : 0.2244415283203125
+[2026/09/23 15:22:10] ppocr DEBUG: rec_res num  : 1, elapsed : 0.15491032600402832
+[2026/09/23 15:22:10] ppocr DEBUG: 44  Predict time of D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\masked_images\remaining_376__batch_01__74.png: 0.381s
+[2026/09/23 15:22:10] ppocr DEBUG: 10:35:18te, 0.920
+[2026/09/23 15:22:10] ppocr DEBUG: The visualized image saved in D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\ocr_visual_results\remaining_376__batch_01__74.png
+[2026/09/23 15:22:10] ppocr DEBUG: dt_boxes num : 4, elapsed : 0.2910003662109375
+[2026/09/23 15:22:11] ppocr DEBUG: rec_res num  : 4, elapsed : 0.230759859085083
+[2026/09/23 15:22:11] ppocr DEBUG: 45  Predict time of D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\masked_images\remaining_376__batch_02__102.png: 0.525s
+[2026/09/23 15:22:11] ppocr DEBUG: 28:06:2E, 0.911
+[2026/09/23 15:22:11] ppocr DEBUG: dpP1, 0.681
+[2026/09/23 15:22:11] ppocr DEBUG: kVA, 0.987
+[2026/09/23 15:22:11] ppocr DEBUG: MD, 0.983
+[2026/09/23 15:22:11] ppocr DEBUG: The visualized image saved in D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\ocr_visual_results\remaining_376__batch_02__102.png
+[2026/09/23 15:22:11] ppocr DEBUG: dt_boxes num : 3, elapsed : 0.41626596450805664
+[2026/09/23 15:22:11] ppocr DEBUG: rec_res num  : 3, elapsed : 0.18152070045471191
+[2026/09/23 15:22:11] ppocr DEBUG: 46  Predict time of D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\masked_images\remaining_376__batch_02__112.png: 0.604s
+[2026/09/23 15:22:11] ppocr DEBUG: 18:50:19, 0.986
+[2026/09/23 15:22:11] ppocr DEBUG: t, 0.998
+[2026/09/23 15:22:11] ppocr DEBUG: IPh, 0.842
+[2026/09/23 15:22:11] ppocr DEBUG: The visualized image saved in D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\ocr_visual_results\remaining_376__batch_02__112.png
+[2026/09/23 15:22:11] ppocr DEBUG: dt_boxes num : 7, elapsed : 0.11147212982177734
+[2026/09/23 15:22:12] ppocr DEBUG: rec_res num  : 7, elapsed : 0.4319312572479248
+[2026/09/23 15:22:12] ppocr DEBUG: 47  Predict time of D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\masked_images\remaining_376__batch_02__120.png: 0.551s
+[2026/09/23 15:22:12] ppocr DEBUG: 16:06:26, 0.965
+[2026/09/23 15:22:12] ppocr DEBUG: d1, 0.813
+[2026/09/23 15:22:12] ppocr DEBUG: IP, 0.999
+[2026/09/23 15:22:12] ppocr DEBUG: kW, 0.976
+[2026/09/23 15:22:12] ppocr DEBUG: B, 0.989
+[2026/09/23 15:22:12] ppocr DEBUG: MD, 1.000
+[2026/09/23 15:22:12] ppocr DEBUG: The visualized image saved in D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\ocr_visual_results\remaining_376__batch_02__120.png
+[2026/09/23 15:22:13] ppocr DEBUG: dt_boxes num : 5, elapsed : 0.6771776676177979
+[2026/09/23 15:22:13] ppocr DEBUG: rec_res num  : 5, elapsed : 0.3474726676940918
+[2026/09/23 15:22:13] ppocr DEBUG: 48  Predict time of D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\masked_images\remaining_376__batch_02__134.png: 1.036s
+[2026/09/23 15:22:13] ppocr DEBUG: PO, 0.922
+[2026/09/23 15:22:13] ppocr DEBUG: modE, 0.974
+[2026/09/23 15:22:13] ppocr DEBUG: t, 0.989
+[2026/09/23 15:22:13] ppocr DEBUG: n, 0.995
+[2026/09/23 15:22:13] ppocr DEBUG: The visualized image saved in D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\ocr_visual_results\remaining_376__batch_02__134.png
+[2026/09/23 15:22:13] ppocr DEBUG: dt_boxes num : 5, elapsed : 0.11185908317565918
+[2026/09/23 15:22:14] ppocr DEBUG: rec_res num  : 5, elapsed : 0.2914919853210449
+[2026/09/23 15:22:14] ppocr DEBUG: 49  Predict time of D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\masked_images\remaining_376__batch_03__149.png: 0.413s
+[2026/09/23 15:22:14] ppocr DEBUG: 000141, 0.921
+[2026/09/23 15:22:14] ppocr DEBUG: IP, 1.000
+[2026/09/23 15:22:14] ppocr DEBUG: 1, 0.992
+[2026/09/23 15:22:14] ppocr DEBUG: kWh, 0.979
+[2026/09/23 15:22:14] ppocr DEBUG: B, 0.990
+[2026/09/23 15:22:14] ppocr DEBUG: The visualized image saved in D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\ocr_visual_results\remaining_376__batch_03__149.png
+[2026/09/23 15:22:14] ppocr DEBUG: dt_boxes num : 2, elapsed : 0.635429859161377
+[2026/09/23 15:22:14] ppocr DEBUG: rec_res num  : 2, elapsed : 0.17610430717468262
+[2026/09/23 15:22:14] ppocr DEBUG: 50  Predict time of D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\masked_images\remaining_376__batch_03__153.png: 0.818s
+[2026/09/23 15:22:14] ppocr DEBUG: c_0PEN, 0.902
+[2026/09/23 15:22:15] ppocr DEBUG: The visualized image saved in D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\ocr_visual_results\remaining_376__batch_03__153.png
+[2026/09/23 15:22:15] ppocr DEBUG: dt_boxes num : 6, elapsed : 0.0991520881652832
+[2026/09/23 15:22:15] ppocr DEBUG: rec_res num  : 6, elapsed : 0.49691104888916016
+[2026/09/23 15:22:15] ppocr DEBUG: 51  Predict time of D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\masked_images\remaining_376__batch_03__168.png: 0.610s
+[2026/09/23 15:22:15] ppocr DEBUG: 05.773, 0.924
+[2026/09/23 15:22:15] ppocr DEBUG: IP, 1.000
+[2026/09/23 15:22:15] ppocr DEBUG: 1, 0.690
+[2026/09/23 15:22:15] ppocr DEBUG: kW, 0.984
+[2026/09/23 15:22:15] ppocr DEBUG: B, 0.995
+[2026/09/23 15:22:15] ppocr DEBUG: MD, 1.000
+[2026/09/23 15:22:15] ppocr DEBUG: The visualized image saved in D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\ocr_visual_results\remaining_376__batch_03__168.png
+[2026/09/23 15:22:15] ppocr DEBUG: dt_boxes num : 4, elapsed : 0.11750674247741699
+[2026/09/23 15:22:16] ppocr DEBUG: rec_res num  : 4, elapsed : 0.2710855007171631
+[2026/09/23 15:22:16] ppocr DEBUG: 52  Predict time of D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\masked_images\remaining_376__batch_03__180.png: 0.414s
+[2026/09/23 15:22:16] ppocr DEBUG: PF0.999, 0.977
+[2026/09/23 15:22:16] ppocr DEBUG: IPT1, 0.998
+[2026/09/23 15:22:16] ppocr DEBUG: BA, 0.994
+[2026/09/23 15:22:16] ppocr DEBUG: The visualized image saved in D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\ocr_visual_results\remaining_376__batch_03__180.png
+[2026/09/23 15:22:16] ppocr DEBUG: dt_boxes num : 5, elapsed : 0.5416867733001709
+[2026/09/23 15:22:17] ppocr DEBUG: rec_res num  : 5, elapsed : 0.2607903480529785
+[2026/09/23 15:22:17] ppocr DEBUG: 53  Predict time of D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\masked_images\remaining_376__batch_04__202.png: 0.806s
+[2026/09/23 15:22:17] ppocr DEBUG: 00000, 0.987
+[2026/09/23 15:22:17] ppocr DEBUG: EP, 1.000
+[2026/09/23 15:22:17] ppocr DEBUG: kVA, 0.981
+[2026/09/23 15:22:17] ppocr DEBUG: B, 0.988
+[2026/09/23 15:22:17] ppocr DEBUG: IMD, 0.845
+[2026/09/23 15:22:17] ppocr DEBUG: The visualized image saved in D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\ocr_visual_results\remaining_376__batch_04__202.png
+[2026/09/23 15:22:17] ppocr DEBUG: dt_boxes num : 5, elapsed : 0.0690298080444336
+[2026/09/23 15:22:17] ppocr DEBUG: rec_res num  : 5, elapsed : 0.2934412956237793
+[2026/09/23 15:22:17] ppocr DEBUG: 54  Predict time of D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\masked_images\remaining_376__batch_04__207.png: 0.368s
+[2026/09/23 15:22:17] ppocr DEBUG: 28:06:2E, 0.965
+[2026/09/23 15:22:17] ppocr DEBUG: dEP, 0.991
+[2026/09/23 15:22:17] ppocr DEBUG: kVA, 0.987
+[2026/09/23 15:22:17] ppocr DEBUG: IMD, 0.928
+[2026/09/23 15:22:17] ppocr DEBUG: The visualized image saved in D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\ocr_visual_results\remaining_376__batch_04__207.png
+[2026/09/23 15:22:17] ppocr DEBUG: dt_boxes num : 5, elapsed : 0.07168197631835938
+[2026/09/23 15:22:17] ppocr DEBUG: rec_res num  : 5, elapsed : 0.29063987731933594
+[2026/09/23 15:22:17] ppocr DEBUG: 55  Predict time of D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\masked_images\remaining_376__batch_04__208.png: 0.367s
+[2026/09/23 15:22:17] ppocr DEBUG: 09:00:00, 0.960
+[2026/09/23 15:22:17] ppocr DEBUG: t, 0.994
+[2026/09/23 15:22:17] ppocr DEBUG: EP, 1.000
+[2026/09/23 15:22:17] ppocr DEBUG: kVA, 0.978
+[2026/09/23 15:22:17] ppocr DEBUG: IMD, 0.941
+[2026/09/23 15:22:18] ppocr DEBUG: The visualized image saved in D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\ocr_visual_results\remaining_376__batch_04__208.png
+[2026/09/23 15:22:18] ppocr DEBUG: dt_boxes num : 2, elapsed : 0.17018842697143555
+[2026/09/23 15:22:18] ppocr DEBUG: rec_res num  : 2, elapsed : 0.12184524536132812
+[2026/09/23 15:22:18] ppocr DEBUG: 56  Predict time of D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\masked_images\remaining_376__batch_04__235.png: 0.294s
+[2026/09/23 15:22:18] ppocr DEBUG: 0000.06, 0.936
+[2026/09/23 15:22:18] ppocr DEBUG: The visualized image saved in D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\ocr_visual_results\remaining_376__batch_04__235.png
+[2026/09/23 15:22:18] ppocr DEBUG: dt_boxes num : 1, elapsed : 0.20260357856750488
+[2026/09/23 15:22:18] ppocr DEBUG: rec_res num  : 1, elapsed : 0.1256728172302246
+[2026/09/23 15:22:18] ppocr DEBUG: 57  Predict time of D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\masked_images\remaining_376__batch_05__265.png: 0.330s
+[2026/09/23 15:22:18] ppocr DEBUG: 10:35:25te, 0.886
+[2026/09/23 15:22:18] ppocr DEBUG: The visualized image saved in D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\ocr_visual_results\remaining_376__batch_05__265.png
+[2026/09/23 15:22:18] ppocr DEBUG: dt_boxes num : 2, elapsed : 0.1943371295928955
+[2026/09/23 15:22:19] ppocr DEBUG: rec_res num  : 2, elapsed : 0.14385771751403809
+[2026/09/23 15:22:19] ppocr DEBUG: 58  Predict time of D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\masked_images\remaining_376__batch_05__274.png: 0.340s
+[2026/09/23 15:22:19] ppocr DEBUG: 00:00:00, 0.991
+[2026/09/23 15:22:19] ppocr DEBUG: The visualized image saved in D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\ocr_visual_results\remaining_376__batch_05__274.png
+[2026/09/23 15:22:19] ppocr DEBUG: dt_boxes num : 2, elapsed : 0.03171849250793457
+[2026/09/23 15:22:19] ppocr DEBUG: rec_res num  : 2, elapsed : 0.13032174110412598
+[2026/09/23 15:22:19] ppocr DEBUG: 59  Predict time of D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\masked_images\remaining_376__batch_05__277.png: 0.166s
+[2026/09/23 15:22:19] ppocr DEBUG: 0000.00, 0.893
+[2026/09/23 15:22:19] ppocr DEBUG: lr, 0.999
+[2026/09/23 15:22:19] ppocr DEBUG: The visualized image saved in D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\ocr_visual_results\remaining_376__batch_05__277.png
+[2026/09/23 15:22:19] ppocr DEBUG: dt_boxes num : 5, elapsed : 0.4118926525115967
+[2026/09/23 15:22:19] ppocr DEBUG: rec_res num  : 5, elapsed : 0.2810637950897217
+[2026/09/23 15:22:19] ppocr DEBUG: 60  Predict time of D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\masked_images\remaining_376__batch_05__306.png: 0.697s
+[2026/09/23 15:22:19] ppocr DEBUG: 28:06:2E, 0.892
+[2026/09/23 15:22:19] ppocr DEBUG: kVA, 0.983
+[2026/09/23 15:22:19] ppocr DEBUG: MD, 1.000
+[2026/09/23 15:22:19] ppocr DEBUG: 0, 0.586
+[2026/09/23 15:22:19] ppocr DEBUG: The visualized image saved in D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\ocr_visual_results\remaining_376__batch_05__306.png
+[2026/09/23 15:22:20] ppocr DEBUG: dt_boxes num : 2, elapsed : 0.18363690376281738
+[2026/09/23 15:22:20] ppocr DEBUG: rec_res num  : 2, elapsed : 0.1282656192779541
+[2026/09/23 15:22:20] ppocr DEBUG: 61  Predict time of D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\masked_images\remaining_376__batch_06__321.png: 0.314s
+[2026/09/23 15:22:20] ppocr DEBUG: 0000.06, 0.880
+[2026/09/23 15:22:20] ppocr DEBUG: BAL, 0.998
+[2026/09/23 15:22:20] ppocr DEBUG: The visualized image saved in D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\ocr_visual_results\remaining_376__batch_06__321.png
+[2026/09/23 15:22:20] ppocr DEBUG: dt_boxes num : 3, elapsed : 0.1754157543182373
+[2026/09/23 15:22:20] ppocr DEBUG: rec_res num  : 3, elapsed : 0.266526460647583
+[2026/09/23 15:22:20] ppocr DEBUG: 62  Predict time of D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\masked_images\remaining_376__batch_06__326.png: 0.444s
+[2026/09/23 15:22:20] ppocr DEBUG: 0000.0G, 0.904
+[2026/09/23 15:22:20] ppocr DEBUG: The visualized image saved in D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\ocr_visual_results\remaining_376__batch_06__326.png
+[2026/09/23 15:22:21] ppocr DEBUG: dt_boxes num : 5, elapsed : 0.3932631015777588
+[2026/09/23 15:22:21] ppocr DEBUG: rec_res num  : 5, elapsed : 0.35651683807373047
+[2026/09/23 15:22:21] ppocr DEBUG: 63  Predict time of D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\masked_images\remaining_376__batch_06__345.png: 0.753s
+[2026/09/23 15:22:21] ppocr DEBUG: 300000, 0.924
+[2026/09/23 15:22:21] ppocr DEBUG: 1, 0.821
+[2026/09/23 15:22:21] ppocr DEBUG: S, 0.991
+[2026/09/23 15:22:21] ppocr DEBUG: IL1, 0.563
+[2026/09/23 15:22:21] ppocr DEBUG: The visualized image saved in D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\ocr_visual_results\remaining_376__batch_06__345.png
+[2026/09/23 15:22:21] ppocr DEBUG: dt_boxes num : 3, elapsed : 0.21408390998840332
+[2026/09/23 15:22:21] ppocr DEBUG: rec_res num  : 3, elapsed : 0.19018197059631348
+[2026/09/23 15:22:21] ppocr DEBUG: 64  Predict time of D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\masked_images\remaining_376__batch_06__348.png: 0.407s
+[2026/09/23 15:22:21] ppocr DEBUG: 425130, 0.949
+[2026/09/23 15:22:21] ppocr DEBUG: 1, 0.396
+[2026/09/23 15:22:21] ppocr DEBUG: S, 0.965
+[2026/09/23 15:22:21] ppocr DEBUG: The visualized image saved in D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\ocr_visual_results\remaining_376__batch_06__348.png
+[2026/09/23 15:22:21] ppocr DEBUG: dt_boxes num : 2, elapsed : 0.028990507125854492
+[2026/09/23 15:22:22] ppocr DEBUG: rec_res num  : 2, elapsed : 0.13687610626220703
+[2026/09/23 15:22:22] ppocr DEBUG: 65  Predict time of D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\masked_images\remaining_376__batch_06__351.png: 0.169s
+[2026/09/23 15:22:22] ppocr DEBUG: 00:00:00t, 0.981
+[2026/09/23 15:22:22] ppocr DEBUG: The visualized image saved in D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\ocr_visual_results\remaining_376__batch_06__351.png
+[2026/09/23 15:22:22] ppocr DEBUG: dt_boxes num : 3, elapsed : 0.40369224548339844
+[2026/09/23 15:22:22] ppocr DEBUG: rec_res num  : 3, elapsed : 0.17072749137878418
+[2026/09/23 15:22:22] ppocr DEBUG: 66  Predict time of D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\masked_images\remaining_376__batch_07__359.png: 0.579s
+[2026/09/23 15:22:22] ppocr DEBUG: uees, 0.409
+[2026/09/23 15:22:22] ppocr DEBUG: 00000, 0.915
+[2026/09/23 15:22:22] ppocr DEBUG: BAL, 0.944
+[2026/09/23 15:22:22] ppocr DEBUG: The visualized image saved in D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\ocr_visual_results\remaining_376__batch_07__359.png
+[2026/09/23 15:22:22] ppocr DEBUG: dt_boxes num : 6, elapsed : 0.0415501594543457
+[2026/09/23 15:22:23] ppocr DEBUG: rec_res num  : 6, elapsed : 0.4394567012786865
+[2026/09/23 15:22:23] ppocr DEBUG: 67  Predict time of D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\masked_images\remaining_376__batch_07__377.png: 0.485s
+[2026/09/23 15:22:23] ppocr DEBUG: PO, 0.906
+[2026/09/23 15:22:23] ppocr DEBUG: dE, 0.971
+[2026/09/23 15:22:23] ppocr DEBUG: B, 0.462
+[2026/09/23 15:22:23] ppocr DEBUG: n, 0.718
+[2026/09/23 15:22:23] ppocr DEBUG: The visualized image saved in D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\ocr_visual_results\remaining_376__batch_07__377.png
+[2026/09/23 15:22:23] ppocr DEBUG: dt_boxes num : 1, elapsed : 0.0545811653137207
+[2026/09/23 15:22:23] ppocr DEBUG: rec_res num  : 1, elapsed : 0.1623070240020752
+[2026/09/23 15:22:23] ppocr DEBUG: 68  Predict time of D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\masked_images\remaining_376__batch_07__379.png: 0.221s
+[2026/09/23 15:22:23] ppocr DEBUG: 18:38:47, 0.968
+[2026/09/23 15:22:23] ppocr DEBUG: The visualized image saved in D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\ocr_visual_results\remaining_376__batch_07__379.png
+[2026/09/23 15:22:24] ppocr DEBUG: dt_boxes num : 7, elapsed : 0.5303232669830322
+[2026/09/23 15:22:24] ppocr DEBUG: rec_res num  : 7, elapsed : 0.3614921569824219
+[2026/09/23 15:22:24] ppocr DEBUG: 69  Predict time of D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\masked_images\remaining_376__batch_07__389.png: 0.898s
+[2026/09/23 15:22:24] ppocr DEBUG: 09:15:00, 0.922
+[2026/09/23 15:22:24] ppocr DEBUG: IP, 1.000
+[2026/09/23 15:22:24] ppocr DEBUG: 1, 0.993
+[2026/09/23 15:22:24] ppocr DEBUG: 01, 0.388
+[2026/09/23 15:22:24] ppocr DEBUG: kW, 0.979
+[2026/09/23 15:22:24] ppocr DEBUG: B, 0.997
+[2026/09/23 15:22:24] ppocr DEBUG: MD, 1.000
+[2026/09/23 15:22:24] ppocr DEBUG: The visualized image saved in D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\ocr_visual_results\remaining_376__batch_07__389.png
+[2026/09/23 15:22:24] ppocr DEBUG: dt_boxes num : 4, elapsed : 0.4818415641784668
+[2026/09/23 15:22:25] ppocr DEBUG: rec_res num  : 4, elapsed : 0.3142549991607666
+[2026/09/23 15:22:25] ppocr DEBUG: 70  Predict time of D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\masked_images\remaining_376__batch_07__395.png: 0.802s
+[2026/09/23 15:22:25] ppocr DEBUG: uee0, 0.648
+[2026/09/23 15:22:25] ppocr DEBUG: 00000, 0.937
+[2026/09/23 15:22:25] ppocr DEBUG: BAL, 0.999
+[2026/09/23 15:22:25] ppocr DEBUG: The visualized image saved in D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\ocr_visual_results\remaining_376__batch_07__395.png
+[2026/09/23 15:22:25] ppocr DEBUG: dt_boxes num : 6, elapsed : 0.40128493309020996
+[2026/09/23 15:22:26] ppocr DEBUG: rec_res num  : 6, elapsed : 0.3301079273223877
+[2026/09/23 15:22:26] ppocr DEBUG: 71  Predict time of D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\masked_images\remaining_376__batch_08__407.png: 0.736s
+[2026/09/23 15:22:26] ppocr DEBUG: 19:00:0C, 0.843
+[2026/09/23 15:22:26] ppocr DEBUG: E1, 0.500
+[2026/09/23 15:22:26] ppocr DEBUG: t, 0.900
+[2026/09/23 15:22:26] ppocr DEBUG: kW, 0.973
+[2026/09/23 15:22:26] ppocr DEBUG: B, 0.977
+[2026/09/23 15:22:26] ppocr DEBUG: MD, 0.799
+[2026/09/23 15:22:26] ppocr DEBUG: The visualized image saved in D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\ocr_visual_results\remaining_376__batch_08__407.png
+[2026/09/23 15:22:26] ppocr DEBUG: dt_boxes num : 6, elapsed : 0.6105003356933594
+[2026/09/23 15:22:27] ppocr DEBUG: rec_res num  : 6, elapsed : 0.2971978187561035
+[2026/09/23 15:22:27] ppocr DEBUG: 72  Predict time of D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\masked_images\remaining_376__batch_08__421.png: 0.919s
+[2026/09/23 15:22:27] ppocr DEBUG: 05773, 0.992
+[2026/09/23 15:22:27] ppocr DEBUG: IP, 1.000
+[2026/09/23 15:22:27] ppocr DEBUG: 1, 0.946
+[2026/09/23 15:22:27] ppocr DEBUG: kW, 0.987
+[2026/09/23 15:22:27] ppocr DEBUG: B, 0.997
+[2026/09/23 15:22:27] ppocr DEBUG: MD, 1.000
+[2026/09/23 15:22:27] ppocr DEBUG: The visualized image saved in D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\ocr_visual_results\remaining_376__batch_08__421.png
+[2026/09/23 15:22:27] ppocr DEBUG: dt_boxes num : 3, elapsed : 0.495985746383667
+[2026/09/23 15:22:27] ppocr DEBUG: rec_res num  : 3, elapsed : 0.20637273788452148
+[2026/09/23 15:22:27] ppocr DEBUG: 73  Predict time of D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\masked_images\remaining_376__batch_08__431.png: 0.708s
+[2026/09/23 15:22:27] ppocr DEBUG: 000005, 0.935
+[2026/09/23 15:22:27] ppocr DEBUG: EP, 1.000
+[2026/09/23 15:22:27] ppocr DEBUG: kVAh, 0.946
+[2026/09/23 15:22:27] ppocr DEBUG: The visualized image saved in D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\ocr_visual_results\remaining_376__batch_08__431.png
+[2026/09/23 15:22:28] ppocr DEBUG: dt_boxes num : 4, elapsed : 0.20190954208374023
+[2026/09/23 15:22:28] ppocr DEBUG: rec_res num  : 4, elapsed : 0.24607634544372559
+[2026/09/23 15:22:28] ppocr DEBUG: 74  Predict time of D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\masked_images\remaining_376__batch_08__436.png: 0.448s
+[2026/09/23 15:22:28] ppocr DEBUG: It, 0.691
+[2026/09/23 15:22:28] ppocr DEBUG: n, 0.545
+[2026/09/23 15:22:28] ppocr DEBUG: The visualized image saved in D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\ocr_visual_results\remaining_376__batch_08__436.png
+[2026/09/23 15:22:28] ppocr DEBUG: dt_boxes num : 1, elapsed : 0.19787836074829102
+[2026/09/23 15:22:28] ppocr DEBUG: rec_res num  : 1, elapsed : 0.06570172309875488
+[2026/09/23 15:22:28] ppocr DEBUG: 75  Predict time of D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\masked_images\remaining_376__batch_08__447.png: 0.266s
+[2026/09/23 15:22:28] ppocr DEBUG: 00:00:00, 0.991
+[2026/09/23 15:22:28] ppocr DEBUG: The visualized image saved in D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\ocr_visual_results\remaining_376__batch_08__447.png
+[2026/09/23 15:22:28] ppocr DEBUG: dt_boxes num : 2, elapsed : 0.17253375053405762
+[2026/09/23 15:22:29] ppocr DEBUG: rec_res num  : 2, elapsed : 0.19257688522338867
+[2026/09/23 15:22:29] ppocr DEBUG: 76  Predict time of D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\masked_images\remaining_376__batch_09__455.png: 0.367s
+[2026/09/23 15:22:29] ppocr DEBUG: 00:00:00t, 0.975
+[2026/09/23 15:22:29] ppocr DEBUG: BAL, 0.832
+[2026/09/23 15:22:29] ppocr DEBUG: The visualized image saved in D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\ocr_visual_results\remaining_376__batch_09__455.png
+[2026/09/23 15:22:29] ppocr DEBUG: dt_boxes num : 7, elapsed : 0.2446279525756836
+[2026/09/23 15:22:29] ppocr DEBUG: rec_res num  : 7, elapsed : 0.5322315692901611
+[2026/09/23 15:22:29] ppocr DEBUG: 77  Predict time of D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\masked_images\remaining_376__batch_09__462.png: 0.782s
+[2026/09/23 15:22:29] ppocr DEBUG: Pr, 0.994
+[2026/09/23 15:22:29] ppocr DEBUG: d1, 0.689
+[2026/09/23 15:22:29] ppocr DEBUG: r, 1.000
+[2026/09/23 15:22:29] ppocr DEBUG: t, 0.992
+[2026/09/23 15:22:29] ppocr DEBUG: m0, 0.527
+[2026/09/23 15:22:29] ppocr DEBUG: n, 0.993
+[2026/09/23 15:22:29] ppocr DEBUG: The visualized image saved in D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\ocr_visual_results\remaining_376__batch_09__462.png
+[2026/09/23 15:22:30] ppocr DEBUG: dt_boxes num : 4, elapsed : 0.3729367256164551
+[2026/09/23 15:22:30] ppocr DEBUG: rec_res num  : 4, elapsed : 0.27428674697875977
+[2026/09/23 15:22:30] ppocr DEBUG: 78  Predict time of D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\masked_images\remaining_376__batch_09__473.png: 0.654s
+[2026/09/23 15:22:30] ppocr DEBUG: 000141, 0.989
+[2026/09/23 15:22:30] ppocr DEBUG: IP, 1.000
+[2026/09/23 15:22:30] ppocr DEBUG: 1, 0.988
+[2026/09/23 15:22:30] ppocr DEBUG: kWh, 0.981
+[2026/09/23 15:22:30] ppocr DEBUG: The visualized image saved in D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\ocr_visual_results\remaining_376__batch_09__473.png
+[2026/09/23 15:22:31] ppocr DEBUG: dt_boxes num : 2, elapsed : 0.5537943840026855
+[2026/09/23 15:22:31] ppocr DEBUG: rec_res num  : 2, elapsed : 0.1086418628692627
+[2026/09/23 15:22:31] ppocr DEBUG: 79  Predict time of D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\masked_images\remaining_376__batch_09__499.png: 0.671s
+[2026/09/23 15:22:31] ppocr DEBUG: 01:01:32, 0.967
+[2026/09/23 15:22:31] ppocr DEBUG: d, 0.894
+[2026/09/23 15:22:31] ppocr DEBUG: The visualized image saved in D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\ocr_visual_results\remaining_376__batch_09__499.png
+[2026/09/23 15:22:31] ppocr DEBUG: dt_boxes num : 2, elapsed : 0.4578855037689209
+[2026/09/23 15:22:31] ppocr DEBUG: rec_res num  : 2, elapsed : 0.11631941795349121
+[2026/09/23 15:22:31] ppocr DEBUG: 80  Predict time of D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\masked_images\remaining_376__batch_10__517.png: 0.584s
+[2026/09/23 15:22:31] ppocr DEBUG: 01:01:32, 0.992
+[2026/09/23 15:22:31] ppocr DEBUG: d, 0.981
+[2026/09/23 15:22:32] ppocr DEBUG: The visualized image saved in D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\ocr_visual_results\remaining_376__batch_10__517.png
+[2026/09/23 15:22:32] ppocr DEBUG: dt_boxes num : 3, elapsed : 0.07978320121765137
+[2026/09/23 15:22:32] ppocr DEBUG: rec_res num  : 3, elapsed : 0.25507640838623047
+[2026/09/23 15:22:32] ppocr DEBUG: 81  Predict time of D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\masked_images\remaining_376__batch_10__523.png: 0.347s
+[2026/09/23 15:22:32] ppocr DEBUG: 18.164, 0.986
+[2026/09/23 15:22:32] ppocr DEBUG: T2, 0.918
+[2026/09/23 15:22:32] ppocr DEBUG: kVA, 0.981
+[2026/09/23 15:22:32] ppocr DEBUG: The visualized image saved in D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\ocr_visual_results\remaining_376__batch_10__523.png
+[2026/09/23 15:22:32] ppocr DEBUG: dt_boxes num : 1, elapsed : 0.08255219459533691
+[2026/09/23 15:22:32] ppocr DEBUG: rec_res num  : 1, elapsed : 0.06639885902404785
+[2026/09/23 15:22:32] ppocr DEBUG: 82  Predict time of D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\masked_images\remaining_376__batch_10__535.png: 0.155s
+[2026/09/23 15:22:32] ppocr DEBUG: 06:13:51, 0.930
+[2026/09/23 15:22:32] ppocr DEBUG: The visualized image saved in D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\ocr_visual_results\remaining_376__batch_10__535.png
+[2026/09/23 15:22:32] ppocr DEBUG: dt_boxes num : 3, elapsed : 0.08016562461853027
+[2026/09/23 15:22:33] ppocr DEBUG: rec_res num  : 3, elapsed : 0.1731090545654297
+[2026/09/23 15:22:33] ppocr DEBUG: 83  Predict time of D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\masked_images\remaining_376__batch_10__537.png: 0.264s
+[2026/09/23 15:22:33] ppocr DEBUG: 17923, 0.965
+[2026/09/23 15:22:33] ppocr DEBUG: T2, 0.887
+[2026/09/23 15:22:33] ppocr DEBUG: kW, 0.980
+[2026/09/23 15:22:33] ppocr DEBUG: The visualized image saved in D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\ocr_visual_results\remaining_376__batch_10__537.png
+[2026/09/23 15:22:33] ppocr DEBUG: dt_boxes num : 6, elapsed : 0.07683205604553223
+[2026/09/23 15:22:33] ppocr DEBUG: rec_res num  : 6, elapsed : 0.3102447986602783
+[2026/09/23 15:22:33] ppocr DEBUG: 84  Predict time of D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\masked_images\remaining_376__batch_10__548.png: 0.402s
+[2026/09/23 15:22:33] ppocr DEBUG: 01:01:58, 0.989
+[2026/09/23 15:22:33] ppocr DEBUG: L1, 0.999
+[2026/09/23 15:22:33] ppocr DEBUG: L2, 0.992
+[2026/09/23 15:22:33] ppocr DEBUG: dB1MD, 0.993
+[2026/09/23 15:22:33] ppocr DEBUG: T1, 1.000
+[2026/09/23 15:22:33] ppocr DEBUG: kVA, 0.992
+[2026/09/23 15:22:33] ppocr DEBUG: The visualized image saved in D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\ocr_visual_results\remaining_376__batch_10__548.png
+[2026/09/23 15:22:33] ppocr DEBUG: dt_boxes num : 2, elapsed : 0.07877707481384277
+[2026/09/23 15:22:33] ppocr DEBUG: rec_res num  : 2, elapsed : 0.13498640060424805
+[2026/09/23 15:22:33] ppocr DEBUG: 85  Predict time of D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\masked_images\remaining_376__batch_11__560.png: 0.221s
+[2026/09/23 15:22:33] ppocr DEBUG: 01:01:32, 0.955
+[2026/09/23 15:22:33] ppocr DEBUG: d, 0.978
+[2026/09/23 15:22:34] ppocr DEBUG: The visualized image saved in D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\ocr_visual_results\remaining_376__batch_11__560.png
+[2026/09/23 15:22:34] ppocr DEBUG: dt_boxes num : 4, elapsed : 0.10077118873596191
+[2026/09/23 15:22:34] ppocr DEBUG: rec_res num  : 4, elapsed : 0.2494204044342041
+[2026/09/23 15:22:34] ppocr DEBUG: 86  Predict time of D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\masked_images\remaining_376__batch_11__562.png: 0.360s
+[2026/09/23 15:22:34] ppocr DEBUG: 000060, 0.985
+[2026/09/23 15:22:34] ppocr DEBUG: T2, 1.000
+[2026/09/23 15:22:34] ppocr DEBUG: kWh, 0.966
+[2026/09/23 15:22:34] ppocr DEBUG: F, 1.000
+[2026/09/23 15:22:34] ppocr DEBUG: The visualized image saved in D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\ocr_visual_results\remaining_376__batch_11__562.png
+[2026/09/23 15:22:34] ppocr DEBUG: dt_boxes num : 3, elapsed : 0.06657052040100098
+[2026/09/23 15:22:34] ppocr DEBUG: rec_res num  : 3, elapsed : 0.14641809463500977
+[2026/09/23 15:22:34] ppocr DEBUG: 87  Predict time of D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\masked_images\remaining_376__batch_11__573.png: 0.222s
+[2026/09/23 15:22:34] ppocr DEBUG: 17918, 0.956
+[2026/09/23 15:22:34] ppocr DEBUG: T2, 0.909
+[2026/09/23 15:22:34] ppocr DEBUG: kVA, 0.984
+[2026/09/23 15:22:34] ppocr DEBUG: The visualized image saved in D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\ocr_visual_results\remaining_376__batch_11__573.png
+[2026/09/23 15:22:34] ppocr DEBUG: dt_boxes num : 3, elapsed : 0.07140016555786133
+[2026/09/23 15:22:35] ppocr DEBUG: rec_res num  : 3, elapsed : 0.1817951202392578
+[2026/09/23 15:22:35] ppocr DEBUG: 88  Predict time of D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\masked_images\remaining_376__batch_11__581.png: 0.265s
+[2026/09/23 15:22:35] ppocr DEBUG: 09081, 0.963
+[2026/09/23 15:22:35] ppocr DEBUG: T2, 0.993
+[2026/09/23 15:22:35] ppocr DEBUG: kW, 0.981
+[2026/09/23 15:22:35] ppocr DEBUG: The visualized image saved in D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\ocr_visual_results\remaining_376__batch_11__581.png
+[2026/09/23 15:22:35] ppocr DEBUG: dt_boxes num : 7, elapsed : 0.09262752532958984
+[2026/09/23 15:22:35] ppocr DEBUG: rec_res num  : 7, elapsed : 0.43434858322143555
+[2026/09/23 15:22:35] ppocr DEBUG: 89  Predict time of D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\masked_images\remaining_376__batch_11__586.png: 0.543s
+[2026/09/23 15:22:35] ppocr DEBUG: 0.165, 0.999
+[2026/09/23 15:22:35] ppocr DEBUG: L1L2, 1.000
+[2026/09/23 15:22:35] ppocr DEBUG: B, 0.691
+[2026/09/23 15:22:35] ppocr DEBUG: 5, 0.405
+[2026/09/23 15:22:35] ppocr DEBUG: MD, 0.999
+[2026/09/23 15:22:35] ppocr DEBUG: T1, 0.999
+[2026/09/23 15:22:35] ppocr DEBUG: kW, 0.994
+[2026/09/23 15:22:35] ppocr DEBUG: The visualized image saved in D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\ocr_visual_results\remaining_376__batch_11__586.png
+[2026/09/23 15:22:36] ppocr DEBUG: dt_boxes num : 5, elapsed : 0.08501291275024414
+[2026/09/23 15:22:36] ppocr DEBUG: rec_res num  : 5, elapsed : 0.3551795482635498
+[2026/09/23 15:22:36] ppocr DEBUG: 90  Predict time of D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\masked_images\remaining_376__batch_12__630.png: 0.455s
+[2026/09/23 15:22:36] ppocr DEBUG: 000061, 0.993
+[2026/09/23 15:22:36] ppocr DEBUG: T2, 0.933
+[2026/09/23 15:22:36] ppocr DEBUG: kWh, 0.969
+[2026/09/23 15:22:36] ppocr DEBUG: F, 1.000
+[2026/09/23 15:22:36] ppocr DEBUG: The visualized image saved in D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\ocr_visual_results\remaining_376__batch_12__630.png
+[2026/09/23 15:22:36] ppocr DEBUG: dt_boxes num : 3, elapsed : 0.08388900756835938
+[2026/09/23 15:22:36] ppocr DEBUG: rec_res num  : 3, elapsed : 0.18669629096984863
+[2026/09/23 15:22:36] ppocr DEBUG: 91  Predict time of D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\masked_images\remaining_376__batch_12__631.png: 0.279s
+[2026/09/23 15:22:36] ppocr DEBUG: 14341, 0.985
+[2026/09/23 15:22:36] ppocr DEBUG: T2, 1.000
+[2026/09/23 15:22:36] ppocr DEBUG: kW, 0.963
+[2026/09/23 15:22:36] ppocr DEBUG: The visualized image saved in D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\ocr_visual_results\remaining_376__batch_12__631.png
+[2026/09/23 15:22:36] ppocr DEBUG: dt_boxes num : 4, elapsed : 0.08049559593200684
+[2026/09/23 15:22:37] ppocr DEBUG: rec_res num  : 4, elapsed : 0.22837424278259277
+[2026/09/23 15:22:37] ppocr DEBUG: 92  Predict time of D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\masked_images\remaining_376__batch_12__644.png: 0.316s
+[2026/09/23 15:22:37] ppocr DEBUG: 14338, 0.978
+[2026/09/23 15:22:37] ppocr DEBUG: T2, 0.999
+[2026/09/23 15:22:37] ppocr DEBUG: kW, 0.974
+[2026/09/23 15:22:37] ppocr DEBUG: The visualized image saved in D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\ocr_visual_results\remaining_376__batch_12__644.png
+[2026/09/23 15:22:37] ppocr DEBUG: dt_boxes num : 2, elapsed : 0.07754635810852051
+[2026/09/23 15:22:37] ppocr DEBUG: rec_res num  : 2, elapsed : 0.12430024147033691
+[2026/09/23 15:22:37] ppocr DEBUG: 93  Predict time of D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\masked_images\remaining_376__batch_12__649.png: 0.209s
+[2026/09/23 15:22:37] ppocr DEBUG: 06:23:0E, 0.963
+[2026/09/23 15:22:37] ppocr DEBUG: t, 0.991
+[2026/09/23 15:22:37] ppocr DEBUG: The visualized image saved in D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\ocr_visual_results\remaining_376__batch_12__649.png
+[2026/09/23 15:22:37] ppocr DEBUG: dt_boxes num : 5, elapsed : 0.07267451286315918
+[2026/09/23 15:22:37] ppocr DEBUG: rec_res num  : 5, elapsed : 0.2830376625061035
+[2026/09/23 15:22:37] ppocr DEBUG: 94  Predict time of D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\masked_images\remaining_376__batch_12__660.png: 0.365s
+[2026/09/23 15:22:37] ppocr DEBUG: PF0001, 0.994
+[2026/09/23 15:22:37] ppocr DEBUG: T2, 0.999
+[2026/09/23 15:22:38] ppocr DEBUG: The visualized image saved in D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\ocr_visual_results\remaining_376__batch_12__660.png
+[2026/09/23 15:22:38] ppocr DEBUG: dt_boxes num : 2, elapsed : 0.07281184196472168
+[2026/09/23 15:22:38] ppocr DEBUG: rec_res num  : 2, elapsed : 0.12476444244384766
+[2026/09/23 15:22:38] ppocr DEBUG: 95  Predict time of D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\masked_images\remaining_376__batch_13__675.png: 0.211s
+[2026/09/23 15:22:38] ppocr DEBUG: PF0002, 0.998
+[2026/09/23 15:22:38] ppocr DEBUG: T2, 0.774
+[2026/09/23 15:22:38] ppocr DEBUG: The visualized image saved in D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\ocr_visual_results\remaining_376__batch_13__675.png
+[2026/09/23 15:22:38] ppocr DEBUG: dt_boxes num : 4, elapsed : 0.07886886596679688
+[2026/09/23 15:22:38] ppocr DEBUG: rec_res num  : 4, elapsed : 0.23979711532592773
+[2026/09/23 15:22:38] ppocr DEBUG: 96  Predict time of D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\masked_images\remaining_376__batch_13__684.png: 0.328s
+[2026/09/23 15:22:38] ppocr DEBUG: 14528, 0.946
+[2026/09/23 15:22:38] ppocr DEBUG: T2, 1.000
+[2026/09/23 15:22:38] ppocr DEBUG: kW, 0.974
+[2026/09/23 15:22:38] ppocr DEBUG: The visualized image saved in D:\Actual Project\Indali_Lcd-Data-Extractor\shared\hybrid-with-icon-masking\ocr_visual_results\remaining_376__batch_13__684.png
+[2026/09/23 15:22:38] ppocr INFO: The predict total time is 55.79156303405762

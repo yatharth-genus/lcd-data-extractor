@@ -13,3 +13,9 @@ packages/**/*.bin filter=lfs diff=lfs merge=lfs -text
 packages/**/*.xml filter=lfs diff=lfs merge=lfs -text
 packages/**/*.docx filter=lfs diff=lfs merge=lfs -text
 packages/**/*.xlsx filter=lfs diff=lfs merge=lfs -text
+packages/hybrid-with-icon-masking/results/masked_images/*.png filter=lfs diff=lfs merge=lfs -text
+packages/hybrid-with-icon-masking/results/masked_images/*.jpg filter=lfs diff=lfs merge=lfs -text
+packages/hybrid-with-icon-masking/results/masked_images/*.jpeg filter=lfs diff=lfs merge=lfs -text
+packages/hybrid-with-icon-masking/results/ocr_visual_results/*.png filter=lfs diff=lfs merge=lfs -text
+packages/hybrid-with-icon-masking/results/ocr_visual_results/*.jpg filter=lfs diff=lfs merge=lfs -text
+packages/hybrid-with-icon-masking/results/ocr_visual_results/*.jpeg filter=lfs diff=lfs merge=lfs -text
