@@ -1,0 +1,9 @@
+﻿fastapi
+uvicorn[standard]
+python-multipart
+openvino
+opencv-python
+numpy
+PyYAML
+paddleocr==2.8.1
+paddlepaddle==2.6.2
