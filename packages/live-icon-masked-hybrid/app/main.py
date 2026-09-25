@@ -680,3 +680,132 @@ def get_rendered_result(request_id: str):
 
     return FileResponse(result_path, media_type="image/png", filename=result_path.name)
 
+
+# FOLDER_PREDICTION_SUPPORT_V1
+MAX_FOLDER_IMAGES = 20
+FOLDER_SUPPORTED_CONTENT_TYPES = {"image/png", "image/jpeg", "image/bmp", "image/webp"}
+
+class FolderPredictionFailure(BaseModel):
+    filename: str
+    code: str
+    message: str
+
+class FolderPredictionResponse(BaseModel):
+    batch_id: str
+    status: str
+    total_files_received: int
+    images_processed: int
+    images_failed: int
+    total_processing_time_ms: float
+    results: list[dict]
+    failures: list[FolderPredictionFailure]
+
+def _response_to_dict(value):
+    if hasattr(value, "model_dump"):
+        return value.model_dump(mode="json")
+    if hasattr(value, "dict"):
+        return value.dict()
+    if isinstance(value, dict):
+        return value
+    raise TypeError("Unsupported single-image prediction response type.")
+
+@app.post(
+    "/predict/folder",
+    response_model=FolderPredictionResponse,
+    summary="Process a folder containing up to 20 LCD images",
+    description=(
+        "Accepts between 1 and 20 images. Each image receives fresh icon "
+        "detection, icon masking, Model 2 text detection, Model 3 text "
+        "recognition, and a rendered result. Processing is sequential."
+    ),
+    tags=["Prediction"],
+    operation_id="predict_lcd_image_folder",
+)
+async def predict_lcd_image_folder(
+    request: Request,
+    lcd_images: list[UploadFile] = File(..., description="Select 1 to 20 LCD images."),
+):
+    received_count = len(lcd_images)
+    if received_count < 1:
+        raise HTTPException(status_code=400, detail={
+            "code": "EMPTY_BATCH", "message": "Select at least one image.",
+            "minimum_images": 1, "received_files": 0,
+        })
+    if received_count > MAX_FOLDER_IMAGES:
+        raise HTTPException(status_code=400, detail={
+            "code": "BATCH_LIMIT_EXCEEDED",
+            "message": "A folder prediction request can contain a maximum of 20 images.",
+            "maximum_images": MAX_FOLDER_IMAGES,
+            "received_files": received_count,
+        })
+
+    batch_id = str(uuid.uuid4())
+    batch_started = perf_counter()
+    successful_results = []
+    failures = []
+
+    for upload in lcd_images:
+        original_name = upload.filename or "uploaded_image"
+        filename = Path(original_name.replace("\\", "/")).name
+        content_type = upload.content_type or ""
+        if content_type not in FOLDER_SUPPORTED_CONTENT_TYPES:
+            failures.append({
+                "filename": filename,
+                "code": "UNSUPPORTED_FILE_TYPE",
+                "message": "Supported formats are PNG, JPG, JPEG, BMP, and WebP.",
+            })
+            continue
+        try:
+            prediction = await extract_lcd_text_and_icons(request=request, lcd_image=upload)
+            prediction_data = _response_to_dict(prediction)
+            prediction_data["source_relative_path"] = original_name
+            successful_results.append(prediction_data)
+        except HTTPException as error:
+            detail = error.detail
+            if isinstance(detail, dict):
+                code = str(detail.get("code", "PREDICTION_FAILED"))
+                message = str(detail.get("message", detail))
+            else:
+                code, message = "PREDICTION_FAILED", str(detail)
+            failures.append({"filename": filename, "code": code, "message": message})
+        except Exception as error:
+            failures.append({"filename": filename, "code": "INTERNAL_ERROR", "message": str(error)})
+
+    elapsed_ms = (perf_counter() - batch_started) * 1000
+    processed_count = len(successful_results)
+    failed_count = len(failures)
+    status = "success" if processed_count == received_count else ("partial_success" if processed_count else "failed")
+    return {
+        "batch_id": batch_id,
+        "status": status,
+        "total_files_received": received_count,
+        "images_processed": processed_count,
+        "images_failed": failed_count,
+        "total_processing_time_ms": elapsed_ms,
+        "results": successful_results,
+        "failures": failures,
+    }
+
+FOLDER_TEST_PAGE = r'''<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>LCD Folder Tester</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;background:#f4f7fb;color:#172033}header{background:white;border-bottom:1px solid #dce3ec;padding:18px 24px}main{max-width:1500px;margin:auto;padding:24px}.panel,.card{background:white;border:1px solid #dce3ec;border-radius:14px;padding:18px;margin-bottom:18px;box-shadow:0 4px 18px rgba(28,44,70,.06)}.controls{display:flex;gap:12px;flex-wrap:wrap;align-items:center}button,a.btn{border:0;border-radius:9px;padding:10px 16px;background:#1769e0;color:white;font-weight:700;text-decoration:none;cursor:pointer}button:disabled{opacity:.55}.muted{color:#657386}.warning{color:#b42318;font-weight:700}.summary{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.metric{background:#f7f9fc;border-radius:10px;padding:12px}.metric strong{display:block;font-size:22px}.images,.data{display:grid;grid-template-columns:1fr 1fr;gap:16px}.box{border:1px solid #dce3ec;border-radius:10px;padding:10px;background:white}.box img{width:100%;max-height:520px;object-fit:contain}.occ{padding:8px 0;border-bottom:1px solid #edf1f6}@media(max-width:900px){.images,.data{grid-template-columns:1fr}.summary{grid-template-columns:1fr 1fr}}
+</style></head><body>
+<header><h1>LCD Folder Prediction Tester</h1><p>Select a folder containing 1 to 20 supported images.</p></header>
+<main><section class="panel"><div class="controls"><input id="files" type="file" webkitdirectory multiple accept="image/png,image/jpeg,image/bmp,image/webp"><button id="run">Run Folder Prediction</button><a class="btn" href="/test">Single Image</a><a class="btn" href="/docs/">API Docs</a></div><p id="message" class="muted">Maximum 20 images per folder request.</p><p id="progress"></p></section>
+<section id="summary" class="panel" hidden><div class="summary"><div class="metric">Received<strong id="received">0</strong></div><div class="metric">Processed<strong id="processed">0</strong></div><div class="metric">Failed<strong id="failed">0</strong></div><div class="metric">Total Time<strong id="time">0 ms</strong></div></div></section><section id="results"></section></main>
+<script>
+const input=document.getElementById('files'),run=document.getElementById('run'),message=document.getElementById('message'),progress=document.getElementById('progress'),results=document.getElementById('results'),summary=document.getElementById('summary');
+const allowed=new Set(['image/png','image/jpeg','image/bmp','image/webp']);let selected=[];
+const esc=v=>String(v).replace(/[&<>'"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]));
+input.onchange=()=>{selected=Array.from(input.files).filter(f=>allowed.has(f.type));if(selected.length>20){message.innerHTML=`<span class="warning">Selected ${selected.length} supported images. Maximum is 20.</span>`;run.disabled=true}else{message.textContent=selected.length?`Selected ${selected.length} supported image(s). Maximum is 20.`:'No supported images selected.';run.disabled=false}};
+function rows(items,kind){if(!items||!items.length)return'<div class="muted">None detected</div>';return items.map(x=>`<div class="occ"><strong>${esc(x.id)}: ${esc(kind==='text'?x.value:x.class_name)}</strong><br><span class="muted">Confidence ${Number(x.confidence).toFixed(4)}</span></div>`).join('')}
+run.onclick=async()=>{if(selected.length<1||selected.length>20){message.innerHTML='<span class="warning">Select between 1 and 20 supported images.</span>';return}run.disabled=true;results.innerHTML='';summary.hidden=true;progress.textContent=`Processing ${selected.length} image(s)...`;const form=new FormData(),previews=new Map();selected.forEach(file=>{form.append('lcd_images',file,file.webkitRelativePath||file.name);previews.set(file.name,URL.createObjectURL(file))});try{const response=await fetch('/predict/folder',{method:'POST',body:form}),payload=await response.json();if(!response.ok)throw new Error(payload.detail?.message||JSON.stringify(payload.detail));received.textContent=payload.total_files_received;processed.textContent=payload.images_processed;failed.textContent=payload.images_failed;time.textContent=`${Number(payload.total_processing_time_ms).toFixed(1)} ms`;summary.hidden=false;progress.textContent=`Completed ${payload.images_processed} of ${payload.total_files_received}.`;payload.results.forEach(item=>{const name=item.image.filename,card=document.createElement('article');card.className='card';card.innerHTML=`<h2>${esc(name)}</h2><div class="images"><div class="box"><h3>Original</h3><img src="${previews.get(name)||''}"></div><div class="box"><h3>Rendered Result</h3><img src="${item.rendered_result.url}"></div></div><div class="data"><div class="box"><h3>Text (${item.text_occurrences.length})</h3>${rows(item.text_occurrences,'text')}</div><div class="box"><h3>Icons (${item.icon_occurrences.length})</h3>${rows(item.icon_occurrences,'icon')}</div></div>`;results.appendChild(card)});if(payload.failures.length){const card=document.createElement('section');card.className='panel';card.innerHTML='<h2>Failures</h2>'+payload.failures.map(x=>`<div class="occ"><strong>${esc(x.filename)}</strong>: ${esc(x.message)}</div>`).join('');results.appendChild(card)}}catch(error){progress.innerHTML=`<span class="warning">${esc(error.message)}</span>`}finally{run.disabled=false}};
+</script></body></html>'''
+
+@app.get("/folder-test", response_class=HTMLResponse, include_in_schema=False)
+def get_folder_test_page():
+    return HTMLResponse(content=FOLDER_TEST_PAGE)
+
+
