@@ -1,0 +1,4 @@
+openvino>=2025.0
+opencv-python>=4.8
+numpy>=1.24
+PyYAML>=6.0

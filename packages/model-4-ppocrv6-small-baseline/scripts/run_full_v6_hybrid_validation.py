@@ -4,6 +4,7 @@ import argparse
 import importlib.util
 import inspect
 import json
+import os
 import shutil
 import subprocess
 import sys
@@ -15,23 +16,20 @@ from typing import Any
 import cv2
 import numpy as np
 
-ROOT = Path(r"D:\Actual Project")
-SOURCE = ROOT / "lcd-fastapi-learning"
-ICON_MODULE = SOURCE / "icon_detector.py"
-PADDLE_REPO = ROOT / "PaddleOCR-3.7"
-PADDLE_PYTHON = ROOT / "ppocrv6_env" / "Scripts" / "python.exe"
-CLEAN = ROOT / "Indali_Lcd-Data-Extractor"
-MODEL4 = CLEAN / "packages" / "model-4-ppocrv6-small-baseline"
+SCRIPT_FILE = Path(__file__).resolve()
+SCRIPT_DIR = SCRIPT_FILE.parent
+MODEL4 = SCRIPT_DIR.parent
+PACKAGES_DIR = MODEL4.parent
+REPO_ROOT = PACKAGES_DIR.parent
+ICON_PACKAGE = PACKAGES_DIR / "icon-detector-openvino"
+ICON_MODULE = ICON_PACKAGE / "runtime" / "icon_detector.py"
+PADDLE_REPO = Path(os.environ.get("PADDLEOCR_ROOT", str(REPO_ROOT.parent / "PaddleOCR-3.7"))).expanduser().resolve()
+PADDLE_PYTHON = Path(os.environ.get("PPOCRV6_PYTHON", sys.executable)).expanduser().resolve()
 DET_MODEL = MODEL4 / "models" / "detector" / "inference"
 REC_MODEL = MODEL4 / "models" / "recognizer" / "inference"
 REC_DICT = MODEL4 / "models" / "recognizer" / "character_dict.txt"
-VALIDATION = (
-    CLEAN / "packages" / "model-3-full-reviewed" / "data" /
-    "corrected_dataset" / "detector" / "validation" / "images"
-)
 DEFAULT_OUTPUT = MODEL4 / "results" / "full_v6_hybrid_validation"
 SUPPORTED = {".png", ".jpg", ".jpeg", ".bmp", ".webp"}
-
 
 def load_icon_class():
     spec = importlib.util.spec_from_file_location("lcd_icon_detector", ICON_MODULE)
@@ -228,7 +226,7 @@ def find_ocr_visual(ocr_dir: Path, name: str) -> Path | None:
 
 def main():
     parser = argparse.ArgumentParser(description="Run icon masking plus PP-OCRv6 OCR on all validation images.")
-    parser.add_argument("--images", type=Path, default=VALIDATION)
+    parser.add_argument("--images", type=Path, required=True)
     parser.add_argument("--output", type=Path, default=DEFAULT_OUTPUT)
     parser.add_argument("--icon-threshold", type=float, default=0.38)
     args = parser.parse_args()

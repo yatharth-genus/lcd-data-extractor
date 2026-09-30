@@ -1,142 +1,96 @@
 # Full Icon-Masked PP-OCRv6 LCD Pipeline
 
-This package contains the completed experimental LCD pipeline:
+This package is portable. It does not depend on the original developer's drive letter, username, virtual-environment path, or validation-data path.
+
+## Pipeline
 
 ```text
-LCD image
-  -> OpenVINO icon detector
-  -> icon masking
-  -> fine-tuned PP-OCRv6 small detector
-  -> fine-tuned PP-OCRv6 small recognizer
-  -> rendered images and JSON reports
+LCD image -> OpenVINO icon detector -> icon masking -> PP-OCRv6 detector -> PP-OCRv6 recognizer -> rendered output and JSON
 ```
 
-## Results
+## Metrics
 
-### Detector
+Detector: precision `0.7112068966`, recall `0.8823529412`, Hmean `0.7875894988`, best epoch `40`.
 
-- Precision: `0.7112068966`
-- Recall: `0.8823529412`
-- Hmean: `0.7875894988`
-- Best epoch: `40`
+Recognizer: accuracy `0.9171122749`, normalized edit similarity `0.9653043045`, best epoch `30`.
 
-### Recognizer
-
-- Validation accuracy: `0.9171122749`
-- Normalized edit similarity: `0.9653043045`
-- Best epoch: `30`
-
-The existing PP-OCRv3 Model 3 recognizer remains the stronger general fallback. This package is the experimental full PP-OCRv6 path and a base for future meter-family routing.
-
-## Contents
-
-```text
-config/                         Training and reference configurations
-models/detector/training/       Best detector checkpoint
-models/detector/inference/      Exported detector model
-models/recognizer/training/     Best recognizer checkpoint
-models/recognizer/inference/    Exported recognizer model
-models/recognizer/character_dict.txt
-scripts/                        Pipeline, comparison, and import utilities
-results/                        Compact metrics and reports
-logs/                           Colab training logs
-docs/                           Import and environment records
-```
-
-The reviewed icon detector is stored at:
-
-```text
-packages/icon-detector-openvino/
-```
-
-## Required local paths
-
-```text
-D:\Actual Project\lcd-fastapi-learning\icon_detector.py
-D:\Actual Project\PaddleOCR-3.7
-D:\Actual Project\ppocrv6_env
-D:\Actual Project\Indali_Lcd-Data-Extractor
-```
-
-## Run the full validation pipeline
-
-Activate the environment containing OpenVINO and the icon detector dependencies:
+## Clone and fetch model files
 
 ```powershell
-& "D:\Actual Project\lcd_fastapi_env\Scripts\Activate.ps1"
+git clone <COMPANY_REPOSITORY_URL>
+cd Indali_Lcd-Data-Extractor
+git switch feature/ppocrv6-full-pipeline
+git lfs install
+git lfs pull
 ```
 
-If the environment is inside the FastAPI folder, use:
+## Create the icon runtime
 
 ```powershell
-& "D:\Actual Project\lcd-fastapi-learning\lcd_fastapi_env\Scripts\Activate.ps1"
+py -3.10 -m venv .venv-icon
+& ".\.venv-icon\Scripts\Activate.ps1"
+python -m pip install --upgrade pip
+python -m pip install -r ".\packages\model-4-ppocrv6-small-baseline\requirements\requirements-inference.txt"
 ```
 
-Run all reviewed validation images:
+## Prepare PaddleOCR 3.7
+
+Clone PaddleOCR next to this repository. It can also be stored elsewhere.
 
 ```powershell
-cd "D:\Actual Project\Indali_Lcd-Data-Extractor"
-python ".\packages\model-4-ppocrv6-small-baseline\scriptsun_full_v6_hybrid_validation.py"
+cd ..
+git clone --depth 1 --branch v3.7.0 https://github.com/PaddlePaddle/PaddleOCR.git PaddleOCR-3.7
+cd PaddleOCR-3.7
+py -3.10 -m venv .venv-ppocrv6
+& ".\.venv-ppocrv6\Scripts\Activate.ps1"
+python -m pip install --upgrade pip
+python -m pip install -r requirements.txt
+python -m pip install -e .
 ```
 
-The expected validation count is 97. The OCR stage automatically invokes `D:\Actual Project\ppocrv6_env\Scripts\python.exe`.
+Install the appropriate PaddlePaddle CPU or GPU build in `.venv-ppocrv6`.
 
-## Run another image folder
+## Configure runtime locations
+
+From the company repository root:
 
 ```powershell
-python ".\packages\model-4-ppocrv6-small-baseline\scriptsun_full_v6_hybrid_validation.py" `
-  --images "D:\path	o\lcd_images" `
-  --output "D:\path	o\output"
+$env:PADDLEOCR_ROOT = (Resolve-Path "..\PaddleOCR-3.7").Path
+$env:PPOCRV6_PYTHON = (Resolve-Path "..\PaddleOCR-3.7\.venv-ppocrv6\Scripts\python.exe").Path
 ```
 
-Set a different icon confidence threshold:
+These environment variables make the setup independent of installation location.
+
+## Run
 
 ```powershell
-python ".\packages\model-4-ppocrv6-small-baseline\scriptsun_full_v6_hybrid_validation.py" `
+& ".\.venv-icon\Scripts\Activate.ps1"
+python ".\packages\model-4-ppocrv6-small-baseline\scripts\run_full_v6_hybrid_validation.py" `
+  --images "C:\path\to\lcd_images" `
+  --output ".\pipeline-output"
+```
+
+Optional threshold:
+
+```powershell
+python ".\packages\model-4-ppocrv6-small-baseline\scripts\run_full_v6_hybrid_validation.py" `
+  --images "C:\path\to\lcd_images" `
+  --output ".\pipeline-output" `
   --icon-threshold 0.45
 ```
 
 ## Outputs
 
 ```text
-results/full_v6_hybrid_validation/
-  originals/          Ignored by Git
-  masked/             Ignored by Git
-  ocr_rendered/       Ignored by Git
-  rendered/           Ignored by Git
-  json/               Ignored by Git
-  predictions.json
-  failures.json
-  summary.json
-  pipeline_console.txt
+pipeline-output/originals
+pipeline-output/masked
+pipeline-output/ocr_rendered
+pipeline-output/rendered
+pipeline-output/json
+pipeline-output/predictions.json
+pipeline-output/failures.json
+pipeline-output/summary.json
+pipeline-output/pipeline_console.txt
 ```
 
-## Compare recognizers
-
-```powershell
-python ".\packages\model-4-ppocrv6-small-baseline\scripts\compare_lcd_recognizers.py"
-```
-
-## Git LFS
-
-Model binaries use Git LFS. After cloning or pulling:
-
-```powershell
-git lfs install
-git lfs pull
-```
-
-Do not commit copied datasets, Colab archives, virtual environments, backups, or bulk generated renderings.
-
-## Temporary API routing plan
-
-```text
-general_v3
-  -> Model 2 detector
-  -> Model 3 recognizer
-
-experimental_v6
-  -> icon detector and masking
-  -> fine-tuned PP-OCRv6 small detector
-  -> fine-tuned PP-OCRv6 small recognizer
-```
+The validation dataset is not committed. Supply any image directory with `--images`.
