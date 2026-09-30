@@ -1,0 +1,42 @@
+{
+  "imported_at": "2026-09-30T13:06:35",
+  "source_zip": "C:\\Users\\109958\\Downloads\\ppocrv6_detector_best.zip",
+  "metrics": {
+    "hmean": 0.7875894988066825,
+    "precision": 0.7112068965517241,
+    "recall": 0.8823529411764706,
+    "best_epoch": 40,
+    "checkpoint_files": [
+      "best_accuracy.pdopt",
+      "best_accuracy.states",
+      "best_accuracy.pdema",
+      "best_accuracy.pdparams"
+    ],
+    "saved_at": "2026-09-30 06:33:24",
+    "inference_exported": true
+  },
+  "checkpoint": "D:\\Actual Project\\Indali_Lcd-Data-Extractor\\packages\\model-4-ppocrv6-small-baseline\\models\\detector\\training\\best_accuracy.pdparams",
+  "checkpoint_bytes": 10757225,
+  "checkpoint_sha256": "74241a846e16c4c924fa008a39b4625706b66db95450dbbd50151ca67f1e5133",
+  "inference_file_count": 3,
+  "inference_files": [
+    {
+      "path": "D:\\Actual Project\\Indali_Lcd-Data-Extractor\\packages\\model-4-ppocrv6-small-baseline\\models\\detector\\inference\\inference.json",
+      "bytes": 229307,
+      "sha256": "89240f689a4a77aad75ef55a8df0a15c8e1d4980a327d17e58f24bbadde5aeab"
+    },
+    {
+      "path": "D:\\Actual Project\\Indali_Lcd-Data-Extractor\\packages\\model-4-ppocrv6-small-baseline\\models\\detector\\inference\\inference.pdiparams",
+      "bytes": 9817888,
+      "sha256": "eb027e432f679c88129945afbf1274e9adb77c9cbf1617faa7a9de83b411e5aa"
+    },
+    {
+      "path": "D:\\Actual Project\\Indali_Lcd-Data-Extractor\\packages\\model-4-ppocrv6-small-baseline\\models\\detector\\inference\\inference.yml",
+      "bytes": 885,
+      "sha256": "89a3f9ad7df58b5b794fa1bb68831b019ea0c2a438363095be18b3e2cf1d7710"
+    }
+  ],
+  "config": "D:\\Actual Project\\Indali_Lcd-Data-Extractor\\packages\\model-4-ppocrv6-small-baseline\\config\\PP-OCRv6_small_det_lcd_finetune.yml",
+  "training_log": "D:\\Actual Project\\Indali_Lcd-Data-Extractor\\packages\\model-4-ppocrv6-small-baseline\\logs\\detector_training_console_colab.txt",
+  "backup": "D:\\Actual Project\\Indali_Lcd-Data-Extractor\\packages\\model-4-ppocrv6-small-baseline\\backups\\detector_before_colab_import_20260930_130635"
+}

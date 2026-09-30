@@ -1,0 +1,36 @@
+{
+  "model": "D:\\Actual Project\\handover\\model\\saved_model.xml",
+  "device": "CPU",
+  "input_name": "input",
+  "input_shape": [
+    1,
+    3,
+    640,
+    640
+  ],
+  "output_names": [
+    "dets",
+    "labels"
+  ],
+  "threshold": 0.38,
+  "pad_position": "center",
+  "include_ok": false,
+  "model_load_seconds": 0.6156,
+  "images_requested": 97,
+  "images_completed": 97,
+  "total_detections": 320,
+  "average_inference_ms": 674.654,
+  "class_counts": {
+    "ForwardCN": 48,
+    "battery": 12,
+    "comm": 17,
+    "coverOpen": 16,
+    "earth": 32,
+    "magnet": 17,
+    "neutral": 8,
+    "powerON": 83,
+    "reverseCN": 12,
+    "switchOFF": 23,
+    "switchON": 52
+  }
+}

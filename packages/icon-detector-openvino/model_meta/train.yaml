@@ -1,0 +1,17 @@
+binary_postprocessing:
+  BboxToBinaryClassification:
+    always_apply: true
+    p: 1.0
+    score_threshold: 0.38
+eval:
+  postprocessing:
+    output_type: object-detection
+experiment_type: object-detection
+model:
+  inputs:
+  - name: input
+    shape:
+    - 640
+    - 640
+    - 3
+  score_threshold: 0.38

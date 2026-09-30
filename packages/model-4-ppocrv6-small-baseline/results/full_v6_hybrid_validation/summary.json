@@ -1,0 +1,13 @@
+{
+  "total_validation_images": 97,
+  "icon_stage_completed": 97,
+  "successful_rendered": 97,
+  "failed": 0,
+  "total_icons": 320,
+  "average_icon_detection_ms": 605.2004711340144,
+  "average_icon_masking_ms": 1.2403185567050574,
+  "ocr_total_ms": 69840.39180000003,
+  "detector_model": "D:\\Actual Project\\Indali_Lcd-Data-Extractor\\packages\\model-4-ppocrv6-small-baseline\\models\\detector\\inference",
+  "recognizer_model": "D:\\Actual Project\\Indali_Lcd-Data-Extractor\\packages\\model-4-ppocrv6-small-baseline\\models\\recognizer\\inference",
+  "icon_threshold": 0.38
+}

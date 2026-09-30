@@ -1,0 +1,10 @@
+[32mModel files already exist. Using cached files. To redownload, please delete the directory manually: `C:\Users\109958\.paddlex\official_models\PP-OCRv6_small_rec`.[0m
+WARNING: Logging before InitGoogleLogging() is written to STDERR
+I0930 10:04:30.929167 24408 onednn_context.cc:81] oneDNN v3.6.2
+ReduceMeanCheckIfOneDNNSupport
+ReduceMeanCheckIfOneDNNSupport
+ReduceMeanCheckIfOneDNNSupport
+ReduceMeanCheckIfOneDNNSupport
+ReduceMeanCheckIfOneDNNSupport
+[2026/09/30 10:04:31] paddleocr INFO: Processed item 0 in 182.0662021636963 ms
+[32m{'res': {'input_path': 'D:\\Actual Project\\Indali_Lcd-Data-Extractor\\packages\\model-3-full-reviewed\\data\\corrected_dataset\\recognizer\\validation\\crop_img\\additional_100__batch_01__38__crop_0.jpg', 'page_index': None, 'rec_text': '00000', 'rec_score': 0.9998329281806946}}[0m

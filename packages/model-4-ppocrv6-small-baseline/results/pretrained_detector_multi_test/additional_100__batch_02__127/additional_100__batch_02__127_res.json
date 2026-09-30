@@ -1,0 +1,27 @@
+{
+    "input_path": "D:\\Actual Project\\Indali_Lcd-Data-Extractor\\packages\\model-3-full-reviewed\\data\\corrected_dataset\\detector\\validation\\images\\additional_100__batch_02__127.png",
+    "page_index": null,
+    "dt_polys": [
+        [
+            [
+                19,
+                25
+            ],
+            [
+                685,
+                25
+            ],
+            [
+                685,
+                316
+            ],
+            [
+                19,
+                316
+            ]
+        ]
+    ],
+    "dt_scores": [
+        0.818588178562585
+    ]
+}

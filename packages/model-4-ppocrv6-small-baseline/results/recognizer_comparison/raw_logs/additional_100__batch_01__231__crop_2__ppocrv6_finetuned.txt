@@ -1,0 +1,9 @@
+WARNING: Logging before InitGoogleLogging() is written to STDERR
+I0930 10:04:22.809609 27860 onednn_context.cc:81] oneDNN v3.6.2
+[2026/09/30 10:04:22] ppocr INFO: In PP-OCRv3, rec_image_shape parameter defaults to '3, 48, 320', if you are using recognition model with PP-OCRv2 or an older version, please set --rec_image_shape='3,32,320
+ReduceMeanCheckIfOneDNNSupport
+ReduceMeanCheckIfOneDNNSupport
+ReduceMeanCheckIfOneDNNSupport
+ReduceMeanCheckIfOneDNNSupport
+ReduceMeanCheckIfOneDNNSupport
+[2026/09/30 10:04:23] ppocr INFO: Predicts of D:\Actual Project\Indali_Lcd-Data-Extractor\packages\model-3-full-reviewed\data\corrected_dataset\recognizer\validation\crop_img\additional_100__batch_01__231__crop_2.jpg:('d', 0.9993901252746582)

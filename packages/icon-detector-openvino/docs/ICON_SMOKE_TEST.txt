@@ -1,0 +1,34 @@
+﻿Icon detector smoke-test record
+
+Date:
+2026-09-23 14:43:38
+
+Model:
+D:\Actual Project\handover\model\saved_model.xml
+
+Runtime:
+OpenVINO
+
+Device:
+CPU
+
+Input:
+D:\Actual Project\Indali_Lcd-Data-Extractor\packages\hybrid-model-2-detector-model-3-recognizer\data\validation\images\additional_100__batch_01__231.png
+
+Threshold:
+0.38
+
+Detections:
+3
+
+Inference time:
+431.432 ms
+
+Status:
+Passed
+
+Generated outputs:
+icon_smoke_test\rendered
+icon_smoke_test\reports\icon_detections.json
+icon_smoke_test\reports\icon_detections.jsonl
+icon_smoke_test\reports\summary.json

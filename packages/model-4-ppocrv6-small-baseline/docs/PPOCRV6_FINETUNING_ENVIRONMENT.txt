@@ -1,0 +1,19 @@
+﻿PP-OCRv6 fine-tuning environment
+
+PaddlePaddle:
+3.2.0
+
+PaddleX:
+3.7.2
+
+Python:
+Python 3.10.11
+
+Environment:
+D:\Actual Project\ppocrv6_env
+
+Purpose:
+Fine-tuning pretrained PP-OCRv6 small detector and recognizer on reviewed LCD data.
+
+Training from scratch:
+No

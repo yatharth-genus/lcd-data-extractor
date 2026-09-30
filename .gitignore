@@ -1,5 +1,4 @@
-﻿# Local staging packages
-packages/
+# Local staging packages
 
 # Git worktrees
 git-worktrees/
@@ -43,3 +42,17 @@ Label_before_gt_review_*.txt
 *.tmp
 *.bak
 *.backup
+# PP-OCRv6 generated and temporary artifacts
+packages/model-4-ppocrv6-small-baseline/backups/
+packages/model-4-ppocrv6-small-baseline/data/
+packages/model-4-ppocrv6-small-baseline/results/full_v6_hybrid_validation/originals/
+packages/model-4-ppocrv6-small-baseline/results/full_v6_hybrid_validation/masked/
+packages/model-4-ppocrv6-small-baseline/results/full_v6_hybrid_validation/ocr_rendered/
+packages/model-4-ppocrv6-small-baseline/results/full_v6_hybrid_validation/rendered/
+packages/model-4-ppocrv6-small-baseline/results/full_v6_hybrid_validation/json/
+ppocrv6_colab_build/
+ppocrv6_detector_colab_build/
+*.zip
+packages/icon-detector-openvino/results/baseline_97_images/rendered/
+packages/icon-detector-openvino/results/package_smoke_test/rendered/
+packages/model-4-ppocrv6-small-baseline/models/recognizer/inference_metadata_backup_*/

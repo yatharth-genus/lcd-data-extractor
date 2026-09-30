@@ -1,0 +1,26 @@
+﻿Icon detector runtime environment
+
+Python:
+Python 3.10.11
+
+OpenVINO:
+2026.4.0-22959-99c81491cc3-releases/2026/4
+
+OpenCV:
+5.0.0
+
+NumPy:
+2.2.6
+
+PyYAML:
+6.0.3
+
+Device:
+CPU
+
+Model:
+model/saved_model.xml
+model/saved_model.bin
+
+Default score threshold:
+0.38

@@ -1,0 +1,16 @@
+﻿image,ground_truth,model,prediction,confidence,exact_match,edit_distance
+additional_100__batch_01__231__crop_0.jpg,00:00:00,ppocrv6_zero_shot,00:0000,0.9335137605667114,False,1
+additional_100__batch_01__231__crop_0.jpg,00:00:00,ppocrv6_finetuned,00:00:00,0.9794209003448486,True,0
+additional_100__batch_01__231__crop_0.jpg,00:00:00,model3_ppocrv3,00:00:00,0.9385014772415161,True,0
+additional_100__batch_01__231__crop_1.jpg,BAL,ppocrv6_zero_shot,BA1L,0.6993699073791504,False,1
+additional_100__batch_01__231__crop_1.jpg,BAL,ppocrv6_finetuned,BAL,0.9880884289741516,True,0
+additional_100__batch_01__231__crop_1.jpg,BAL,model3_ppocrv3,BAL,0.9949819445610046,True,0
+additional_100__batch_01__231__crop_2.jpg,d,ppocrv6_zero_shot,d,0.7487324476242065,True,0
+additional_100__batch_01__231__crop_2.jpg,d,ppocrv6_finetuned,d,0.9993901252746582,True,0
+additional_100__batch_01__231__crop_2.jpg,d,model3_ppocrv3,d,0.9374834895133972,True,0
+additional_100__batch_01__38__crop_0.jpg,00.000,ppocrv6_zero_shot,00000,0.9998329281806946,False,1
+additional_100__batch_01__38__crop_0.jpg,00.000,ppocrv6_finetuned,00.000,0.9997884631156921,True,0
+additional_100__batch_01__38__crop_0.jpg,00.000,model3_ppocrv3,00.000,0.9490669369697571,True,0
+additional_100__batch_01__38__crop_1.jpg,KW,ppocrv6_zero_shot,KW,0.7925362586975098,True,0
+additional_100__batch_01__38__crop_1.jpg,KW,ppocrv6_finetuned,kW,0.891853928565979,False,1
+additional_100__batch_01__38__crop_1.jpg,KW,model3_ppocrv3,kW,0.9780840277671814,False,1

@@ -1,0 +1,52 @@
+[
+  {
+    "image": "additional_100__batch_01__231.png",
+    "source_path": "D:\\Actual Project\\Indali_Lcd-Data-Extractor\\packages\\hybrid-model-2-detector-model-3-recognizer\\data\\validation\\images\\additional_100__batch_01__231.png",
+    "width": 410,
+    "height": 132,
+    "status": "ok",
+    "inference_ms": 445.093,
+    "threshold": 0.38,
+    "pad_position": "center",
+    "detection_count": 3,
+    "detections": [
+      {
+        "class_id": 4,
+        "class_name": "switchON",
+        "confidence": 0.993809,
+        "box": [
+          176,
+          120,
+          208,
+          131
+        ],
+        "box_format": "xyxy"
+      },
+      {
+        "class_id": 3,
+        "class_name": "comm",
+        "confidence": 0.990335,
+        "box": [
+          16,
+          108,
+          42,
+          131
+        ],
+        "box_format": "xyxy"
+      },
+      {
+        "class_id": 10,
+        "class_name": "powerON",
+        "confidence": 0.95723,
+        "box": [
+          358,
+          27,
+          384,
+          51
+        ],
+        "box_format": "xyxy"
+      }
+    ],
+    "rendered_file": "additional_100__batch_01__231_icons.png"
+  }
+]

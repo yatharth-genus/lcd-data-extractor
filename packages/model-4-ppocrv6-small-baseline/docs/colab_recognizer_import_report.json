@@ -1,0 +1,32 @@
+{
+  "source_package": "D:\\Actual Project\\ppocrv6_colab",
+  "model4": "D:\\Actual Project\\Indali_Lcd-Data-Extractor\\packages\\model-4-ppocrv6-small-baseline",
+  "backup": null,
+  "best_checkpoint": "D:\\Actual Project\\Indali_Lcd-Data-Extractor\\packages\\model-4-ppocrv6-small-baseline\\models\\recognizer\\training\\best_accuracy.pdparams",
+  "best_checkpoint_bytes": 58720942,
+  "best_checkpoint_sha256": "8432ec0b39eff9b116e86428f2d280e3a8ddfbaf0694c932772475fdb6c532f1",
+  "inference_file_count": 3,
+  "inference_files": [
+    {
+      "path": "D:\\Actual Project\\Indali_Lcd-Data-Extractor\\packages\\model-4-ppocrv6-small-baseline\\models\\recognizer\\inference\\inference.json",
+      "bytes": 207986,
+      "sha256": "f23c0944c2272fdec9b7c237ee8c2b0ad8b7906cd41a41af8855da71129ee23d"
+    },
+    {
+      "path": "D:\\Actual Project\\Indali_Lcd-Data-Extractor\\packages\\model-4-ppocrv6-small-baseline\\models\\recognizer\\inference\\inference.pdiparams",
+      "bytes": 12065438,
+      "sha256": "f43f00c7ed84b110e157acfd021b9585857884f4a7ee54cd36a77f233b557394"
+    },
+    {
+      "path": "D:\\Actual Project\\Indali_Lcd-Data-Extractor\\packages\\model-4-ppocrv6-small-baseline\\models\\recognizer\\inference\\inference.yml",
+      "bytes": 1386,
+      "sha256": "d6b6b02de080a8828784807aa282b081bc667bd10c913940b959e1c7dfb5854c"
+    }
+  ],
+  "logs_copied": {
+    "training_log": true,
+    "preflight_log": true
+  },
+  "config": "D:\\Actual Project\\Indali_Lcd-Data-Extractor\\packages\\model-4-ppocrv6-small-baseline\\config\\PP-OCRv6_small_rec_lcd_finetune.yml",
+  "imported_at": "2026-09-30T09:47:32"
+}

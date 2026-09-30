@@ -13,3 +13,8 @@ packages/**/*.bin filter=lfs diff=lfs merge=lfs -text
 packages/**/*.xml filter=lfs diff=lfs merge=lfs -text
 packages/**/*.docx filter=lfs diff=lfs merge=lfs -text
 packages/**/*.xlsx filter=lfs diff=lfs merge=lfs -text
+*.pdparams filter=lfs diff=lfs merge=lfs -text
+*.pdiparams filter=lfs diff=lfs merge=lfs -text
+*.pdmodel filter=lfs diff=lfs merge=lfs -text
+*.bin filter=lfs diff=lfs merge=lfs -text
+*.xml filter=lfs diff=lfs merge=lfs -text
