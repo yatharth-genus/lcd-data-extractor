@@ -1,0 +1,20 @@
+train: &id001
+- RescaleWithPadding:
+    height: 640
+    width: 640
+- Pad:
+    always_apply: false
+    pad_height_divisor: 32
+    pad_width_divisor: 32
+- NormalizeMeanStd:
+    always_apply: false
+    mean:
+    - 123.675
+    - 116.28
+    - 103.53
+    p: 1
+    std:
+    - 58.395
+    - 57.12
+    - 57.375
+valid: *id001

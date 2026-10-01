@@ -1,21 +1,18 @@
-# Local staging packages
+﻿# Local staging packages
 
 # Git worktrees
 git-worktrees/
-
 # Python environments
 .venv/
 venv/
 env/
 paddle_train_env/
 annotation_legacy_env/
-
 # Python cache
 __pycache__/
 .pytest_cache/
 *.pyc
 *.pyo
-
 # Temporary training files
 latest.pdparams
 latest.pdopt
@@ -23,21 +20,17 @@ latest.states
 iter_epoch_*.pdparams
 iter_epoch_*.pdopt
 iter_epoch_*.states
-
 # Runtime logs
 *.log
 *_console.txt
 *_inference_raw.txt
-
 # Annotation backups
 Label_before_boundary_fix_*.txt
 Label_before_final_boundary_fix_*.txt
 Label_before_gt_review_*.txt
-
 # Microsoft Office temporary files
 ~$*.docx
 ~$*.xlsx
-
 # Miscellaneous temporary files
 *.tmp
 *.bak
@@ -56,3 +49,14 @@ ppocrv6_detector_colab_build/
 packages/icon-detector-openvino/results/baseline_97_images/rendered/
 packages/icon-detector-openvino/results/package_smoke_test/rendered/
 packages/model-4-ppocrv6-small-baseline/models/recognizer/inference_metadata_backup_*/
+packages/meter-family-api/.venv-api/
+packages/meter-family-api/.venv-v6/
+packages/meter-family-api/runtime/PaddleOCR-3.7/
+packages/meter-family-api/results/single/
+packages/meter-family-api/results/folder/
+packages/meter-family-api/results/rendered/*
+!packages/meter-family-api/results/rendered/.gitkeep
+packages/meter-family-api/results/debug/*
+packages/meter-family-api/app/__pycache__/
+packages/meter-family-api/**/*.pyc
+packages/meter-family-api/app/backups/

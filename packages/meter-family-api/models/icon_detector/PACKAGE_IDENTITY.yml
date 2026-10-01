@@ -1,0 +1,45 @@
+﻿package_id: icon-detector-openvino
+package_status: standalone_verified
+model:
+  runtime: OpenVINO
+  xml: model/saved_model.xml
+  bin: model/saved_model.bin
+  alternate_onnx: model/saved_model.onnx
+  input_name: input
+  input_shape: [1, 3, 640, 640]
+  input_type: float32
+  outputs: [dets, labels]
+preprocessing:
+  color_conversion: BGR_to_RGB
+  resize: aspect_ratio_preserving
+  target_width: 640
+  target_height: 640
+  padding: centered
+  mean: [123.675, 116.28, 103.53]
+  std: [58.395, 57.12, 57.375]
+  output_layout: NCHW
+postprocessing:
+  default_threshold: 0.38
+  box_format: original_image_xyxy
+  exclude_class_zero: true
+  external_nms_required: false
+classes:
+  0: ok
+  1: earth
+  2: magnet
+  3: comm
+  4: switchON
+  5: switchOFF
+  6: battery
+  7: reverseCN
+  8: ForwardCN
+  9: neutral
+  10: powerON
+  11: coverOpen
+evaluation:
+  smoke_test: passed
+  corrected_validation_images: 97
+  batch_inference: passed
+  rendered_results_reviewed: true
+integration:
+  ocr_overlap_filtering: not_started

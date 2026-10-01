@@ -1,0 +1,4 @@
+openvino
+numpy
+opencv-python
+PyYAML
