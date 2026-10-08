@@ -1,0 +1,10 @@
+Annotation interface: patched PPOCRLabel v2
+OCR package: Model 5 PP-OCRv6 expanded
+Model root: packages/meter-family-api/models/experimental_v6
+Detector algorithm: DB
+Recognizer algorithm: SVTR_LCNet
+Recognition shape: 3,48,320
+Space-character support: enabled
+Recognition dictionary: models/recognizer/character_dict.txt
+Runtime: packages/meter-family-api/.venv-v6
+PaddleOCR source: packages/meter-family-api/runtime/PaddleOCR-3.7

@@ -67,3 +67,15 @@ packages/meter-family-api/app/backups/
 *.before_*
 packages/meter-family-api/models/experimental_v6_before_*/
 # Local logs
+
+# Portable PPOCRLabel annotation package
+packages/annotation-ppocrlabel/.venv-annotation/
+packages/annotation-ppocrlabel/**/__pycache__/
+packages/annotation-ppocrlabel/**/*.pyc
+packages/annotation-ppocrlabel/*.log
+packages/annotation-ppocrlabel/*.before_*
+packages/annotation-ppocrlabel/backups/
+packages/annotation-ppocrlabel.before_rebuild_*/
+# Local PPOCRLabel annotation outputs
+**/fileState.txt
+**/Cache.cach
