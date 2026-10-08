@@ -1,4 +1,4 @@
-﻿# Local staging packages
+# Local staging packages
 
 # Git worktrees
 git-worktrees/
@@ -60,3 +60,10 @@ packages/meter-family-api/results/debug/*
 packages/meter-family-api/app/__pycache__/
 packages/meter-family-api/**/*.pyc
 packages/meter-family-api/app/backups/
+# Local meter-family API environments and runtime
+# Generated API results and Python caches
+**/__pycache__/
+# Local development backups
+*.before_*
+packages/meter-family-api/models/experimental_v6_before_*/
+# Local logs

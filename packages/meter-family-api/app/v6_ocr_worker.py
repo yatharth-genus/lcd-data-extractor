@@ -19,7 +19,25 @@ def create_system(args):
     from tools.infer.utility import parse_args
     saved = sys.argv[:]
     try:
-        sys.argv = ["predict_system.py", "--det_model_dir", str(args.det_model), "--rec_model_dir", str(args.rec_model), "--rec_char_dict_path", str(args.dictionary), "--use_gpu", "false", "--use_angle_cls", "false", "--use_space_char", "false", "--det_algorithm", "DB", "--rec_algorithm", "SVTR_LCNet", "--det_limit_type", "max", "--det_limit_side_len", "1280", "--det_db_thresh", "0.20", "--det_db_box_thresh", "0.45", "--det_db_unclip_ratio", "1.40", "--drop_score", "0.0", "--show_log", "false"]
+        sys.argv = [
+            "predict_system.py",
+            "--det_model_dir", str(args.det_model),
+            "--rec_model_dir", str(args.rec_model),
+            "--rec_char_dict_path", str(args.dictionary),
+            "--rec_image_shape", "3,48,320",
+            "--use_gpu", "false",
+            "--use_angle_cls", "false",
+            "--use_space_char", "true",
+            "--det_algorithm", "DB",
+            "--rec_algorithm", "SVTR_LCNet",
+            "--det_limit_type", "max",
+            "--det_limit_side_len", "1280",
+            "--det_db_thresh", "0.20",
+            "--det_db_box_thresh", "0.45",
+            "--det_db_unclip_ratio", "1.40",
+            "--drop_score", "0.0",
+            "--show_log", "false",
+        ]
         parsed = parse_args()
     finally:
         sys.argv = saved

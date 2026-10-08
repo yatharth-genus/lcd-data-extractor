@@ -16,7 +16,6 @@ from pydantic import BaseModel, Field
 from starlette.concurrency import run_in_threadpool
 
 from .icon_detector import IconDetector
-from .ocr_engine import OcrEngine
 from .pipeline_registry import DEFAULT_PIPELINE, public_pipeline_catalog, resolve_pipeline
 from .v6_ocr_engine import V6OcrEngine
 
@@ -100,6 +99,13 @@ class RenderedResult(BaseModel):
     url: str | None
 
 
+class SavedResults(BaseModel):
+    run_name: str
+    masked_url: str
+    rendered_url: str
+    prediction_url: str
+
+
 class DevelopmentPredictionResponse(BaseModel):
     request_id: str
     mode: str
@@ -109,6 +115,7 @@ class DevelopmentPredictionResponse(BaseModel):
     icon_occurrences: list[IconOccurrence]
     timing: ProcessingTiming
     rendered_result: RenderedResult
+    saved_results: SavedResults
     warnings: list[str]
     requested_meter_family: str = DEFAULT_PIPELINE
     resolved_pipeline: str = DEFAULT_PIPELINE
@@ -298,9 +305,49 @@ def result_url(path: Path) -> str:
     return "/results/" + "/".join(relative.parts)
 
 
+def create_general_v3_engine():
+    """Create the historical general_v3 engine only when explicitly requested."""
+    try:
+        from .ocr_engine import OcrEngine
+    except ModuleNotFoundError as error:
+        if error.name in {"paddleocr", "paddle"}:
+            raise RuntimeError(
+                "The general_v3 pipeline is unavailable because its PaddleOCR "
+                "runtime is not installed in the API environment. Start or select "
+                "experimental_v6, which uses the isolated .venv-v6 worker."
+            ) from error
+        raise
+
+    return OcrEngine(
+        detector_model_path=OCR_DETECTOR_MODEL_PATH,
+        recognizer_model_path=OCR_RECOGNIZER_MODEL_PATH,
+        character_dictionary_path=OCR_CHARACTER_DICTIONARY_PATH,
+    )
+
+
+def get_pipeline_engine(app, routing):
+    engine_name = routing["definition"].engine_state_name
+    engine = getattr(app.state, engine_name, None)
+
+    if engine_name == "ocr_engine_general_v3" and engine is None:
+        with app.state.general_v3_initialization_lock:
+            engine = getattr(app.state, engine_name, None)
+            if engine is None:
+                engine = create_general_v3_engine()
+                setattr(app.state, engine_name, engine)
+
+    if engine is None:
+        raise RuntimeError(
+            f"OCR engine '{engine_name}' is not available for pipeline "
+            f"'{routing['resolved_pipeline']}'."
+        )
+
+    return engine
+
+
 def run_complete_pipeline(app, image, meter_family=DEFAULT_PIPELINE):
     routing = resolve_pipeline(meter_family)
-    engine = getattr(app.state, routing["definition"].engine_state_name)
+    engine = get_pipeline_engine(app, routing)
     raw_icons, icon_ms = app.state.icon_detector.predict(image)
     icons = [
         {
@@ -351,9 +398,15 @@ async def application_lifespan(app: FastAPI):
         ICON_LABELS_PATH,
         ICON_TRANSFORMS_PATH,
         ICON_TRAIN_CONFIG_PATH,
-        OCR_CHARACTER_DICTIONARY_PATH,
+        PPOCRV6_PYTHON,
+        PPOCRV6_CHARACTER_DICTIONARY_PATH,
+        API_ROOT / "v6_ocr_worker.py",
     ]
-    required_folders = [OCR_DETECTOR_MODEL_PATH, OCR_RECOGNIZER_MODEL_PATH]
+    required_folders = [
+        PPOCRV6_ROOT,
+        PPOCRV6_DETECTOR_MODEL_PATH,
+        PPOCRV6_RECOGNIZER_MODEL_PATH,
+    ]
     missing = [str(path) for path in required_files if not path.is_file()]
     missing += [str(path) for path in required_folders if not path.is_dir()]
     if missing:
@@ -369,11 +422,11 @@ async def application_lifespan(app: FastAPI):
         threshold=ICON_THRESHOLD,
         device="CPU",
     )
-    app.state.ocr_engine_general_v3 = OcrEngine(
-        detector_model_path=OCR_DETECTOR_MODEL_PATH,
-        recognizer_model_path=OCR_RECOGNIZER_MODEL_PATH,
-        character_dictionary_path=OCR_CHARACTER_DICTIONARY_PATH,
-    )
+    # general_v3 is a historical fallback. Do not import or initialize its
+    # PaddleOCR runtime unless that pipeline is explicitly requested.
+    import threading
+    app.state.general_v3_initialization_lock = threading.Lock()
+    app.state.ocr_engine_general_v3 = None
     app.state.ocr_engine_experimental_v6 = V6OcrEngine(
         python_executable=PPOCRV6_PYTHON,
         paddleocr_root=PPOCRV6_ROOT,
@@ -735,13 +788,13 @@ def check_service_health(request: Request):
         },
         "ocr_detector": {
             **common,
-            "model_name": "det_lcd_v2_expanded_240",
-            "runtime": "Paddle Inference",
+            "model_name": "PP-OCRv6_small_det_lcd",
+            "runtime": "PaddleOCR 3.7 isolated worker",
         },
         "ocr_recognizer": {
             **common,
-            "model_name": "rec_lcd_v3_full_reviewed",
-            "runtime": "Paddle Inference",
+            "model_name": "PP-OCRv6_small_rec_lcd",
+            "runtime": "PaddleOCR 3.7 isolated worker",
         },
     }
 
@@ -751,8 +804,8 @@ def check_service_health(request: Request):
     response_model=DevelopmentPredictionResponse,
     summary="Extract text and icons from an LCD image",
     description=(
-        "Runs icon detection, hides detected icons, runs the finalized hybrid "
-        "OCR pipeline, preserves duplicates, and creates a rendered result."
+        "Runs icon detection, masks detected icons, runs the selected meter-family "
+        "OCR pipeline, preserves duplicates, and creates named result artifacts."
     ),
     tags=["Prediction"],
     operation_id="extract_lcd_text_and_icons",
@@ -937,18 +990,18 @@ def _response_to_dict(value):
 @app.post(
     "/predict/folder",
     response_model=FolderPredictionResponse,
-    summary="Process a folder containing up to 20 LCD images",
+    summary="Process a folder containing LCD images",
     description=(
-        "Accepts between 1 and 20 images. Each image receives fresh icon "
-        "detection, icon masking, Model 2 text detection, Model 3 text "
-        "recognition, and a rendered result. Processing is sequential."
+        "Accepts one or more images. Each image receives fresh icon "
+        "detection, icon masking, the selected meter-family OCR pipeline, "
+        "and named result artifacts. Processing is sequential."
     ),
     tags=["Prediction"],
     operation_id="predict_lcd_image_folder",
 )
 async def predict_lcd_image_folder(
     request: Request,
-    lcd_images: list[UploadFile] = File(..., description="Select 1 to 20 LCD images."),
+    lcd_images: list[UploadFile] = File(..., description="Select one or more LCD images."),
     meter_family: Literal["general_v3", "experimental_v6"] = Form(DEFAULT_PIPELINE, description="Select one pipeline for the complete folder request."),
 ):
     received_count = len(lcd_images)
@@ -956,13 +1009,6 @@ async def predict_lcd_image_folder(
         raise HTTPException(status_code=400, detail={
             "code": "EMPTY_BATCH", "message": "Select at least one image.",
             "minimum_images": 1, "received_files": 0,
-        })
-    if received_count > MAX_FOLDER_IMAGES:
-        raise HTTPException(status_code=400, detail={
-            "code": "BATCH_LIMIT_EXCEEDED",
-            "message": "A folder prediction request can contain a maximum of 20 images.",
-            "maximum_images": MAX_FOLDER_IMAGES,
-            "received_files": received_count,
         })
 
     batch_id = str(uuid.uuid4())
@@ -1013,24 +1059,809 @@ async def predict_lcd_image_folder(
     }
 
 FOLDER_TEST_PAGE = r'''<!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>LCD Folder Tester</title>
-<style>
-*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;background:#f4f7fb;color:#172033}header{background:white;border-bottom:1px solid #dce3ec;padding:18px 24px}main{max-width:1500px;margin:auto;padding:24px}.panel,.card{background:white;border:1px solid #dce3ec;border-radius:14px;padding:18px;margin-bottom:18px;box-shadow:0 4px 18px rgba(28,44,70,.06)}.controls{display:flex;gap:12px;flex-wrap:wrap;align-items:center}button,a.btn{border:0;border-radius:9px;padding:10px 16px;background:#1769e0;color:white;font-weight:700;text-decoration:none;cursor:pointer}button:disabled{opacity:.55}.muted{color:#657386}.warning{color:#b42318;font-weight:700}.summary{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.metric{background:#f7f9fc;border-radius:10px;padding:12px}.metric strong{display:block;font-size:22px}.images,.data{display:grid;grid-template-columns:1fr 1fr;gap:16px}.box{border:1px solid #dce3ec;border-radius:10px;padding:10px;background:white}.box img{width:100%;max-height:520px;object-fit:contain}.occ{padding:8px 0;border-bottom:1px solid #edf1f6}@media(max-width:900px){.images,.data{grid-template-columns:1fr}.summary{grid-template-columns:1fr 1fr}}
-</style></head><body>
-<header><h1>LCD Folder Prediction Tester</h1><p>Select a folder containing 1 to 20 supported images.</p></header>
-<main><section class="panel"><div class="controls"><label for="folderMeterFamily"><strong>Meter family</strong></label><select id="folderMeterFamily" data-default="__DEFAULT_PIPELINE__"><option value="general_v3">General v3</option><option value="experimental_v6">Experimental v6</option></select><input id="files" type="file" webkitdirectory multiple accept="image/png,image/jpeg,image/bmp,image/webp"><button id="run">Run Folder Prediction</button><a class="btn" href="/test">Single Image</a><a class="btn" href="/docs/">API Docs</a></div><p id="message" class="muted">Maximum 20 images per folder request.</p><p id="progress"></p></section>
-<section id="summary" class="panel" hidden><div class="summary"><div class="metric">Received<strong id="received">0</strong></div><div class="metric">Processed<strong id="processed">0</strong></div><div class="metric">Failed<strong id="failed">0</strong></div><div class="metric">Total Time<strong id="time">0 ms</strong></div></div></section><section id="results"></section></main>
-<script>
-document.getElementById('folderMeterFamily').value='__DEFAULT_PIPELINE__';const input=document.getElementById('files'),run=document.getElementById('run'),message=document.getElementById('message'),progress=document.getElementById('progress'),results=document.getElementById('results'),summary=document.getElementById('summary');
-const allowed=new Set(['image/png','image/jpeg','image/bmp','image/webp']);let selected=[];
-const esc=v=>String(v).replace(/[&<>'"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]));
-input.onchange=()=>{selected=Array.from(input.files).filter(f=>allowed.has(f.type));if(selected.length>20){message.innerHTML=`<span class="warning">Selected ${selected.length} supported images. Maximum is 20.</span>`;run.disabled=true}else{message.textContent=selected.length?`Selected ${selected.length} supported image(s). Maximum is 20.`:'No supported images selected.';run.disabled=false}};
-function rows(items,kind){if(!items||!items.length)return'<div class="muted">None detected</div>';return items.map(x=>`<div class="occ"><strong>${esc(x.id)}: ${esc(kind==='text'?x.value:x.class_name)}</strong><br><span class="muted">Confidence ${Number(x.confidence).toFixed(4)}</span></div>`).join('')}
-run.onclick=async()=>{if(selected.length<1||selected.length>20){message.innerHTML='<span class="warning">Select between 1 and 20 supported images.</span>';return}run.disabled=true;results.innerHTML='';summary.hidden=true;progress.textContent=`Processing ${selected.length} image(s)...`;const form=new FormData(),previews=new Map();form.append('meter_family',document.getElementById('folderMeterFamily').value);selected.forEach(file=>{form.append('lcd_images',file,file.webkitRelativePath||file.name);previews.set(file.name,URL.createObjectURL(file))});try{const response=await fetch('/predict/folder',{method:'POST',body:form}),payload=await response.json();if(!response.ok)throw new Error(payload.detail?.message||JSON.stringify(payload.detail));received.textContent=payload.total_files_received;processed.textContent=payload.images_processed;failed.textContent=payload.images_failed;time.textContent=`${Number(payload.total_processing_time_ms).toFixed(1)} ms`;summary.hidden=false;progress.textContent=`Completed ${payload.images_processed} of ${payload.total_files_received}.`;payload.results.forEach(item=>{const name=item.image.filename,card=document.createElement('article');card.className='card';card.innerHTML=`<h2>${esc(name)}</h2><div class="images"><div class="box"><h3>Original</h3><img src="${previews.get(name)||''}"></div><div class="box"><h3>Rendered Result</h3><img src="${item.rendered_result.url}"></div></div><div class="data"><div class="box"><h3>Text (${item.text_occurrences.length})</h3>${rows(item.text_occurrences,'text')}</div><div class="box"><h3>Icons (${item.icon_occurrences.length})</h3>${rows(item.icon_occurrences,'icon')}</div></div>`;results.appendChild(card)});if(payload.failures.length){const card=document.createElement('section');card.className='panel';card.innerHTML='<h2>Failures</h2>'+payload.failures.map(x=>`<div class="occ"><strong>${esc(x.filename)}</strong>: ${esc(x.message)}</div>`).join('');results.appendChild(card)}}catch(error){progress.innerHTML=`<span class="warning">${esc(error.message)}</span>`}finally{run.disabled=false}};
-</script></body></html>'''
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1"
+    >
+
+    <title>LCD Folder Tester</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f7fb;
+            color: #172033;
+        }
+
+        header {
+            padding: 18px 24px;
+            background: white;
+            border-bottom: 1px solid #dce3ec;
+        }
+
+        main {
+            max-width: 1500px;
+            margin: auto;
+            padding: 24px;
+        }
+
+        .panel,
+        .card {
+            margin-bottom: 18px;
+            padding: 18px;
+            background: white;
+            border: 1px solid #dce3ec;
+            border-radius: 14px;
+            box-shadow: 0 4px 18px rgba(28, 44, 70, 0.06);
+        }
+
+        .controls {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        button,
+        a.btn {
+            padding: 10px 16px;
+            border: 0;
+            border-radius: 9px;
+            background: #1769e0;
+            color: white;
+            font-weight: 700;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        button:disabled {
+            opacity: 0.55;
+            cursor: not-allowed;
+        }
+
+        .muted {
+            color: #657386;
+        }
+
+        .warning {
+            color: #b42318;
+            font-weight: 700;
+        }
+
+        .success {
+            color: #087a55;
+            font-weight: 700;
+        }
+
+        .progress-shell {
+            position: relative;
+            height: 28px;
+            margin-top: 16px;
+            overflow: hidden;
+            background: #e7edf5;
+            border: 1px solid #d4dce8;
+            border-radius: 14px;
+        }
+
+        .progress-bar {
+            width: 0%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(90deg, #1769e0, #0f9d8a);
+            color: white;
+            font-size: 13px;
+            font-weight: 700;
+            white-space: nowrap;
+            transition: width 0.25s ease;
+        }
+
+        .progress-details {
+            margin-top: 10px;
+            line-height: 1.6;
+        }
+
+        .summary {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px;
+        }
+
+        .metric {
+            padding: 12px;
+            background: #f7f9fc;
+            border-radius: 10px;
+        }
+
+        .metric strong {
+            display: block;
+            margin-top: 5px;
+            color: #0f6b78;
+            font-size: 22px;
+        }
+
+        .images,
+        .data {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        .box {
+            padding: 10px;
+            background: white;
+            border: 1px solid #dce3ec;
+            border-radius: 10px;
+        }
+
+        .box img {
+            width: 100%;
+            max-height: 520px;
+            object-fit: contain;
+        }
+
+        .occ {
+            padding: 8px 0;
+            border-bottom: 1px solid #edf1f6;
+        }
+
+        .result-links {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-top: 12px;
+        }
+
+        .result-links a {
+            color: #1769e0;
+            font-weight: 700;
+        }
+
+        @media (max-width: 900px) {
+            .images,
+            .data {
+                grid-template-columns: 1fr;
+            }
+
+            .summary {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>LCD Folder Prediction Tester</h1>
+
+        <p>
+            Select a folder containing supported LCD images.
+            Images are processed sequentially with live progress.
+        </p>
+    </header>
+
+    <main>
+        <section class="panel">
+            <div class="controls">
+                <label for="folderMeterFamily">
+                    <strong>Meter family</strong>
+                </label>
+
+                <select
+                    id="folderMeterFamily"
+                    data-default="__DEFAULT_PIPELINE__"
+                >
+                    <option value="general_v3">
+                        General v3
+                    </option>
+
+                    <option value="experimental_v6">
+                        Experimental v6
+                    </option>
+                </select>
+
+                <input
+                    id="files"
+                    type="file"
+                    webkitdirectory
+                    multiple
+                    accept="image/png,image/jpeg,image/bmp,image/webp"
+                >
+
+                <button id="run" disabled>
+                    Run Folder Prediction
+                </button>
+
+                <a class="btn" href="/test">
+                    Single Image
+                </a>
+
+                <a class="btn" href="/docs/">
+                    API Docs
+                </a>
+            </div>
+
+            <p id="message" class="muted">
+                Select one or more supported images.
+                There is no application-level image-count limit.
+            </p>
+
+            <div class="progress-shell">
+                <div id="progressBar" class="progress-bar">
+                    0%
+                </div>
+            </div>
+
+            <div id="progress" class="progress-details muted">
+                No folder prediction is running.
+            </div>
+        </section>
+
+        <section id="summary" class="panel" hidden>
+            <div class="summary">
+                <div class="metric">
+                    Selected
+                    <strong id="received">0</strong>
+                </div>
+
+                <div class="metric">
+                    Successful
+                    <strong id="processed">0</strong>
+                </div>
+
+                <div class="metric">
+                    Failed
+                    <strong id="failed">0</strong>
+                </div>
+
+                <div class="metric">
+                    Total Time
+                    <strong id="time">0 ms</strong>
+                </div>
+            </div>
+        </section>
+
+        <section id="results"></section>
+    </main>
+
+    <script>
+        document.getElementById(
+            "folderMeterFamily"
+        ).value = "__DEFAULT_PIPELINE__";
+
+        const input = document.getElementById("files");
+        const run = document.getElementById("run");
+        const message = document.getElementById("message");
+        const progress = document.getElementById("progress");
+        const progressBar = document.getElementById("progressBar");
+        const results = document.getElementById("results");
+        const summary = document.getElementById("summary");
+        const received = document.getElementById("received");
+        const processed = document.getElementById("processed");
+        const failed = document.getElementById("failed");
+        const time = document.getElementById("time");
+        const meterFamily = document.getElementById(
+            "folderMeterFamily"
+        );
+
+        const allowedMimeTypes = new Set([
+            "image/png",
+            "image/jpeg",
+            "image/bmp",
+            "image/webp"
+        ]);
+
+        const allowedExtensions = new Set([
+            ".png",
+            ".jpg",
+            ".jpeg",
+            ".bmp",
+            ".webp"
+        ]);
+
+        let selected = [];
+        let running = false;
+
+        function escapeHtml(value) {
+            return String(value).replace(
+                /[&<>'"]/g,
+                function (character) {
+                    const replacements = {
+                        "&": "&amp;",
+                        "<": "&lt;",
+                        ">": "&gt;",
+                        "'": "&#39;",
+                        '"': "&quot;"
+                    };
+
+                    return replacements[character];
+                }
+            );
+        }
+
+        function isSupportedImage(file) {
+            if (allowedMimeTypes.has(file.type)) {
+                return true;
+            }
+
+            const lowerName = file.name.toLowerCase();
+
+            for (const extension of allowedExtensions) {
+                if (lowerName.endsWith(extension)) {
+                    return true;
+                }
+            }
+
+            return false;
+        }
+
+        function occurrenceRows(items, kind) {
+            if (!items || items.length === 0) {
+                return '<div class="muted">None detected</div>';
+            }
+
+            return items.map(function (item) {
+                const value = kind === "text"
+                    ? item.value
+                    : item.class_name;
+
+                return `
+                    <div class="occ">
+                        <strong>
+                            ${escapeHtml(item.id)}:
+                            ${escapeHtml(value)}
+                        </strong>
+                        <br>
+                        <span class="muted">
+                            Confidence
+                            ${Number(item.confidence).toFixed(4)}
+                        </span>
+                    </div>
+                `;
+            }).join("");
+        }
+
+        function getRenderedUrl(item) {
+            if (
+                item.rendered_result &&
+                item.rendered_result.url
+            ) {
+                return item.rendered_result.url;
+            }
+
+            if (
+                item.saved_results &&
+                item.saved_results.rendered_url
+            ) {
+                return item.saved_results.rendered_url;
+            }
+
+            return "";
+        }
+
+        function getSavedLinks(item) {
+            if (!item.saved_results) {
+                return "";
+            }
+
+            const links = [];
+
+            if (item.saved_results.masked_url) {
+                links.push(`
+                    <a
+                        href="${escapeHtml(
+                            item.saved_results.masked_url
+                        )}"
+                        target="_blank"
+                    >
+                        Open Masked Image
+                    </a>
+                `);
+            }
+
+            if (item.saved_results.rendered_url) {
+                links.push(`
+                    <a
+                        href="${escapeHtml(
+                            item.saved_results.rendered_url
+                        )}"
+                        target="_blank"
+                    >
+                        Open Rendered Image
+                    </a>
+                `);
+            }
+
+            if (item.saved_results.prediction_url) {
+                links.push(`
+                    <a
+                        href="${escapeHtml(
+                            item.saved_results.prediction_url
+                        )}"
+                        target="_blank"
+                    >
+                        Open Prediction JSON
+                    </a>
+                `);
+            }
+
+            if (links.length === 0) {
+                return "";
+            }
+
+            return `
+                <div class="result-links">
+                    ${links.join("")}
+                </div>
+            `;
+        }
+
+        function appendSuccessfulResult(item, previewUrl) {
+            const name = (
+                item.image &&
+                item.image.filename
+            )
+                ? item.image.filename
+                : "uploaded_image";
+
+            const renderedUrl = getRenderedUrl(item);
+
+            const textItems = item.text_occurrences || [];
+            const iconItems = item.icon_occurrences || [];
+
+            const card = document.createElement("article");
+            card.className = "card";
+
+            card.innerHTML = `
+                <h2>${escapeHtml(name)}</h2>
+
+                <div class="images">
+                    <div class="box">
+                        <h3>Original</h3>
+                        <img
+                            src="${escapeHtml(previewUrl)}"
+                            alt="Original ${escapeHtml(name)}"
+                        >
+                    </div>
+
+                    <div class="box">
+                        <h3>Rendered Result</h3>
+
+                        ${
+                            renderedUrl
+                                ? `
+                                    <img
+                                        src="${escapeHtml(renderedUrl)}"
+                                        alt="Rendered ${escapeHtml(name)}"
+                                    >
+                                `
+                                : `
+                                    <div class="warning">
+                                        Rendered result URL was not returned.
+                                    </div>
+                                `
+                        }
+                    </div>
+                </div>
+
+                <div class="data">
+                    <div class="box">
+                        <h3>
+                            Text (${textItems.length})
+                        </h3>
+
+                        ${occurrenceRows(textItems, "text")}
+                    </div>
+
+                    <div class="box">
+                        <h3>
+                            Icons (${iconItems.length})
+                        </h3>
+
+                        ${occurrenceRows(iconItems, "icon")}
+                    </div>
+                </div>
+
+                ${getSavedLinks(item)}
+            `;
+
+            results.appendChild(card);
+        }
+
+        function appendFailure(displayName, errorMessage) {
+            const card = document.createElement("section");
+            card.className = "panel";
+
+            card.innerHTML = `
+                <h2>
+                    Failed:
+                    ${escapeHtml(displayName)}
+                </h2>
+
+                <div class="warning">
+                    ${escapeHtml(errorMessage)}
+                </div>
+            `;
+
+            results.appendChild(card);
+        }
+
+        function updateProgress(
+            completed,
+            total,
+            succeeded,
+            failedCount,
+            currentName,
+            startedAt
+        ) {
+            const percentage = total > 0
+                ? Math.round((completed / total) * 100)
+                : 0;
+
+            progressBar.style.width = `${percentage}%`;
+            progressBar.textContent = `${percentage}%`;
+
+            received.textContent = String(total);
+            processed.textContent = String(succeeded);
+            failed.textContent = String(failedCount);
+
+            time.textContent = (
+                performance.now() - startedAt
+            ).toFixed(1) + " ms";
+
+            progress.innerHTML = `
+                Completed
+                <strong>${completed} of ${total}</strong>
+                <br>
+
+                ${
+                    currentName
+                        ? `
+                            Last file:
+                            ${escapeHtml(currentName)}
+                            <br>
+                        `
+                        : ""
+                }
+
+                Successful: ${succeeded}
+                |
+                Failed: ${failedCount}
+            `;
+        }
+
+        input.addEventListener("change", function () {
+            const allFiles = Array.from(input.files);
+
+            selected = allFiles.filter(isSupportedImage);
+
+            const ignoredCount = (
+                allFiles.length - selected.length
+            );
+
+            if (selected.length === 0) {
+                message.textContent =
+                    "No supported images were selected.";
+
+                run.disabled = true;
+                return;
+            }
+
+            message.textContent =
+                `Selected ${selected.length} supported image(s)` +
+                (
+                    ignoredCount > 0
+                        ? ` and ignored ${ignoredCount} unsupported file(s).`
+                        : "."
+                );
+
+            run.disabled = false;
+        });
+
+        run.addEventListener("click", async function () {
+            if (running) {
+                return;
+            }
+
+            if (selected.length < 1) {
+                message.innerHTML = `
+                    <span class="warning">
+                        Select at least one supported image.
+                    </span>
+                `;
+
+                return;
+            }
+
+            running = true;
+            run.disabled = true;
+            input.disabled = true;
+            meterFamily.disabled = true;
+
+            results.innerHTML = "";
+            summary.hidden = false;
+
+            const total = selected.length;
+            const startedAt = performance.now();
+            const selectedMeterFamily = meterFamily.value;
+
+            let completed = 0;
+            let succeeded = 0;
+            let failedCount = 0;
+
+            received.textContent = String(total);
+            processed.textContent = "0";
+            failed.textContent = "0";
+            time.textContent = "0 ms";
+
+            progressBar.style.width = "0%";
+            progressBar.textContent = "0%";
+
+            for (const file of selected) {
+                const relativeName = (
+                    file.webkitRelativePath ||
+                    file.name
+                );
+
+                progress.innerHTML = `
+                    Processing
+                    <strong>
+                        ${completed + 1} of ${total}
+                    </strong>
+                    <br>
+
+                    Current file:
+                    ${escapeHtml(relativeName)}
+                    <br>
+
+                    Successful: ${succeeded}
+                    |
+                    Failed: ${failedCount}
+                `;
+
+                const previewUrl = URL.createObjectURL(file);
+                const formData = new FormData();
+
+                formData.append(
+                    "meter_family",
+                    selectedMeterFamily
+                );
+
+                formData.append(
+                    "lcd_images",
+                    file,
+                    relativeName
+                );
+
+                try {
+                    const response = await fetch(
+                        "/predict/folder",
+                        {
+                            method: "POST",
+                            body: formData
+                        }
+                    );
+
+                    let payload;
+
+                    try {
+                        payload = await response.json();
+                    } catch (jsonError) {
+                        throw new Error(
+                            `Server returned HTTP ${response.status} ` +
+                            "with a non-JSON response."
+                        );
+                    }
+
+                    if (!response.ok) {
+                        const detail = payload.detail;
+
+                        let serverMessage;
+
+                        if (
+                            detail &&
+                            typeof detail === "object"
+                        ) {
+                            serverMessage = (
+                                detail.message ||
+                                JSON.stringify(detail)
+                            );
+                        } else {
+                            serverMessage = (
+                                detail ||
+                                JSON.stringify(payload)
+                            );
+                        }
+
+                        throw new Error(serverMessage);
+                    }
+
+                    if (
+                        payload.results &&
+                        payload.results.length > 0
+                    ) {
+                        appendSuccessfulResult(
+                            payload.results[0],
+                            previewUrl
+                        );
+
+                        succeeded += 1;
+                    } else {
+                        let failureMessage =
+                            "Prediction returned no result.";
+
+                        if (
+                            payload.failures &&
+                            payload.failures.length > 0
+                        ) {
+                            failureMessage = (
+                                payload.failures[0].message ||
+                                failureMessage
+                            );
+                        }
+
+                        throw new Error(failureMessage);
+                    }
+                } catch (error) {
+                    failedCount += 1;
+
+                    appendFailure(
+                        relativeName,
+                        error.message || String(error)
+                    );
+                }
+
+                completed += 1;
+
+                updateProgress(
+                    completed,
+                    total,
+                    succeeded,
+                    failedCount,
+                    relativeName,
+                    startedAt
+                );
+            }
+
+            progressBar.style.width = "100%";
+            progressBar.textContent = "100%";
+
+            progress.innerHTML = `
+                <span class="success">
+                    Folder prediction completed.
+                </span>
+                <br>
+
+                Processed ${completed} of ${total} files.
+                <br>
+
+                Successful: ${succeeded}
+                |
+                Failed: ${failedCount}
+            `;
+
+            time.textContent = (
+                performance.now() - startedAt
+            ).toFixed(1) + " ms";
+
+            running = false;
+            run.disabled = false;
+            input.disabled = false;
+            meterFamily.disabled = false;
+        });
+    </script>
+</body>
+</html>'''
 
 @app.get("/folder-test", response_class=HTMLResponse, include_in_schema=False)
 def get_folder_test_page():
     return HTMLResponse(content=FOLDER_TEST_PAGE.replace('__DEFAULT_PIPELINE__', DEFAULT_PIPELINE))
-
