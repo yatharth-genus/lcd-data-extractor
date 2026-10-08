@@ -960,7 +960,6 @@ def get_rendered_result(request_id: str):
 
 
 # FOLDER_PREDICTION_SUPPORT_V1
-MAX_FOLDER_IMAGES = 20
 FOLDER_SUPPORTED_CONTENT_TYPES = {"image/png", "image/jpeg", "image/bmp", "image/webp"}
 
 class FolderPredictionFailure(BaseModel):
